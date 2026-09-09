@@ -17,6 +17,18 @@ The four final controllers passed their separate calibration procedures. On 10,8
 
 Strict budgets produced very little automation. Accepting all top tags produced 4,245 unsupported tags, or 39.1136% error. Raw-confidence filters at 0.5, 0.8, and 0.9 provide descriptive baselines; they do not carry a formal risk guarantee. Review-all has undefined conditional error, not useful perfect accuracy. All exact counts, first failures, baselines, warm-up summaries, and subgroup tables are in the [regenerated results](report/results.md).
 
+![Locked automation and observed selected error, including strict-budget detail and descriptive baselines.](report/figures/risk_automation.svg)
+
+*Observed rates on the study's locked role, not risk bounds. Each budget uses delta 0.05 separately; no joint or subgroup guarantee. [Complete caption and numerical inputs](report/figures/README.md#locked-risk-and-automation).*
+
+## Calibration size and remaining review work
+
+![Passing frequency and median warm-up automation versus requested calibration size.](report/figures/calibration_size.svg)
+
+*100 recorded whole-group samples per budget and requested tier. Bands are empirical 5th–95th percentiles, including review-all as zero automation; they are not confidence intervals. Realized sizes can be smaller than requested. Runs share development data and sample orders across budgets and tiers. The single full-pool run is retained in the tables. [Complete caption](report/figures/README.md#calibration-sample-size).*
+
+At the 5% budget, the 2,000-comment tier has 32 passing runs out of 100; at 4,000, all 100 pass, but median automation is only 4.1836%. The [research note](../../docs/research-note.md) develops this finding alongside the locked trade-off, annotation-consensus differences, and unsuccessful development steps. The [figure guide](report/figures/README.md#regenerate) provides the plotting command and downloadable SVG/PNG assets.
+
 ## Run it
 
 From the repository root, after `uv sync --locked`:

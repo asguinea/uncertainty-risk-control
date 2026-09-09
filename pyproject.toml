@@ -20,4 +20,9 @@ uqrc = "uncertainty_risk_control.cli:main"
 packages = ["src/uncertainty_risk_control"]
 
 [tool.hatch.build.targets.sdist]
-include = ["/src", "/tests", "/docs", "/experiments", "/provenance", "/README.md", "/LICENSE", "/LICENSE_SCOPE.md", "/THIRD_PARTY_NOTICES.md", "/CITATION.cff", "/pyproject.toml", "/uv.lock", "/.python-version"]
+include = ["/src", "/tests", "/docs", "/examples", "/experiments", "/provenance", "/README.md", "/LICENSE", "/LICENSE_SCOPE.md", "/THIRD_PARTY_NOTICES.md", "/CITATION.cff", "/pyproject.toml", "/uv.lock", "/.python-version"]
+
+[dependency-groups]
+figures = [
+    "matplotlib==3.10.7",
+]

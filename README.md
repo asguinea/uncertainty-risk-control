@@ -1,49 +1,58 @@
 # Uncertainty and risk control
 
-Research on selective prediction: deciding when to accept a model output and when to send it for review, using a statistical bound on the error among accepted outputs.
+**When should a model answer, and when should it ask for review?** This repository studies selective prediction: using uncertainty scores and statistical calibration to control errors among automatically accepted outputs, then measuring how much work can actually be automated.
 
-**Status: local research snapshot, version `0.1.0.dev0`.** This repository contains an exact-binomial fixed-sequence method, synthetic verification, and [GoEmotions MB1](experiments/goemotions/README.md): executable replay of frozen final-calibration evidence and regeneration of benchmark aggregate tables. Historical model retraining and checkpoint inference are not included; the [reproduction scope](experiments/goemotions/reproduction.md) explains why. Synthetic illustrations remain separate from benchmark evidence.
+The first study, [GoEmotions MB1](experiments/goemotions/README.md), turns a frozen emotion classifier's outputs into four acceptance/review policies. At the 5% and 10% risk budgets, fewer than 5% of locked comments are accepted. Higher budgets increase automation alongside the observed error rate. Passing calibration and obtaining useful automation are distinct outcomes.
 
-## Run the foundation
+![Locked automation and observed selected error for four risk budgets and descriptive baselines, including a detail panel showing less than 5% automation for the strict budgets.](experiments/goemotions/report/figures/risk_automation.svg)
 
-The reference environment uses Python 3.11.13, NumPy 2.4.6, and SciPy 1.17.1. Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then run from the repository root:
+*10,853 locked comments from the study's own group-preserving split. Each budget uses delta 0.05 separately; the points are observed rates, not bounds or a joint guarantee. “Error” means the top tag is absent from the agreed-label reference. [Counts, captions, and figure sources](experiments/goemotions/report/figures/README.md).*
+
+## What you can inspect and run
+
+| Component | What it establishes |
+| --- | --- |
+| [Exact-binomial method](docs/method.md) | Fixed-sequence calibration with explicit assumptions, first-failure stopping, and review-all behavior |
+| [Synthetic walkthrough](examples/selected_risk_walkthrough.py) | A small example of passing, stopping, count replay, and insufficient evidence |
+| [GoEmotions evidence replay](experiments/goemotions/reproduction.md) | Recomputes all 35 executed final-calibration tests across four budgets, including their first failures |
+| [Tables and figures](experiments/goemotions/report/figures/README.md) | Regenerates locked observations and sample-size summaries from published aggregate evidence |
+| [Research note](docs/research-note.md) | Explains calibration, annotation disagreement, development history, and the limits of the findings |
+
+**Status: research snapshot, `0.1.0.dev0`; no public release yet.** The runnable benchmark scope is final-calibration replay and aggregate regeneration. Full historical training, checkpoint inference, and warm-up sampling/prefix reproduction are unavailable. The [reproduction contract](experiments/goemotions/reproduction.md) states the missing inputs. Synthetic examples are labeled separately from benchmark results.
+
+## Quick start
+
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then run from the repository root. The reference environment is Python 3.11.13 with locked dependencies.
 
 ```sh
 uv sync --locked
-uv run --locked python -m unittest discover -s tests -v
-uv run --locked uqrc verify --output results/method-verification.json
-uv run --locked uqrc synthetic --config experiments/synthetic/config.toml --output results/synthetic.json
+uv run --locked python examples/selected_risk_walkthrough.py
 uv run --locked uqrc goemotions --evidence experiments/goemotions/evidence --output results/goemotions/replay.json --report results/goemotions/tables.md
 ```
 
-Verification includes numerical fixtures and five synthetic Monte Carlo scenarios, with 30,000 trials each. It requires no dataset, trained model, GPU, product checkout, or credentials. The synthetic illustration uses separate development and calibration draws, records the frozen candidate order, and writes aggregate results. Output paths are supplied by the caller; generated results are ignored by Git.
+The replay requires no dataset download, trained weights, GPU, credentials, or product checkout. It produces a JSON verification receipt and the research tables. `status: PASS` means the replay checks passed; it does not authenticate the original model predictions or verify the dataset's sampling assumptions.
 
-## Use the method
+To regenerate the figures, install the optional plotting dependencies:
 
-```python
-from uncertainty_risk_control import calibrate_fixed_sequence
-
-# Illustration only: fix this sequence independently of calibration data.
-sequence = [{"threshold": 0.1}, {"threshold": 0.2}]
-result = calibrate_fixed_sequence(
-    sequence,
-    scores=[0.1] * 59,
-    outcomes=[0] * 59,  # 1 means a mistake; 0 means no mistake
-    alpha=0.05,
-    delta=0.05,
-)
-print(result.state, result.threshold, result.selected)
-# CERTIFIED 0.2 59
+```sh
+uv sync --locked --group figures
+uv run --locked --group figures python experiments/goemotions/scripts/plot_results.py --evidence experiments/goemotions/evidence --output results/goemotions/figures
 ```
 
-Lower scores mean lower estimated risk. A candidate accepts `score <= threshold`, including ties. Tests run in the supplied order and stop at the first failure. The method returns `REVIEW_ALL` if no candidate passes. Zero accepted observations have undefined conditional error.
+The plotting command replays the evidence before rendering two SVG/PNG figures and their exact numerical inputs. See the [reproduction guide](docs/reproduction.md) for method verification, synthetic simulations, packaging, and expected outputs.
 
-`CERTIFIED` is a method outcome under the sampling and protocol assumptions; it is not a certification of a product. Read the [method and assumptions](docs/method.md), [reproduction instructions](docs/reproduction.md), and [extraction provenance](docs/provenance.md) before interpreting results.
+## How to read the method
 
-## Research context and attribution
+A frozen scorer gives lower values to outputs it estimates are less likely to be wrong. A threshold accepts `score <= threshold`, including ties. Calibration tests candidates in an independently fixed order, stops at the first failure, and chooses the largest accepted set within the passing prefix. If none passes, it returns `REVIEW_ALL`; conditional error is undefined when nothing is accepted.
 
-Maintainer: Alejandro Sanchez Guinea. This research was developed in connection with EyeTrustAI, which the maintainer owns. This repository presents research methods and benchmark experiments. A planned companion EyeTrustAI repository will describe their relationship to specific product implementations and validation requirements; it will cite research releases rather than present the same study as an independent replication.
+The target is **error conditional on acceptance**, not the model's overall accuracy or the reliability of every individual probability. Under the stated sampling and protocol assumptions, each calibrated nonempty policy has a selected-risk guarantee at its own budget. `CERTIFIED` is the implementation's name for that method outcome. Read the [assumptions and exact statement](docs/method.md#assumptions-and-interpretation) before applying it elsewhere.
 
-The contribution here is the implementation, protocol, verification, and experimental investigation. Exact binomial inference and [Learn then Test](https://arxiv.org/abs/2110.01052) are existing statistical methods. See [CITATION.cff](CITATION.cff) for this software's citation metadata and [method references](docs/method.md#references) for the underlying work.
+## Author, research context, and citation
 
-Original material is provided under [Apache-2.0](LICENSE), subject to [license scope](LICENSE_SCOPE.md) and [third-party notices](THIRD_PARTY_NOTICES.md). This snapshot distributes projected aggregate evidence, not raw comments, row-level datasets, or model weights. It does not license underlying social-media content.
+Maintained by **Alejandro Sanchez Guinea**, owner of EyeTrustAI. This research originated in EyeTrustAI's validation work. The personal repository focuses on the experimental protocol, implementation, verification, and investigation of uncertainty and selective prediction. [Contribution and relationship details](docs/contributions.md) distinguish those contributions from the underlying statistical methods, dataset, and base model.
+
+A planned EyeTrustAI companion repository will connect immutable research releases to specific product implementations and validation requirements. It will identify the shared evidence and ownership; it will not present the same benchmark as an independent replication. This benchmark alone does not establish product readiness.
+
+Use [CITATION.cff](CITATION.cff) for the software's current metadata and cite the underlying [statistical methods](docs/method.md#references), [GoEmotions](https://aclanthology.org/2020.acl-main.372/), and [RoBERTa](https://arxiv.org/abs/1907.11692) as applicable. [Reusable portfolio copy](docs/portfolio.md) accompanies the research note.
+
+Original material is under [Apache-2.0](LICENSE), subject to [license scope](LICENSE_SCOPE.md) and [third-party notices](THIRD_PARTY_NOTICES.md). The repository distributes projected aggregate evidence and derived figures. It includes no raw comments, row-level datasets, model weights, or product runtime.

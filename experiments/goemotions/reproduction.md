@@ -3,7 +3,7 @@
 | Workflow | Available now | Inputs and limits |
 | --- | --- | --- |
 | Final-calibration method replay | Yes | Frozen 21-candidate sequence and counts for each executed prefix, including first failures; exact controller/count/threshold correspondence and `1e-12` probability tolerance |
-| Aggregate report regeneration | Yes | Locked/warm-up baseline and subgroup counts; all 2,804 warm-up aggregate records; original quantile and milestone formulas |
+| Aggregate report and figure regeneration | Yes | Locked/warm-up baseline and subgroup counts; all 2,804 warm-up aggregate records; original quantile and milestone formulas; optional plotting dependencies |
 | Upstream source acquisition/verification | Yes, as a separate utility | Nine official resources with frozen byte sizes and hashes; no downstream reference/role/model reconstruction is implied |
 | Historical warm-up sampling and every candidate test | No | Group orders and per-run candidate-prefix statistics are not distributed; winner statistics are checked, and aggregate summaries are regenerated |
 | Checkpoint-assisted model inference | No | Fine-tuned classifier and meta-model assets are not included, and a public source-to-historical-record mapping has not been released |
@@ -23,6 +23,17 @@ uv run --locked uqrc goemotions \
 The command verifies file and projection-code hashes, then recomputes 35 tests across the four controller prefixes. It does not evaluate later candidates after a failure. Controller states, thresholds, integer counts, selected candidates, and stopping decisions must match exactly; a comparison tolerance applies only to probabilities and derived rates, never to test decisions.
 
 The JSON receipt reports the executed scope and identifies the input manifest hash, reference-core hash, Python and dependency versions. `status: PASS` refers to this verification and arithmetic. It does not authenticate the original predictions or establish the dataset's statistical assumptions. No original private repository or mounted volume is required. The method and aggregate tables run on CPU in the base environment.
+
+## Render the figures
+
+```sh
+uv sync --locked --group figures
+uv run --locked --group figures python experiments/goemotions/scripts/plot_results.py \
+  --evidence experiments/goemotions/evidence \
+  --output results/goemotions/figures
+```
+
+The optional script runs the same evidence replay before producing SVG/PNG charts of the locked automation–error trade-off and warm-up sample-size summaries. It writes exact input values and provenance to `plot_data.json`. It does not infer model outputs, test the unexecuted candidate tail, or reconstruct warm-up sample orders. The [figure guide](report/figures/README.md) supplies captions, display conventions, and reuse attribution.
 
 ## Obtain upstream data separately
 

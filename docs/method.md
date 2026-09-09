@@ -27,9 +27,9 @@ Each invocation at a different risk budget has its own confidence statement. Fou
 
 The historical numerical core is preserved byte for byte under `_reference/`. The public interface validates binary outcomes **before** integer conversion, rejects invalid scores, thresholds, counts, and probabilities, and delegates valid inputs to that core. Native and NumPy integer counts are accepted, excluding booleans. Zero selection and empty candidate sequences produce review-all behavior. Invalid inputs fail even when a numerical shortcut would otherwise return early.
 
-The historical nearest-rank development helper uses 5% increments through 95%, then 97.5% and 99%, deduplicates score ties, and includes a zero boundary. Development ordering drops candidates selecting no development observations. This helper is not the planned GoEmotions MB1 family's frozen definition.
+The historical nearest-rank development helper uses 5% increments through 95%, then 97.5% and 99%, deduplicates score ties, and includes a zero boundary. Development ordering drops candidates selecting no development observations. GoEmotions MB1 instead uses its own frozen family and design-CP ordering, specified in the [study protocol](../experiments/goemotions/protocol.md).
 
-The inherited probability-mass recurrence is used only as a verification oracle over the original bounded fixtures at `alpha = 0.05`. Despite its historical “stable sum” docstring, its initial mass can underflow for larger `n` or `alpha`, so it is not exported as a general numerical API. Additional high-precision direct-sum tests check all four planned risk budgets against SciPy. The Clopper–Pearson cross-check uses a second SciPy API and therefore is not a fully independent library implementation.
+The inherited probability-mass recurrence is used only as a verification oracle over the original bounded fixtures at `alpha = 0.05`. Despite its historical “stable sum” docstring, its initial mass can underflow for larger `n` or `alpha`, so it is not exported as a general numerical API. Additional high-precision direct-sum tests check all four study risk budgets against SciPy. The Clopper–Pearson cross-check uses a second SciPy API and therefore is not a fully independent library implementation.
 
 ## References
 

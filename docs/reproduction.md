@@ -1,6 +1,6 @@
-# Reproducing this foundation
+# Reproducing the methods and study evidence
 
-The generic commands verify the method and run a synthetic illustration. The separate `goemotions` command replays frozen benchmark evidence and regenerates aggregate tables. See the [GoEmotions reproduction contract](../experiments/goemotions/reproduction.md) for that command's scope and limitations.
+Start with the [small walkthrough](../examples/README.md) to inspect the stopping rule, or run `uqrc goemotions` to replay frozen benchmark evidence and regenerate aggregate tables. The optional figure script renders the study charts from verified aggregates. See the [GoEmotions reproduction contract](../experiments/goemotions/reproduction.md) for the distinction between these workflows and historical model reproduction.
 
 ## Environment and commands
 
@@ -8,6 +8,7 @@ Use the root `.python-version` (3.11.13) and `uv.lock`. NumPy and SciPy are pinn
 
 ```sh
 uv sync --locked
+uv run --locked python examples/selected_risk_walkthrough.py
 uv run --locked python -m unittest discover -s tests -v
 uv run --locked uqrc verify --output results/method-verification.json
 uv run --locked uqrc synthetic --config experiments/synthetic/config.toml --output results/synthetic.json
@@ -22,9 +23,26 @@ The synthetic TOML schema contains exactly `schema_version`, `seed`, `developmen
 
 JSON outputs record method identifiers, source integrity, package/Python versions, seeds or config hashes, and the scope executed. Caller-provided output paths are resolved from the caller's working directory. No original workstation, mounted volume, private commit, or dataset identity is needed. Avoid reusing a result filename after a failed run; only a zero exit status indicates a successful new receipt.
 
+## Study tables and figures
+
+```sh
+uv run --locked uqrc goemotions \
+  --evidence experiments/goemotions/evidence \
+  --output results/goemotions/replay.json \
+  --report results/goemotions/tables.md
+uv sync --locked --group figures
+uv run --locked --group figures python experiments/goemotions/scripts/plot_results.py \
+  --evidence experiments/goemotions/evidence \
+  --output results/goemotions/figures
+```
+
+The first command produces a JSON receipt and Markdown tables. The second workflow adds Matplotlib through the optional, locked `figures` group and produces two SVGs, two PNGs, and `plot_data.json`. It replays the evidence before plotting, so it does not trust an arbitrary saved result file. No dataset or model download is involved. The [figure guide](../experiments/goemotions/report/figures/README.md) explains every plotted quantity, omitted point, variability band, and caption.
+
+Expected checks: the receipt reports 35 final candidate tests, 14 unique executed candidates out of the frozen 21, and 2,804 warm-up aggregate records. Its controller counts and stopping positions must agree exactly with the evidence expectations. The regenerated tables should match `experiments/goemotions/report/results.md` byte for byte in the locked environment. Figure numerical inputs retain full precision; displayed percentages are rounded. Image-byte agreement is only claimed for the checked local environment, not across platforms.
+
 ## Independent wheel installation
 
-Install the wheel built under `dist/` into a new virtual environment and run `uqrc verify` from another directory. This tests package resources and imports without an editable source checkout. The source archive also includes the synthetic config, tests, method documentation, and extraction manifest. The wheel includes the method, CLI, and frozen-core hash manifest; source-only tests/configs need the source archive.
+Install the wheel built under `dist/` into a new virtual environment and run `uqrc verify` from another directory. This tests package resources and imports without an editable source checkout. The source archive includes tests, examples, configs, evidence, the plotting script and figures, documentation, and extraction manifests. The wheel includes the method, CLI, GoEmotions replay/report modules, and hash resources; study evidence, examples, and the plotting workflow need the source archive or checkout. Matplotlib is not a base package dependency.
 
 ## Benchmark reproduction
 
