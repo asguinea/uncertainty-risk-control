@@ -1,0 +1,120 @@
+{
+  "files": {
+    "calibration.json": "8b066f89c37147dcd35d82265fa8934e3ad65fee80e6ed0478ac1c89e06fdfb7",
+    "design.json": "7d39d7f47501c9fcba168321a9365398e9576f1bcb074fadb676ecf0221d81e5",
+    "development_history.json": "eee0637abb951fe7466842559fa91d364fff591c5c86fa79658d25426424fcc9",
+    "evaluations.json": "a0cc59708987bb3955ec7a128b62373e379aac1f7fe18c50d6a2fb693cd830d5",
+    "expected.json": "caca63b3458214da7a5e57b2047a7e018b0119dc022f3808f6b5a17efc0043fc",
+    "study.json": "064f1e70926edc48bb1e350d6097a174b7ed9775f4c3d49a509767ab0bf2024d",
+    "warmup_runs.json": "ef0525336cb9aae54a79249d9be9515fc82c1e3093b8add5dd0104d4375d9e35"
+  },
+  "interpretation": "Source hashes are integrity references; the private source files and historical timing are not independently authenticated by this public bundle.",
+  "projection_code": {
+    "src/uncertainty_risk_control/count_replay.py": "f2abeebfe5781e2a83721d22fa5ab647e29bb72d8d7303531d7478b19f608fcb",
+    "src/uncertainty_risk_control/goemotions/projection.py": "85587046f374a5a58e0c5c293eefac158edd6de22964094a78fae1226d9d28f5"
+  },
+  "schema_version": 1,
+  "source_artifact_hashes": [
+    {
+      "role": "mb1_aggregate_manifest",
+      "sha256": "100550343ff14f6d6fd128ffb92b2098af90dc5ec654fe36f964c1e0f519c118"
+    },
+    {
+      "role": "goemotions_mb1.py",
+      "sha256": "e22161f703cca48e496b0bc7a3569444e5515cfa5b84d7427fdd376bfcddcdd1"
+    },
+    {
+      "role": "goemotions_mb1_common.py",
+      "sha256": "f322da40283ec87094d44b6438f0956fcc915ef8c809e201d064614cec3f2172"
+    },
+    {
+      "role": "freeze_goemotions_d1s_family.py",
+      "sha256": "4966681f6188f11caeb38dbfbac722ca702d0b9c0fc4b1cec4d5c686965ecbb9"
+    },
+    {
+      "role": "goemotions_common.py",
+      "sha256": "49ce88b153de3bd35f7fb23aedb5144c253e9207dd865ca2ab952be3ac7dad8c"
+    },
+    {
+      "role": "goemotions_d1s_common.py",
+      "sha256": "34a31fb76328dfda980f4492c6579fc35171b7851a4ca820ed0e49a10ccd8a87"
+    },
+    {
+      "role": "prepare_goemotions_d1s.py",
+      "sha256": "405455accaf89e4e2f093c15634c5bcb98874517bf888e8dcb11755e3559b9f9"
+    },
+    {
+      "role": "prepare_goemotions_d1.py",
+      "sha256": "8f19df942dc33e606e7f25842cd86dafda5e331348a1e9e650625806e60cf43a"
+    },
+    {
+      "role": "build_goemotions_roles.py",
+      "sha256": "b37a84281a714fba120edcd1a1749ecb7e68c2702cd51429a32fe4bc81cabe93"
+    },
+    {
+      "role": "acquire_goemotions.py",
+      "sha256": "968b619e2fcbb71e5ba4541626dce6a28a5b0af282687ef253a8658f3df7665d"
+    },
+    {
+      "role": "contracts/goemotions_mb1_final_protocol.json",
+      "sha256": "377f1274776cc11ea90ef403897d43c0f03eeba24024673e46b9c1543b2aea51"
+    },
+    {
+      "role": "freeze/multi_budget_final_freeze.json",
+      "sha256": "fdc17193329aea40fbdf620c4b700b0f04065d3a07433cbf9a75b51b850ea7f8"
+    },
+    {
+      "role": "mb1_candidate_family",
+      "sha256": "fdba31fd25a911e6c54cba4a60a7135fc42d30b53fdd991ae8eb9c68f104481c"
+    },
+    {
+      "role": "mb1_fixed_sequence",
+      "sha256": "7ff97ff1ad29edae1b35932a9842ad5cc66b672bb29072c508d95b43ecc7d2c7"
+    },
+    {
+      "role": "controllers/controller_050.json",
+      "sha256": "68ff81ed94eb1016afa57c584b30cb7467ad7d1b95beaac91ac4cb0107e61f60"
+    },
+    {
+      "role": "controllers/controller_100.json",
+      "sha256": "8505a86b6d0e6e0118ff96b2e7174d591d68ca702d44bd28c6c13a995c75720e"
+    },
+    {
+      "role": "controllers/controller_150.json",
+      "sha256": "4d5e21b215996d5c33224cde8347ddd0e2ffb2a63043edb68788a3bd9c10f18b"
+    },
+    {
+      "role": "controllers/controller_200.json",
+      "sha256": "7c4bd725b09e4857f532786d83fa941305ed12cd2dc0a0962d1b4737c405ed5a"
+    },
+    {
+      "role": "frozen_roles",
+      "sha256": "c47bfcb54e72e0d20e9a39a2be578d1594e517188fec04c102c77a3d8769d372"
+    },
+    {
+      "role": "agreed_reference",
+      "sha256": "279a71b4eac68dc2aec561a46fa18b0dd98489cabff4a5e2f1f9b33fa2a4bdb8"
+    },
+    {
+      "role": "base_score_corpus",
+      "sha256": "041649de4723651fe543158412fbc6ba4fce09c0f8c7093b86f0f7e39335165b"
+    },
+    {
+      "role": "meta_score_corpus",
+      "sha256": "cac2b227549c1715005dfb7206e1ecd74f9cc0c7e90a77e0a822786b5fb3ca5b"
+    },
+    {
+      "role": "locked/locked_evaluation.json",
+      "sha256": "99c2a8776e4441c128274710a696a43e569e7fdd2e1e69d7e386cf8fc4252a8b"
+    },
+    {
+      "role": "warmup/multi_budget_warmup_summary.json",
+      "sha256": "52bb1ab62809192cfcd4b7a4078296a7dadd6b485cb4b347c31b628c8a26bcea"
+    },
+    {
+      "role": "warmup/multi_budget_warmup_runs.jsonl",
+      "sha256": "c2036969ef6f8969961b37372097bb44ad79741f7293509594e892c93c2e33a7"
+    }
+  ],
+  "study_id": "GOEMOTIONS_MB1"
+}

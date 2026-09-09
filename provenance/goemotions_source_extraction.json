@@ -1,0 +1,38 @@
+{
+  "files": [
+    {
+      "destination": "src/uncertainty_risk_control/goemotions/features.py",
+      "preserved_function_bodies": [
+        "sigmoid",
+        "feature_names",
+        "feature_vector"
+      ],
+      "sha256": "c57347148f11bf10c87ed12c550074923ad7747446dd3392610388072170efbb",
+      "source_name": "goemotions_d1s_common.py",
+      "source_sha256": "34a31fb76328dfda980f4492c6579fc35171b7851a4ca820ed0e49a10ccd8a87",
+      "transformation": "Extract named pure functions without changing their bodies; replace module header and imports."
+    },
+    {
+      "destination": "src/uncertainty_risk_control/goemotions/_aggregate_reference.py",
+      "preserved_function_bodies": [
+        "quantiles",
+        "threshold_stability",
+        "aggregate_runs",
+        "milestone",
+        "milestones"
+      ],
+      "sha256": "ab3b3c13a0bb37aff5fcc261d6cec8f1169b9c4c9550efe2ccb65403111d569e",
+      "source_name": "goemotions_mb1.py",
+      "source_sha256": "e22161f703cca48e496b0bc7a3569444e5515cfa5b84d7427fdd376bfcddcdd1",
+      "transformation": "Extract named pure functions without changing their bodies; replace module header and imports."
+    },
+    {
+      "destination": "tests/test_goemotions_features.py",
+      "sha256": "8ed52078e0b5ba5d2cb9e099fcf465f346fc5132d9a6b02398b0331d80b21430",
+      "source_name": "test_goemotions_d1s.py",
+      "source_sha256": "fffea188ff8cb3e0246e7a03e695ce34b48f533f74f1a2caf2746f47252d6390",
+      "transformation": "Change package import only; preserve all test bodies."
+    }
+  ],
+  "schema_version": 1
+}

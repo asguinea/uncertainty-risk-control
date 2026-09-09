@@ -1,0 +1,1612 @@
+{
+  "LOCKED_TEST": {
+    "baselines": {
+      "ACCEPT_ALL_TOP_TAGS": {
+        "harmful": 4245,
+        "n": 10853,
+        "selected": 10853
+      },
+      "RAW_CONFIDENCE_GE_0_5": {
+        "harmful": 2301,
+        "n": 10853,
+        "selected": 7711
+      },
+      "RAW_CONFIDENCE_GE_0_8": {
+        "harmful": 350,
+        "n": 10853,
+        "selected": 2686
+      },
+      "RAW_CONFIDENCE_GE_0_9": {
+        "harmful": 48,
+        "n": 10853,
+        "selected": 884
+      },
+      "REVIEW_ALL": {
+        "harmful": 0,
+        "n": 10853,
+        "selected": 0
+      }
+    },
+    "consensus": {
+      "0.05": {
+        "HIGH_CONSENSUS": {
+          "harmful": 1,
+          "n": 2790,
+          "selected": 337
+        },
+        "LOW_CONSENSUS": {
+          "harmful": 0,
+          "n": 2186,
+          "selected": 5
+        },
+        "MEDIUM_CONSENSUS": {
+          "harmful": 9,
+          "n": 5877,
+          "selected": 77
+        }
+      },
+      "0.1": {
+        "HIGH_CONSENSUS": {
+          "harmful": 2,
+          "n": 2790,
+          "selected": 421
+        },
+        "LOW_CONSENSUS": {
+          "harmful": 1,
+          "n": 2186,
+          "selected": 7
+        },
+        "MEDIUM_CONSENSUS": {
+          "harmful": 13,
+          "n": 5877,
+          "selected": 102
+        }
+      },
+      "0.15": {
+        "HIGH_CONSENSUS": {
+          "harmful": 42,
+          "n": 2790,
+          "selected": 1339
+        },
+        "LOW_CONSENSUS": {
+          "harmful": 95,
+          "n": 2186,
+          "selected": 318
+        },
+        "MEDIUM_CONSENSUS": {
+          "harmful": 277,
+          "n": 5877,
+          "selected": 1274
+        }
+      },
+      "0.2": {
+        "HIGH_CONSENSUS": {
+          "harmful": 63,
+          "n": 2790,
+          "selected": 1597
+        },
+        "LOW_CONSENSUS": {
+          "harmful": 167,
+          "n": 2186,
+          "selected": 486
+        },
+        "MEDIUM_CONSENSUS": {
+          "harmful": 453,
+          "n": 5877,
+          "selected": 1809
+        }
+      }
+    },
+    "controllers": {
+      "0.05": {
+        "harmful": 10,
+        "n": 10853,
+        "selected": 419
+      },
+      "0.1": {
+        "harmful": 16,
+        "n": 10853,
+        "selected": 530
+      },
+      "0.15": {
+        "harmful": 414,
+        "n": 10853,
+        "selected": 2931
+      },
+      "0.2": {
+        "harmful": 683,
+        "n": 10853,
+        "selected": 3892
+      }
+    },
+    "emotion_reporting_floor": 30,
+    "n": 10853,
+    "predicted_emotion": {
+      "0.05": {
+        "admiration": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 885,
+          "selected": 0
+        },
+        "amusement": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 609,
+          "selected": 0
+        },
+        "anger": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 497,
+          "selected": 0
+        },
+        "annoyance": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 507,
+          "selected": 0
+        },
+        "approval": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 492,
+          "selected": 0
+        },
+        "caring": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 148,
+          "selected": 0
+        },
+        "confusion": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 133,
+          "selected": 0
+        },
+        "curiosity": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 315,
+          "selected": 0
+        },
+        "desire": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 123,
+          "selected": 0
+        },
+        "disappointment": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 126,
+          "selected": 0
+        },
+        "disapproval": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 522,
+          "selected": 0
+        },
+        "disgust": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 193,
+          "selected": 0
+        },
+        "embarrassment": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 4,
+          "selected": 0
+        },
+        "excitement": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 107,
+          "selected": 0
+        },
+        "fear": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 172,
+          "selected": 0
+        },
+        "gratitude": {
+          "adequate_selected_n": true,
+          "harmful": 10,
+          "n": 648,
+          "selected": 419
+        },
+        "grief": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "joy": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 342,
+          "selected": 0
+        },
+        "love": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 563,
+          "selected": 0
+        },
+        "nervousness": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "neutral": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 3339,
+          "selected": 0
+        },
+        "optimism": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 254,
+          "selected": 0
+        },
+        "pride": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "realization": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 29,
+          "selected": 0
+        },
+        "relief": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "remorse": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 160,
+          "selected": 0
+        },
+        "sadness": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 361,
+          "selected": 0
+        },
+        "surprise": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 324,
+          "selected": 0
+        }
+      },
+      "0.1": {
+        "admiration": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 885,
+          "selected": 0
+        },
+        "amusement": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 609,
+          "selected": 0
+        },
+        "anger": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 497,
+          "selected": 0
+        },
+        "annoyance": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 507,
+          "selected": 0
+        },
+        "approval": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 492,
+          "selected": 0
+        },
+        "caring": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 148,
+          "selected": 0
+        },
+        "confusion": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 133,
+          "selected": 0
+        },
+        "curiosity": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 315,
+          "selected": 0
+        },
+        "desire": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 123,
+          "selected": 0
+        },
+        "disappointment": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 126,
+          "selected": 0
+        },
+        "disapproval": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 522,
+          "selected": 0
+        },
+        "disgust": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 193,
+          "selected": 0
+        },
+        "embarrassment": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 4,
+          "selected": 0
+        },
+        "excitement": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 107,
+          "selected": 10
+        },
+        "fear": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 172,
+          "selected": 0
+        },
+        "gratitude": {
+          "adequate_selected_n": true,
+          "harmful": 16,
+          "n": 648,
+          "selected": 520
+        },
+        "grief": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "joy": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 342,
+          "selected": 0
+        },
+        "love": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 563,
+          "selected": 0
+        },
+        "nervousness": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "neutral": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 3339,
+          "selected": 0
+        },
+        "optimism": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 254,
+          "selected": 0
+        },
+        "pride": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "realization": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 29,
+          "selected": 0
+        },
+        "relief": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "remorse": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 160,
+          "selected": 0
+        },
+        "sadness": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 361,
+          "selected": 0
+        },
+        "surprise": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 324,
+          "selected": 0
+        }
+      },
+      "0.15": {
+        "admiration": {
+          "adequate_selected_n": true,
+          "harmful": 36,
+          "n": 885,
+          "selected": 288
+        },
+        "amusement": {
+          "adequate_selected_n": true,
+          "harmful": 50,
+          "n": 609,
+          "selected": 316
+        },
+        "anger": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 497,
+          "selected": 0
+        },
+        "annoyance": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 507,
+          "selected": 0
+        },
+        "approval": {
+          "adequate_selected_n": true,
+          "harmful": 6,
+          "n": 492,
+          "selected": 44
+        },
+        "caring": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 148,
+          "selected": 27
+        },
+        "confusion": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 133,
+          "selected": 0
+        },
+        "curiosity": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 315,
+          "selected": 10
+        },
+        "desire": {
+          "adequate_selected_n": true,
+          "harmful": 28,
+          "n": 123,
+          "selected": 69
+        },
+        "disappointment": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 126,
+          "selected": 0
+        },
+        "disapproval": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 522,
+          "selected": 6
+        },
+        "disgust": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 193,
+          "selected": 3
+        },
+        "embarrassment": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 4,
+          "selected": 0
+        },
+        "excitement": {
+          "adequate_selected_n": true,
+          "harmful": 11,
+          "n": 107,
+          "selected": 42
+        },
+        "fear": {
+          "adequate_selected_n": true,
+          "harmful": 20,
+          "n": 172,
+          "selected": 98
+        },
+        "gratitude": {
+          "adequate_selected_n": true,
+          "harmful": 39,
+          "n": 648,
+          "selected": 611
+        },
+        "grief": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "joy": {
+          "adequate_selected_n": true,
+          "harmful": 8,
+          "n": 342,
+          "selected": 43
+        },
+        "love": {
+          "adequate_selected_n": true,
+          "harmful": 41,
+          "n": 563,
+          "selected": 318
+        },
+        "nervousness": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "neutral": {
+          "adequate_selected_n": true,
+          "harmful": 121,
+          "n": 3339,
+          "selected": 850
+        },
+        "optimism": {
+          "adequate_selected_n": true,
+          "harmful": 12,
+          "n": 254,
+          "selected": 79
+        },
+        "pride": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "realization": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 29,
+          "selected": 0
+        },
+        "relief": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "remorse": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 160,
+          "selected": 0
+        },
+        "sadness": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 361,
+          "selected": 0
+        },
+        "surprise": {
+          "adequate_selected_n": true,
+          "harmful": 34,
+          "n": 324,
+          "selected": 127
+        }
+      },
+      "0.2": {
+        "admiration": {
+          "adequate_selected_n": true,
+          "harmful": 58,
+          "n": 885,
+          "selected": 404
+        },
+        "amusement": {
+          "adequate_selected_n": true,
+          "harmful": 63,
+          "n": 609,
+          "selected": 367
+        },
+        "anger": {
+          "adequate_selected_n": true,
+          "harmful": 30,
+          "n": 497,
+          "selected": 89
+        },
+        "annoyance": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 507,
+          "selected": 0
+        },
+        "approval": {
+          "adequate_selected_n": true,
+          "harmful": 17,
+          "n": 492,
+          "selected": 70
+        },
+        "caring": {
+          "adequate_selected_n": true,
+          "harmful": 12,
+          "n": 148,
+          "selected": 42
+        },
+        "confusion": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 133,
+          "selected": 0
+        },
+        "curiosity": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 315,
+          "selected": 25
+        },
+        "desire": {
+          "adequate_selected_n": true,
+          "harmful": 31,
+          "n": 123,
+          "selected": 79
+        },
+        "disappointment": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 126,
+          "selected": 4
+        },
+        "disapproval": {
+          "adequate_selected_n": true,
+          "harmful": 15,
+          "n": 522,
+          "selected": 38
+        },
+        "disgust": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 193,
+          "selected": 29
+        },
+        "embarrassment": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 4,
+          "selected": 0
+        },
+        "excitement": {
+          "adequate_selected_n": true,
+          "harmful": 21,
+          "n": 107,
+          "selected": 59
+        },
+        "fear": {
+          "adequate_selected_n": true,
+          "harmful": 28,
+          "n": 172,
+          "selected": 110
+        },
+        "gratitude": {
+          "adequate_selected_n": true,
+          "harmful": 40,
+          "n": 648,
+          "selected": 614
+        },
+        "grief": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "joy": {
+          "adequate_selected_n": true,
+          "harmful": 40,
+          "n": 342,
+          "selected": 134
+        },
+        "love": {
+          "adequate_selected_n": true,
+          "harmful": 55,
+          "n": 563,
+          "selected": 382
+        },
+        "nervousness": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "neutral": {
+          "adequate_selected_n": true,
+          "harmful": 192,
+          "n": 3339,
+          "selected": 1161
+        },
+        "optimism": {
+          "adequate_selected_n": true,
+          "harmful": 18,
+          "n": 254,
+          "selected": 108
+        },
+        "pride": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "realization": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 29,
+          "selected": 1
+        },
+        "relief": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "remorse": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 160,
+          "selected": 0
+        },
+        "sadness": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 361,
+          "selected": 15
+        },
+        "surprise": {
+          "adequate_selected_n": true,
+          "harmful": 49,
+          "n": 324,
+          "selected": 161
+        }
+      }
+    }
+  },
+  "WARMUP_EVALUATION": {
+    "baselines": {
+      "ACCEPT_ALL_TOP_TAGS": {
+        "harmful": 2116,
+        "n": 5426,
+        "selected": 5426
+      },
+      "RAW_CONFIDENCE_GE_0_5": {
+        "harmful": 1171,
+        "n": 5426,
+        "selected": 3884
+      },
+      "RAW_CONFIDENCE_GE_0_8": {
+        "harmful": 177,
+        "n": 5426,
+        "selected": 1348
+      },
+      "RAW_CONFIDENCE_GE_0_9": {
+        "harmful": 24,
+        "n": 5426,
+        "selected": 438
+      },
+      "REVIEW_ALL": {
+        "harmful": 0,
+        "n": 5426,
+        "selected": 0
+      }
+    },
+    "consensus": {
+      "0.05": {
+        "HIGH_CONSENSUS": {
+          "harmful": 2,
+          "n": 1446,
+          "selected": 188
+        },
+        "LOW_CONSENSUS": {
+          "harmful": 0,
+          "n": 1099,
+          "selected": 4
+        },
+        "MEDIUM_CONSENSUS": {
+          "harmful": 4,
+          "n": 2881,
+          "selected": 35
+        }
+      },
+      "0.1": {
+        "HIGH_CONSENSUS": {
+          "harmful": 4,
+          "n": 1446,
+          "selected": 337
+        },
+        "LOW_CONSENSUS": {
+          "harmful": 4,
+          "n": 1099,
+          "selected": 26
+        },
+        "MEDIUM_CONSENSUS": {
+          "harmful": 25,
+          "n": 2881,
+          "selected": 152
+        }
+      },
+      "0.15": {
+        "HIGH_CONSENSUS": {
+          "harmful": 17,
+          "n": 1446,
+          "selected": 594
+        },
+        "LOW_CONSENSUS": {
+          "harmful": 33,
+          "n": 1099,
+          "selected": 118
+        },
+        "MEDIUM_CONSENSUS": {
+          "harmful": 107,
+          "n": 2881,
+          "selected": 518
+        }
+      },
+      "0.2": {
+        "HIGH_CONSENSUS": {
+          "harmful": 34,
+          "n": 1446,
+          "selected": 821
+        },
+        "LOW_CONSENSUS": {
+          "harmful": 89,
+          "n": 1099,
+          "selected": 233
+        },
+        "MEDIUM_CONSENSUS": {
+          "harmful": 213,
+          "n": 2881,
+          "selected": 891
+        }
+      }
+    },
+    "controllers": {
+      "0.05": {
+        "harmful": 6,
+        "n": 5426,
+        "selected": 227
+      },
+      "0.1": {
+        "harmful": 33,
+        "n": 5426,
+        "selected": 515
+      },
+      "0.15": {
+        "harmful": 157,
+        "n": 5426,
+        "selected": 1230
+      },
+      "0.2": {
+        "harmful": 336,
+        "n": 5426,
+        "selected": 1945
+      }
+    },
+    "emotion_reporting_floor": 20,
+    "n": 5426,
+    "predicted_emotion": {
+      "0.05": {
+        "admiration": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 422,
+          "selected": 0
+        },
+        "amusement": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 296,
+          "selected": 0
+        },
+        "anger": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 262,
+          "selected": 0
+        },
+        "annoyance": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 237,
+          "selected": 0
+        },
+        "approval": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 266,
+          "selected": 0
+        },
+        "caring": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 92,
+          "selected": 0
+        },
+        "confusion": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 68,
+          "selected": 0
+        },
+        "curiosity": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 194,
+          "selected": 0
+        },
+        "desire": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 69,
+          "selected": 0
+        },
+        "disappointment": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 65,
+          "selected": 0
+        },
+        "disapproval": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 255,
+          "selected": 0
+        },
+        "disgust": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 81,
+          "selected": 0
+        },
+        "embarrassment": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "excitement": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 52,
+          "selected": 0
+        },
+        "fear": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 67,
+          "selected": 0
+        },
+        "gratitude": {
+          "adequate_selected_n": true,
+          "harmful": 6,
+          "n": 336,
+          "selected": 227
+        },
+        "grief": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "joy": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 176,
+          "selected": 0
+        },
+        "love": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 273,
+          "selected": 0
+        },
+        "nervousness": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "neutral": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 1652,
+          "selected": 0
+        },
+        "optimism": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 126,
+          "selected": 0
+        },
+        "pride": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "realization": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 12,
+          "selected": 0
+        },
+        "relief": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "remorse": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 81,
+          "selected": 0
+        },
+        "sadness": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 173,
+          "selected": 0
+        },
+        "surprise": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 171,
+          "selected": 0
+        }
+      },
+      "0.1": {
+        "admiration": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 422,
+          "selected": 0
+        },
+        "amusement": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 296,
+          "selected": 11
+        },
+        "anger": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 262,
+          "selected": 0
+        },
+        "annoyance": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 237,
+          "selected": 0
+        },
+        "approval": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 266,
+          "selected": 0
+        },
+        "caring": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 92,
+          "selected": 0
+        },
+        "confusion": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 68,
+          "selected": 0
+        },
+        "curiosity": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 194,
+          "selected": 0
+        },
+        "desire": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 69,
+          "selected": 9
+        },
+        "disappointment": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 65,
+          "selected": 0
+        },
+        "disapproval": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 255,
+          "selected": 0
+        },
+        "disgust": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 81,
+          "selected": 0
+        },
+        "embarrassment": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "excitement": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 52,
+          "selected": 19
+        },
+        "fear": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 67,
+          "selected": 16
+        },
+        "gratitude": {
+          "adequate_selected_n": true,
+          "harmful": 17,
+          "n": 336,
+          "selected": 311
+        },
+        "grief": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "joy": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 176,
+          "selected": 0
+        },
+        "love": {
+          "adequate_selected_n": true,
+          "harmful": 0,
+          "n": 273,
+          "selected": 46
+        },
+        "nervousness": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "neutral": {
+          "adequate_selected_n": true,
+          "harmful": 9,
+          "n": 1652,
+          "selected": 101
+        },
+        "optimism": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 126,
+          "selected": 0
+        },
+        "pride": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "realization": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 12,
+          "selected": 0
+        },
+        "relief": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "remorse": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 81,
+          "selected": 0
+        },
+        "sadness": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 173,
+          "selected": 0
+        },
+        "surprise": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 171,
+          "selected": 2
+        }
+      },
+      "0.15": {
+        "admiration": {
+          "adequate_selected_n": true,
+          "harmful": 5,
+          "n": 422,
+          "selected": 90
+        },
+        "amusement": {
+          "adequate_selected_n": true,
+          "harmful": 19,
+          "n": 296,
+          "selected": 137
+        },
+        "anger": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 262,
+          "selected": 0
+        },
+        "annoyance": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 237,
+          "selected": 0
+        },
+        "approval": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 266,
+          "selected": 14
+        },
+        "caring": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 92,
+          "selected": 11
+        },
+        "confusion": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 68,
+          "selected": 0
+        },
+        "curiosity": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 194,
+          "selected": 0
+        },
+        "desire": {
+          "adequate_selected_n": true,
+          "harmful": 10,
+          "n": 69,
+          "selected": 33
+        },
+        "disappointment": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 65,
+          "selected": 0
+        },
+        "disapproval": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 255,
+          "selected": 0
+        },
+        "disgust": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 81,
+          "selected": 0
+        },
+        "embarrassment": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "excitement": {
+          "adequate_selected_n": true,
+          "harmful": 6,
+          "n": 52,
+          "selected": 24
+        },
+        "fear": {
+          "adequate_selected_n": true,
+          "harmful": 6,
+          "n": 67,
+          "selected": 33
+        },
+        "gratitude": {
+          "adequate_selected_n": true,
+          "harmful": 20,
+          "n": 336,
+          "selected": 318
+        },
+        "grief": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "joy": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 176,
+          "selected": 2
+        },
+        "love": {
+          "adequate_selected_n": true,
+          "harmful": 8,
+          "n": 273,
+          "selected": 132
+        },
+        "nervousness": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "neutral": {
+          "adequate_selected_n": true,
+          "harmful": 55,
+          "n": 1652,
+          "selected": 350
+        },
+        "optimism": {
+          "adequate_selected_n": true,
+          "harmful": 5,
+          "n": 126,
+          "selected": 28
+        },
+        "pride": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "realization": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 12,
+          "selected": 0
+        },
+        "relief": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "remorse": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 81,
+          "selected": 0
+        },
+        "sadness": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 173,
+          "selected": 0
+        },
+        "surprise": {
+          "adequate_selected_n": true,
+          "harmful": 19,
+          "n": 171,
+          "selected": 58
+        }
+      },
+      "0.2": {
+        "admiration": {
+          "adequate_selected_n": true,
+          "harmful": 19,
+          "n": 422,
+          "selected": 176
+        },
+        "amusement": {
+          "adequate_selected_n": true,
+          "harmful": 28,
+          "n": 296,
+          "selected": 187
+        },
+        "anger": {
+          "adequate_selected_n": true,
+          "harmful": 16,
+          "n": 262,
+          "selected": 60
+        },
+        "annoyance": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 237,
+          "selected": 1
+        },
+        "approval": {
+          "adequate_selected_n": true,
+          "harmful": 1,
+          "n": 266,
+          "selected": 34
+        },
+        "caring": {
+          "adequate_selected_n": true,
+          "harmful": 10,
+          "n": 92,
+          "selected": 27
+        },
+        "confusion": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 68,
+          "selected": 0
+        },
+        "curiosity": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 194,
+          "selected": 12
+        },
+        "desire": {
+          "adequate_selected_n": true,
+          "harmful": 14,
+          "n": 69,
+          "selected": 40
+        },
+        "disappointment": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 65,
+          "selected": 1
+        },
+        "disapproval": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 255,
+          "selected": 19
+        },
+        "disgust": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 81,
+          "selected": 11
+        },
+        "embarrassment": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "excitement": {
+          "adequate_selected_n": true,
+          "harmful": 8,
+          "n": 52,
+          "selected": 30
+        },
+        "fear": {
+          "adequate_selected_n": true,
+          "harmful": 12,
+          "n": 67,
+          "selected": 45
+        },
+        "gratitude": {
+          "adequate_selected_n": true,
+          "harmful": 24,
+          "n": 336,
+          "selected": 325
+        },
+        "grief": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "joy": {
+          "adequate_selected_n": true,
+          "harmful": 14,
+          "n": 176,
+          "selected": 60
+        },
+        "love": {
+          "adequate_selected_n": true,
+          "harmful": 23,
+          "n": 273,
+          "selected": 189
+        },
+        "nervousness": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "neutral": {
+          "adequate_selected_n": true,
+          "harmful": 111,
+          "n": 1652,
+          "selected": 575
+        },
+        "optimism": {
+          "adequate_selected_n": true,
+          "harmful": 10,
+          "n": 126,
+          "selected": 48
+        },
+        "pride": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "realization": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 12,
+          "selected": 1
+        },
+        "relief": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 0,
+          "selected": 0
+        },
+        "remorse": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 81,
+          "selected": 0
+        },
+        "sadness": {
+          "adequate_selected_n": false,
+          "harmful": null,
+          "n": 173,
+          "selected": 10
+        },
+        "surprise": {
+          "adequate_selected_n": true,
+          "harmful": 33,
+          "n": 171,
+          "selected": 94
+        }
+      }
+    }
+  }
+}

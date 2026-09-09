@@ -1,6 +1,6 @@
 # Reproducing this foundation
 
-The current executable scope is method verification and a synthetic illustration. Neither command replays GoEmotions evidence nor trains or evaluates a benchmark model.
+The generic commands verify the method and run a synthetic illustration. The separate `goemotions` command replays frozen benchmark evidence and regenerates aggregate tables. See the [GoEmotions reproduction contract](../experiments/goemotions/reproduction.md) for that command's scope and limitations.
 
 ## Environment and commands
 
@@ -26,6 +26,6 @@ JSON outputs record method identifiers, source integrity, package/Python version
 
 Install the wheel built under `dist/` into a new virtual environment and run `uqrc verify` from another directory. This tests package resources and imports without an editable source checkout. The source archive also includes the synthetic config, tests, method documentation, and extraction manifest. The wheel includes the method, CLI, and frozen-core hash manifest; source-only tests/configs need the source archive.
 
-## Planned benchmark reproduction
+## Benchmark reproduction
 
-The first planned study has three separate targets: regenerate reports from public aggregate counts; replay the method from frozen sufficient statistics, including first failures; and execute a source-data/model pipeline. These are not interchangeable. Historical training and sampling have unresolved assignment/order dependencies on private identity generation. Publishing a new seed would be a new replication protocol, not exact historical reproduction. Benchmark inputs, evidence exports, and a resolution of this limitation belong to the next implementation batch.
+GoEmotions MB1 supports report regeneration from public counts and final-calibration replay from sufficient statistics, including first failures. It also provides an optional upstream byte-verification/acquisition utility. Historical training and sampling retain unresolved assignment/order dependencies on private identity generation; no source-data/model reproduction command is claimed. Publishing a new seed would define a new replication protocol, not exact historical reproduction.

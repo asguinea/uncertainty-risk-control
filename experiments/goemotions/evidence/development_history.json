@@ -1,0 +1,50 @@
+{
+  "D1": {
+    "alpha": 0.05,
+    "calibration_n": 5427,
+    "delta": 0.05,
+    "first_test": {
+      "cp_upper": 0.06605211786539694,
+      "harmful": 11,
+      "p_value": 0.28909880969035273,
+      "selected": 272,
+      "threshold": 0.0880427360534668
+    },
+    "full_pool_state": "REVIEW_ALL",
+    "status": "DEVELOPMENT_ONLY_REVIEW_ALL"
+  },
+  "D1R": {
+    "alpha": 0.05,
+    "calibration_n": 5427,
+    "delta": 0.05,
+    "first_test": {
+      "cp_upper": 0.05296184574466855,
+      "harmful": 3,
+      "p_value": 0.06702419827024494,
+      "selected": 144,
+      "threshold": 0.07474702596664429
+    },
+    "ordering_used_warmup_calibration": true,
+    "status": "EXPLORATORY_REFINEMENT_STILL_UNSUPPORTED"
+  },
+  "D1S": {
+    "alpha": 0.05,
+    "calibration": {
+      "cp_upper": 0.021772917667370443,
+      "harmful": 1,
+      "n": 5427,
+      "p_value": 0.00019081521618488946,
+      "selected": 216,
+      "threshold": 0.03347426326825264
+    },
+    "delta": 0.05,
+    "evaluation": {
+      "harmful": 6,
+      "n": 5426,
+      "selected": 227
+    },
+    "meta_design_n": 8139,
+    "meta_train_n": 18992,
+    "status": "DEVELOPMENT_ONLY_FORMAL_BUT_VERY_LOW_UTILITY"
+  }
+}

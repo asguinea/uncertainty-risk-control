@@ -1,0 +1,61 @@
+{
+  "publisher": "Google Research",
+  "repository_revision": "041338718b4e8151372fd63677104c65b73a0a4e",
+  "schema_version": 1,
+  "sources": [
+    {
+      "bytes": 14174600,
+      "relative_path": "raw/goemotions_1.csv",
+      "sha256": "cac049036bad5d68d1081f72b65f2cc51e4df82af05e3e22cfa747051cac1af3",
+      "source_url": "https://storage.googleapis.com/gresearch/goemotions/data/full_dataset/goemotions_1.csv"
+    },
+    {
+      "bytes": 14173154,
+      "relative_path": "raw/goemotions_2.csv",
+      "sha256": "f699ecc5aa425c1720c1d02475f1e41815244b680bd75b282eb770d2c76cd84d",
+      "source_url": "https://storage.googleapis.com/gresearch/goemotions/data/full_dataset/goemotions_2.csv"
+    },
+    {
+      "bytes": 14395164,
+      "relative_path": "raw/goemotions_3.csv",
+      "sha256": "467f1e7191af00f2e76cc7f425885c2dc304bea8aff284b10e8c460d22f2e1af",
+      "source_url": "https://storage.googleapis.com/gresearch/goemotions/data/full_dataset/goemotions_3.csv"
+    },
+    {
+      "bytes": 3519053,
+      "relative_path": "official/train.tsv",
+      "sha256": "1c254a142be5c00e80d819b9ae1bbd36d94b2eeb8f4b1271846508d57e57d9c5",
+      "source_url": "https://raw.githubusercontent.com/google-research/google-research/041338718b4e8151372fd63677104c65b73a0a4e/goemotions/data/train.tsv"
+    },
+    {
+      "bytes": 439059,
+      "relative_path": "official/dev.tsv",
+      "sha256": "575489c079c9de1097062a01738f998590d6b7ead66dd1c9fd1d2ba01fd8bc62",
+      "source_url": "https://raw.githubusercontent.com/google-research/google-research/041338718b4e8151372fd63677104c65b73a0a4e/goemotions/data/dev.tsv"
+    },
+    {
+      "bytes": 436706,
+      "relative_path": "official/test.tsv",
+      "sha256": "0587b2dd8b27b97352adbfc3fb083d46005c8946657fdc2b1ca8b1cc7f1f8be4",
+      "source_url": "https://raw.githubusercontent.com/google-research/google-research/041338718b4e8151372fd63677104c65b73a0a4e/goemotions/data/test.tsv"
+    },
+    {
+      "bytes": 248,
+      "relative_path": "official/emotions.txt",
+      "sha256": "45c3ef86782d2a4d7fedcd6d8c111aa0d0e94720689bd164fac94fefb4495a89",
+      "source_url": "https://raw.githubusercontent.com/google-research/google-research/041338718b4e8151372fd63677104c65b73a0a4e/goemotions/data/emotions.txt"
+    },
+    {
+      "bytes": 7968,
+      "relative_path": "metadata/README.md",
+      "sha256": "c882c69be9f400129bce8535319606434481a085be9c20263930670890e171a7",
+      "source_url": "https://raw.githubusercontent.com/google-research/google-research/041338718b4e8151372fd63677104c65b73a0a4e/goemotions/README.md"
+    },
+    {
+      "bytes": 11358,
+      "relative_path": "metadata/google_research_LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source_url": "https://raw.githubusercontent.com/google-research/google-research/041338718b4e8151372fd63677104c65b73a0a4e/LICENSE"
+    }
+  ]
+}

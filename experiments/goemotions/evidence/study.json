@@ -1,0 +1,66 @@
+{
+  "available_reproduction": [
+    "frozen_final_calibration_method_replay",
+    "aggregate_rate_and_warmup_summary_regeneration"
+  ],
+  "budgets": [
+    0.05,
+    0.1,
+    0.15,
+    0.2
+  ],
+  "calibration_confidence": "delta 0.05 separately for each of four risk budgets",
+  "checkpoint_inference_available": false,
+  "delta": 0.05,
+  "emotions": [
+    "admiration",
+    "amusement",
+    "anger",
+    "annoyance",
+    "approval",
+    "caring",
+    "confusion",
+    "curiosity",
+    "desire",
+    "disappointment",
+    "disapproval",
+    "disgust",
+    "embarrassment",
+    "excitement",
+    "fear",
+    "gratitude",
+    "grief",
+    "joy",
+    "love",
+    "nervousness",
+    "optimism",
+    "pride",
+    "realization",
+    "relief",
+    "remorse",
+    "sadness",
+    "surprise",
+    "neutral"
+  ],
+  "historical_freeze_record": {
+    "all_four_before_locked": true,
+    "locked_outcomes_used_at_freeze": 0,
+    "post_locked_adaptation": 0
+  },
+  "historical_retraining_available": false,
+  "locked_role_is_official_test_split": false,
+  "mistake": "predicted top tag is absent from the agreed-label set",
+  "prediction": "top sigmoid-probability label from frozen 28-output RoBERTa",
+  "reference": "all emotion labels supported by at least two recorded raters",
+  "risk_score": "frozen logistic top-tag error-risk model; 97 probability-derived features",
+  "roles": {
+    "FINAL_CALIBRATION": 5426,
+    "LOCKED_TEST": 10853,
+    "MODEL_DEVELOPMENT": 27131,
+    "WARMUP_CALIBRATION": 5427,
+    "WARMUP_EVALUATION": 5426
+  },
+  "schema_version": 1,
+  "study_id": "GOEMOTIONS_MB1",
+  "upstream_revision": "041338718b4e8151372fd63677104c65b73a0a4e"
+}

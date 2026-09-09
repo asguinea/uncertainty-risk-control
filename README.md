@@ -2,7 +2,7 @@
 
 Research on selective prediction: deciding when to accept a model output and when to send it for review, using a statistical bound on the error among accepted outputs.
 
-**Status: local research foundation, version `0.1.0.dev0`.** This snapshot contains an exact-binomial fixed-sequence method, synthetic verification, and an installable Python package. The first planned benchmark study is GoEmotions; its evidence and reproduction pipeline are not included yet. No benchmark result is claimed by the synthetic examples.
+**Status: local research snapshot, version `0.1.0.dev0`.** This repository contains an exact-binomial fixed-sequence method, synthetic verification, and [GoEmotions MB1](experiments/goemotions/README.md): executable replay of frozen final-calibration evidence and regeneration of benchmark aggregate tables. Historical model retraining and checkpoint inference are not included; the [reproduction scope](experiments/goemotions/reproduction.md) explains why. Synthetic illustrations remain separate from benchmark evidence.
 
 ## Run the foundation
 
@@ -13,6 +13,7 @@ uv sync --locked
 uv run --locked python -m unittest discover -s tests -v
 uv run --locked uqrc verify --output results/method-verification.json
 uv run --locked uqrc synthetic --config experiments/synthetic/config.toml --output results/synthetic.json
+uv run --locked uqrc goemotions --evidence experiments/goemotions/evidence --output results/goemotions/replay.json --report results/goemotions/tables.md
 ```
 
 Verification includes numerical fixtures and five synthetic Monte Carlo scenarios, with 30,000 trials each. It requires no dataset, trained model, GPU, product checkout, or credentials. The synthetic illustration uses separate development and calibration draws, records the frozen candidate order, and writes aggregate results. Output paths are supplied by the caller; generated results are ignored by Git.
@@ -45,4 +46,4 @@ Maintainer: Alejandro Sanchez Guinea. This research was developed in connection 
 
 The contribution here is the implementation, protocol, verification, and experimental investigation. Exact binomial inference and [Learn then Test](https://arxiv.org/abs/2110.01052) are existing statistical methods. See [CITATION.cff](CITATION.cff) for this software's citation metadata and [method references](docs/method.md#references) for the underlying work.
 
-Original material is provided under [Apache-2.0](LICENSE), subject to [license scope](LICENSE_SCOPE.md) and [third-party notices](THIRD_PARTY_NOTICES.md). No dataset, model weights, or underlying social-media content is licensed or distributed by this snapshot.
+Original material is provided under [Apache-2.0](LICENSE), subject to [license scope](LICENSE_SCOPE.md) and [third-party notices](THIRD_PARTY_NOTICES.md). This snapshot distributes projected aggregate evidence, not raw comments, row-level datasets, or model weights. It does not license underlying social-media content.

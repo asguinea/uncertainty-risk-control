@@ -7,7 +7,7 @@ authors:
     given-names: "Alejandro"
 version: "0.1.0.dev0"
 license: Apache-2.0
-abstract: "An exact-binomial selected-risk method, synthetic verification, and a foundation for reproducible selective-prediction research."
+abstract: "An exact-binomial selected-risk method, synthetic verification, and frozen-evidence replay with aggregate report regeneration for GoEmotions MB1."
 keywords:
   - uncertainty quantification
   - selective prediction
