@@ -20,6 +20,8 @@ The first study, [GoEmotions MB1](experiments/goemotions/README.md), turns a fro
 
 **Status: research snapshot, `0.1.0.dev0`; no public release yet.** The runnable benchmark scope is final-calibration replay and aggregate regeneration. Full historical training, checkpoint inference, and warm-up sampling/prefix reproduction are unavailable. The [reproduction contract](experiments/goemotions/reproduction.md) states the missing inputs. Synthetic examples are labeled separately from benchmark results.
 
+The [Research checks workflow](https://github.com/asguinea/uncertainty-risk-control/actions/workflows/research.yml) checks isolated wheel installation, numerical verification, evidence replay, figures, and distribution history. See [verification scope and local commands](docs/verification.md). Repository access remains private during release preparation.
+
 ## Quick start
 
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then run from the repository root. The reference environment is Python 3.11.13 with locked dependencies.

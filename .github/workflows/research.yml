@@ -1,0 +1,74 @@
+name: Research checks
+
+on:
+  push:
+    branches: [main, 'codex/**']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: research-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  reproduce:
+    name: Reproduce (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, macos-15, windows-2025]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    env:
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78 # v7
+        with:
+          version: '0.11.16'
+          enable-cache: false
+      - name: Check distribution and complete reachable history
+        run: uv run --locked python scripts/check_distribution.py --history --output results/distribution.json
+      - name: Reproduce from isolated wheel and source archive
+        run: uv run --locked --group figures python scripts/verify_reproduction.py --output results/ci
+      - name: Retain only research receipts and regenerated figures
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: research-${{ matrix.os }}
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            results/distribution.json
+            results/ci/checks.json
+            results/ci/verification.json
+            results/ci/replay.json
+            results/ci/synthetic.json
+            results/ci/tables.md
+            results/ci/figures/*.json
+            results/ci/figures/*.svg
+            results/ci/figures/*.png
+
+  secrets:
+    name: Scan complete history
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install checksum-pinned Gitleaks
+        shell: bash
+        run: |
+          curl --fail --location --silent --show-error --output "$RUNNER_TEMP/gitleaks.tar.gz" https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz
+          printf '%s  %s\n' '551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb' "$RUNNER_TEMP/gitleaks.tar.gz" | sha256sum --check
+          tar -xzf "$RUNNER_TEMP/gitleaks.tar.gz" -C "$RUNNER_TEMP" gitleaks
+      - name: Scan with default rules and redacted output
+        shell: bash
+        run: '"$RUNNER_TEMP/gitleaks" git --redact=100 --no-banner --log-opts="--all --full-history" .'

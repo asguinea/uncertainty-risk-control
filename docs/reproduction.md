@@ -42,6 +42,8 @@ Expected checks: the receipt reports 35 final candidate tests, 14 unique execute
 
 ## Independent wheel installation
 
+The [automated verification workflow](verification.md) performs a fresh wheel/source-archive check on its declared Linux, macOS, and Windows runners. Its receipts distinguish exact scientific comparisons from platform-dependent text line endings and image rendering.
+
 Install the wheel built under `dist/` into a new virtual environment and run `uqrc verify` from another directory. This tests package resources and imports without an editable source checkout. The source archive includes tests, examples, configs, evidence, the plotting script and figures, documentation, and extraction manifests. The wheel includes the method, CLI, GoEmotions replay/report modules, and hash resources; study evidence, examples, and the plotting workflow need the source archive or checkout. Matplotlib is not a base package dependency.
 
 ## Benchmark reproduction
