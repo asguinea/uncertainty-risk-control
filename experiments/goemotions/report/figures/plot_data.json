@@ -22,7 +22,7 @@
     "numpy": "2.4.6",
     "python": "3.11.13",
     "scipy": "1.17.1",
-    "uncertainty-risk-control": "0.1.0.dev0"
+    "uncertainty-risk-control": "0.1.0"
   },
   "evidence_manifest_sha256": "239244a8539c73e72a497a70a2574dc24ac7513767e8e9617de39f8c5fb676f7",
   "generator_sha256": "ed2b67ceb7da98cf05c26a40514d8bf273e263f2e517942c3417cc5e68074aa8",

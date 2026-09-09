@@ -6,7 +6,9 @@ repository-code: "https://github.com/asguinea/uncertainty-risk-control"
 authors:
   - family-names: "Sanchez Guinea"
     given-names: "Alejandro"
-version: "0.1.0.dev0"
+version: "0.1.0"
+date-released: "2026-09-09"
+url: "https://github.com/asguinea/uncertainty-risk-control/releases/tag/v0.1.0"
 license: Apache-2.0
 abstract: "An exact-binomial selected-risk method, synthetic verification, and frozen-evidence replay with reproducible aggregate tables and figures for GoEmotions MB1."
 keywords:

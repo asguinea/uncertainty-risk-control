@@ -1,6 +1,6 @@
 # Portfolio and article copy
 
-These are reusable drafts for a personal portfolio, EyeTrustAI research page, or an article introduction. They describe the implemented evidence-replay scope. Before publishing an article, link the exact reviewed repository release and replace the development-version citation with that release's metadata.
+These are reusable drafts for a personal portfolio, EyeTrustAI research page, or an article introduction. They describe the implemented evidence-replay scope. For this first study, link the [v0.1.0 release](https://github.com/asguinea/uncertainty-risk-control/releases/tag/v0.1.0) and use its citation metadata. That versioned link identifies the evidence discussed here.
 
 ## Portfolio card
 

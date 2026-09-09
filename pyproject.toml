@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "uncertainty-risk-control"
-version = "0.1.0.dev0"
+version = "0.1.0"
 description = "Research methods and reproducible studies of selective prediction and risk control"
 readme = "README.md"
 requires-python = ">=3.11"
