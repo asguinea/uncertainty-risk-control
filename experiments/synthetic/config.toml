@@ -1,0 +1,7 @@
+# Synthetic illustration; these are not benchmark measurements.
+schema_version = 1
+seed = 1729
+development_n = 1000
+calibration_n = 2000
+alpha = 0.05
+delta = 0.05

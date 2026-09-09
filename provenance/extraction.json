@@ -1,0 +1,36 @@
+{
+  "files": [
+    {
+      "destination": "src/uncertainty_risk_control/_reference/selected_risk_v1.py",
+      "extracted_sha256": "5f74c71232a4a8ac938da792ea10f003b008f4bec3a1eede58d29a9cd3d88266",
+      "source_name": "humaid_selected_risk.py",
+      "source_sha256": "5f74c71232a4a8ac938da792ea10f003b008f4bec3a1eede58d29a9cd3d88266",
+      "transformation": "Byte-for-byte copy; public input validation is a separate module."
+    },
+    {
+      "destination": "tests/test_reference_fixtures.py",
+      "extracted_sha256": "6e190c3e03a409c803da5ec27ec60ed0e7d80be4a8db461481c8237ae9731c09",
+      "source_name": "test_humaid_d1_selected_risk.py",
+      "source_sha256": "a04049a4e3df7d9b021b4446913044179be6639e29c7854d6b5a56e84ecf7a06",
+      "transformation": "Adapt imports and module description; preserve original test bodies."
+    },
+    {
+      "destination": "src/uncertainty_risk_control/verification.py",
+      "extracted_sha256": "aaf6fb6eae72d06ed86afe844e70c5aa0e1a4baf3bafebc7564ce64fd1f00818",
+      "source_name": "verify_selected_risk_method.py",
+      "source_sha256": "1b781518f3068974b81c1848f5e869ee4bee3fd3af0d800165469a8f7ea14393",
+      "transformation": "Adapt imports; remove original main and unused CLI imports; add an actual equal-count threshold tie assertion. Numerical and Monte Carlo function bodies, constants and scenarios otherwise unchanged."
+    }
+  ],
+  "method_alias": {
+    "original": "HUMAID_EXACT_BINOMIAL_SELECTED_RISK_LTT_V1",
+    "public": "EXACT_BINOMIAL_SELECTED_RISK_LTT_V1"
+  },
+  "origin": "EyeTrustAI research validation program",
+  "schema_version": 1,
+  "scope": "generic method and synthetic fixtures only",
+  "sequence_alias": {
+    "original": "HUMAID_SELECTED_RISK_FIXED_SEQUENCE_V1",
+    "public": "SELECTED_RISK_FIXED_SEQUENCE_V1"
+  }
+}

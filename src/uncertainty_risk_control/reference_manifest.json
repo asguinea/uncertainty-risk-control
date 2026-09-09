@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "source_name": "humaid_selected_risk.py",
+  "packaged_path": "_reference/selected_risk_v1.py",
+  "source_sha256": "5f74c71232a4a8ac938da792ea10f003b008f4bec3a1eede58d29a9cd3d88266",
+  "transformation": "byte-for-byte copy",
+  "legacy_method_id": "HUMAID_EXACT_BINOMIAL_SELECTED_RISK_LTT_V1",
+  "public_method_id": "EXACT_BINOMIAL_SELECTED_RISK_LTT_V1"
+}
