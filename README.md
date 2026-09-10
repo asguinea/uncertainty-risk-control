@@ -6,7 +6,7 @@ Research on uncertainty quantification for **emotion tagging, sentiment classifi
 
 ![Three social media applications: GoEmotions emotion tagging, HumAID crisis triage, and TweetEval sentiment classification, each with a distinct action and error reference.](docs/figures/study_map.svg)
 
-**Version status:** this checkout prepares the **v0.2.0 release candidate**. The published [v0.1.0 release](https://github.com/asguinea/risk-controlled-social-media-analysis/releases/tag/v0.1.0) contains GoEmotions only and remains unchanged. See the [candidate notes](docs/releases/v0.2.0.md) for the expansion and remaining publication checks.
+**Release: [v0.2.0](https://github.com/asguinea/risk-controlled-social-media-analysis/releases/tag/v0.2.0).** This version adds HumAID and TweetEval Sentiment to the unchanged GoEmotions evidence. See the [release notes](docs/releases/v0.2.0.md) for downloads, verification and versioned reproduction. The earlier [v0.1.0 release](https://github.com/asguinea/risk-controlled-social-media-analysis/releases/tag/v0.1.0) remains available.
 
 ## Explore the studies
 
@@ -20,9 +20,9 @@ These are distinct tasks and references. An emotion error is an unsupported tag,
 
 ## Reproduce the evidence
 
-The candidate replays **86 executed final-calibration tests** and regenerates summaries from **6,810 warm-up aggregate records**. Those totals describe the reproduction inventory; they do not pool study performance. All three workflows run without datasets, model weights, a GPU, credentials, or an EyeTrustAI product checkout.
+The release replays **86 executed final-calibration tests** and regenerates summaries from **6,810 warm-up aggregate records**. Those totals describe the reproduction inventory; they do not pool study performance. All three workflows run without datasets, model weights, a GPU, credentials, or an EyeTrustAI product checkout.
 
-Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then run from this checkout or its candidate source archive:
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then run from this checkout or the v0.2.0 source archive:
 
 ```sh
 uv sync --locked
@@ -55,6 +55,6 @@ Maintained by **Alejandro Sanchez Guinea**, owner of **EyeTrustAI**, where the u
 
 A planned EyeTrustAI companion repository will connect immutable research releases to product implementations and validation requirements. It will disclose shared ownership and evidence; the same benchmark does not become an independent replication or establish product readiness.
 
-Use [CITATION.cff](CITATION.cff) and cite the underlying methods, datasets, and models applicable to your use. The candidate's [portfolio and article drafts](docs/portfolio.md) include figure links and precise wording for later publication.
+Use [CITATION.cff](CITATION.cff) and cite the underlying methods, datasets, and models applicable to your use. The [portfolio and article drafts](docs/portfolio.md) include figure links and precise wording for later publication.
 
 Original included material is under [Apache-2.0](LICENSE), with [license scope](LICENSE_SCOPE.md) and [third-party notices](THIRD_PARTY_NOTICES.md). Published study assets are aggregate projections, code, documentation, and derived figures. Source posts, row-level records, identities, model weights, and product runtime are excluded.

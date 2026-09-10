@@ -1,6 +1,6 @@
 # HumAID reproduction contract
 
-**Available in this local v0.2.0 candidate:** final-calibration sufficient-statistics replay and aggregate regeneration for the completed D1/D2/D3 humanitarian-research sequence. The immutable v0.1.0 tag predates this addition.
+**Available in v0.2.0:** final-calibration sufficient-statistics replay and aggregate regeneration for the completed D1/D2/D3 humanitarian-research sequence. The immutable v0.1.0 tag predates this addition.
 
 ```sh
 uv sync --locked

@@ -4,7 +4,7 @@
 
 The study accepts a model's negative, neutral or positive tag only when its uncertainty score is below a calibrated threshold. An error means the accepted tag differs from the benchmark's released human reference. This is a study of selective prediction and review workload, not an assertion of objective sentiment, customer intent or factual truth.
 
-**Included in the local v0.2.0 release candidate.** The published v0.1.0 release contains GoEmotions only and remains unchanged. See the [candidate notes](../../docs/releases/v0.2.0.md).
+**Included in v0.2.0.** The published v0.1.0 release contains GoEmotions only and remains unchanged. See the [release notes](../../docs/releases/v0.2.0.md).
 
 | Risk budget | Locked automation | Wrong accepted / accepted | Observed selected error |
 | --- | ---: | ---: | ---: |

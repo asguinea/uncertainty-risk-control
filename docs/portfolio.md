@@ -1,6 +1,6 @@
 # Portfolio and article drafts
 
-These drafts accompany the local v0.2.0 candidate. They have not been posted to a website, EyeTrustAI page, Substack or Medium. Link the [repository](https://github.com/asguinea/risk-controlled-social-media-analysis) while discussing work in progress; once v0.2.0 is published, replace that with the verified immutable release link and finalized citation metadata. The existing [v0.1.0 release](https://github.com/asguinea/risk-controlled-social-media-analysis/releases/tag/v0.1.0) supports GoEmotions only.
+These drafts accompany [v0.2.0](https://github.com/asguinea/risk-controlled-social-media-analysis/releases/tag/v0.2.0). They have not been posted to a website, EyeTrustAI page, Substack or Medium. Use the [repository](https://github.com/asguinea/risk-controlled-social-media-analysis) as the project link and the versioned release as the reproducibility reference. The earlier [v0.1.0 release](https://github.com/asguinea/risk-controlled-social-media-analysis/releases/tag/v0.1.0) supports GoEmotions only.
 
 ## Personal portfolio card
 

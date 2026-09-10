@@ -1,10 +1,17 @@
 # Reproducing the methods and study evidence
 
-The v0.2.0 candidate supports GoEmotions, HumAID and TweetEval Sentiment. Each study replays executed final-calibration tests and regenerates aggregate tables. Plotting reads the same verified public evidence. The [small walkthrough](../examples/README.md) introduces the shared method. See the [candidate notes](releases/v0.2.0.md) for release status.
+The v0.2.0 release supports GoEmotions, HumAID and TweetEval Sentiment. Each study replays executed final-calibration tests and regenerates aggregate tables. Plotting reads the same verified public evidence. The [small walkthrough](../examples/README.md) introduces the shared method. See the [release notes](releases/v0.2.0.md) for release status.
 
 The GitHub repository is named `risk-controlled-social-media-analysis`. For compatibility, the package remains `uncertainty-risk-control`, the import remains `uncertainty_risk_control`, and the CLI remains `uqrc`. No PyPI upload is claimed.
 
 ## Environment and commands
+
+For versioned reproduction, download the v0.2.0 source archive from the [release](https://github.com/asguinea/risk-controlled-social-media-analysis/releases/tag/v0.2.0), or clone the tag:
+
+```sh
+git clone --branch v0.2.0 https://github.com/asguinea/risk-controlled-social-media-analysis.git
+cd risk-controlled-social-media-analysis
+```
 
 Use the root `.python-version` (3.11.13) and `uv.lock`. NumPy and SciPy are pinned to the original method environment; the build backend is also pinned. The lock uses public PyPI URLs and hashes. An initial installation needs internet access or a populated package cache; the installed commands themselves need no network. The package declares Python 3.11 or newer, while the acceptance environment is Python 3.11.13 on macOS arm64. Other environments need their own verification.
 
@@ -63,6 +70,6 @@ Install the wheel built under `dist/` into a new virtual environment and run `uq
 
 ## Benchmark reproduction
 
-All three studies support aggregate regeneration and executed final-prefix replay only. The per-study contracts describe historical source assignment and join limitations. HumAID and TweetEval require no source acquisition utility for these workflows. The candidate adds no training, inference, new score fitting, threshold selection, or Negative N1/N2 experiment.
+All three studies support aggregate regeneration and executed final-prefix replay only. The per-study contracts describe historical source assignment and join limitations. HumAID and TweetEval require no source acquisition utility for these workflows. This release adds no training, inference, new score fitting, threshold selection, or Negative N1/N2 experiment.
 
 GoEmotions MB1 supports report regeneration from public counts and final-calibration replay from sufficient statistics, including first failures. It also provides an optional upstream byte-verification/acquisition utility. Historical training and sampling retain unresolved assignment/order dependencies on private identity generation; no source-data/model reproduction command is claimed. Publishing a new seed would define a new replication protocol, not exact historical reproduction.

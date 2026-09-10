@@ -16,10 +16,10 @@ The GoEmotions [study provenance](../experiments/goemotions/provenance.md) separ
 
 The local [HumAID expansion provenance](../experiments/humaid/provenance.md) records four extracted aggregation functions, 12 source trace tests, four target tests projected from the frozen final-calibration inputs, and 1,202 warm-up aggregate records. It reuses the published numerical core and count API. Its internal input-location adapter remains outside the research distribution.
 
-The local [TweetEval Sentiment provenance](../experiments/tweeteval-sentiment/provenance.md) records the projection of 14 final candidate-count rows, parity across 35 tests with the original numerical adapter, and preservation of historical aggregation for 2,804 warm-up records. The public method engine remains shared. The original identity map/key and source-label join stay outside the public distribution.
+The [TweetEval Sentiment provenance](../experiments/tweeteval-sentiment/provenance.md) records the projection of 14 final candidate-count rows, parity across 35 tests with the original numerical adapter, and preservation of historical aggregation for 2,804 warm-up records. The public method engine remains shared. The original identity map/key and source-label join stay outside the public distribution.
 
-## v0.2.0 candidate presentation
+## v0.2.0 presentation
 
 The repository is now named `risk-controlled-social-media-analysis`; the Python distribution, import and CLI names remain stable. The presentation adds a [three-study note](social-media-research.md), figure guides, and [a generator](../scripts/plot_social_media_studies.py) that consumes only verified public aggregate evidence. Each new figure JSON records the generator SHA-256, evidence identity and environment.
 
-The expansion preserves the scientific implementation and all existing evidence bundles, report tables, and original GoEmotions figures and generator. It adds no model fitting, source-data acquisition, threshold search, historical artifact modification or new evaluation. The v0.1.0 release remains immutable. The [candidate notes](releases/v0.2.0.md) distinguish local preparation from the later public release.
+The expansion preserves the scientific implementation and all existing evidence bundles, report tables, and original GoEmotions figures and generator. It adds no model fitting, source-data acquisition, threshold search, historical artifact modification or new evaluation. The v0.1.0 release remains immutable. The [release notes](releases/v0.2.0.md) describe the versioned artifacts and verification record.

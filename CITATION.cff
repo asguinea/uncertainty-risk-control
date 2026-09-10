@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "This checkout is the v0.2.0 release candidate. Cite the exact commit until release, and cite the underlying methods and datasets used."
+message: "If you use this software, cite this version and the underlying methods, datasets and models used."
 type: software
 title: "Uncertainty and Risk Control for Social Media Analysis"
 repository-code: "https://github.com/asguinea/risk-controlled-social-media-analysis"
@@ -7,7 +7,8 @@ authors:
   - family-names: "Sanchez Guinea"
     given-names: "Alejandro"
 version: "0.2.0"
-url: "https://github.com/asguinea/risk-controlled-social-media-analysis"
+date-released: "2026-09-10"
+url: "https://github.com/asguinea/risk-controlled-social-media-analysis/releases/tag/v0.2.0"
 license: Apache-2.0
 abstract: "Research on uncertainty quantification for emotion tagging, crisis-post deprioritization, and sentiment classification. Includes exact-binomial selected-risk calibration, synthetic verification, frozen-evidence replay for GoEmotions, HumAID and TweetEval Sentiment, and reproducible aggregate tables and figures."
 keywords:

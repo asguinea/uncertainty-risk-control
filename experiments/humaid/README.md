@@ -4,7 +4,7 @@
 
 This humanitarian-research study investigates uncertainty through a concrete action: automatically deprioritizing a post whose score suggests it lacks a priority signal. A harmful selection is a deprioritized post carrying one of the study's seven priority categories. The reference is HumAID's released human-agreed category, not verified incident truth.
 
-**Included in the local v0.2.0 release candidate.** The published v0.1.0 release contains GoEmotions only and remains unchanged. See the [candidate notes](../../docs/releases/v0.2.0.md).
+**Included in v0.2.0.** The published v0.1.0 release contains GoEmotions only and remains unchanged. See the [release notes](../../docs/releases/v0.2.0.md).
 
 The primary source policy automates 13.88% of 9,559 locked posts, with 3.39% priority contamination among selected posts. The source study retains its 2.5%, 5% and 10% risk budgets. The 2019 series uses the same frozen scorer, observes source-policy transfer on a development role, and separately calibrates and evaluates a target policy. Its locally calibrated locked result is 18.10% automation and 2.87% selected error. These results use different populations; their difference does not measure a causal benefit from recalibration.
 

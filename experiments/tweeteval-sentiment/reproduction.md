@@ -1,6 +1,6 @@
 # TweetEval Sentiment reproduction contract
 
-**Available in this local v0.2.0 candidate:** frozen D1/D2 final sufficient-statistics replay and aggregate regeneration. The immutable v0.1.0 tag predates this study addition.
+**Available in v0.2.0:** frozen D1/D2 final sufficient-statistics replay and aggregate regeneration. The immutable v0.1.0 tag predates this study addition.
 
 ```sh
 uv sync --locked
