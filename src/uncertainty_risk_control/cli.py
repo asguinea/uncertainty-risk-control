@@ -20,11 +20,14 @@ def main() -> None:
     goemotions = commands.add_parser("goemotions", help="replay frozen GoEmotions MB1 evidence and regenerate aggregates")
     goemotions.add_argument("--evidence", type=Path, required=True)
     goemotions.add_argument("--report", type=Path, help="write the regenerated Markdown research tables")
+    humaid = commands.add_parser("humaid", help="replay frozen HumAID source/target evidence and regenerate aggregates")
+    humaid.add_argument("--evidence", type=Path, required=True)
+    humaid.add_argument("--report", type=Path, help="write the regenerated Markdown research tables")
     sources = commands.add_parser("goemotions-sources", help="verify reader-side upstream files; optionally download them")
     sources.add_argument("--inputs", type=Path, required=True)
     sources.add_argument("--directory", type=Path, required=True)
     sources.add_argument("--download", action="store_true", help="download missing pinned resources from upstream")
-    for command in (verify, example, goemotions, sources):
+    for command in (verify, example, goemotions, humaid, sources):
         command.add_argument("--output", type=Path, help="write JSON here as well as stdout")
     args = parser.parse_args()
     try:
@@ -50,6 +53,9 @@ def main() -> None:
         elif args.command == "goemotions":
             from .goemotions.replay import replay
             result = replay(args.evidence)
+        elif args.command == "humaid":
+            from .humaid.replay import replay
+            result = replay(args.evidence)
         else:
             from .goemotions.sources import verify_or_acquire
             result = verify_or_acquire(args.inputs, args.directory, download=args.download)
@@ -58,8 +64,11 @@ def main() -> None:
         if args.output:
             args.output.parent.mkdir(parents=True, exist_ok=True)
             args.output.write_text(output, encoding="utf-8")
-        if args.command == "goemotions" and args.report:
-            from .goemotions.report import render
+        if args.command in {"goemotions", "humaid"} and args.report:
+            if args.command == "goemotions":
+                from .goemotions.report import render
+            else:
+                from .humaid.report import render
             args.report.parent.mkdir(parents=True, exist_ok=True)
             args.report.write_text(render(result), encoding="utf-8")
         print(output, end="")

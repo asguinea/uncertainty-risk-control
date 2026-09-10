@@ -69,7 +69,7 @@ def main():
                     require((root / name).is_file() and data == (root / name).read_bytes(), f"source archive mismatch: {name}")
                 dest.parent.mkdir(parents=True, exist_ok=True)
                 dest.write_bytes(data)
-        for required in ("examples/selected_risk_walkthrough.py", "scripts/verify_reproduction.py", "experiments/goemotions/scripts/plot_results.py", "experiments/goemotions/evidence/manifest.json"):
+        for required in ("examples/selected_risk_walkthrough.py", "scripts/verify_reproduction.py", "experiments/goemotions/scripts/plot_results.py", "experiments/goemotions/evidence/manifest.json", "experiments/humaid/evidence/manifest.json", "provenance/humaid_source_extraction.json"):
             require((source / required).is_file(), f"missing source asset: {required}")
 
         venv = scratch / "venv"
@@ -89,6 +89,8 @@ def main():
         run("synthetic", [*cli, "synthetic", "--config", source / "experiments/synthetic/config.toml", "--output", output / "synthetic.json"], scratch)
         run("goemotions", [*cli, "goemotions", "--evidence", source / "experiments/goemotions/evidence", "--output", output / "replay.json", "--report", output / "tables.md"], scratch)
         require((output / "tables.md").read_text(encoding="utf-8") == (source / "experiments/goemotions/report/results.md").read_text(encoding="utf-8"), "regenerated table text differs")
+        run("humaid", [*cli, "humaid", "--evidence", source / "experiments/humaid/evidence", "--output", output / "humaid-replay.json", "--report", output / "humaid-tables.md"], scratch)
+        require((output / "humaid-tables.md").read_text(encoding="utf-8") == (source / "experiments/humaid/report/results.md").read_text(encoding="utf-8"), "regenerated HumAID table text differs")
 
         # Install plotting dependencies from the same hash-locked export, then restore the wheel.
         requirements_file = scratch / "requirements.txt"
@@ -104,6 +106,8 @@ def main():
 
     verification = json.loads((output / "verification.json").read_text(encoding="utf-8"))
     replay = json.loads((output / "replay.json").read_text(encoding="utf-8"))
+    humaid = json.loads((output / "humaid-replay.json").read_text(encoding="utf-8"))
+    require(humaid["status"] == "PASS" and humaid["final_candidate_tests"] == 16 and humaid["warmup_records"] == 1202, "HumAID replay scope changed")
     require(verification["monte_carlo_total_experiments"] == 150000 and verification["monte_carlo_status"] == "PASS", "full synthetic verification required")
     receipt = {
         "schema_version": 1, "status": "PASS", "system": platform.system(), "machine": platform.machine(),
@@ -116,6 +120,7 @@ def main():
         "figure_inputs_exact_match_excluding_environment": True,
         "figure_byte_comparison": "not required across platforms; exact numerical inputs are required",
         "evidence_manifest_sha256": replay["evidence_manifest_sha256"], "study_scope": replay["scope"],
+        "humaid": {"evidence_manifest_sha256": humaid["evidence_manifest_sha256"], "final_candidate_tests": humaid["final_candidate_tests"], "warmup_records": humaid["warmup_records"], "table_text_identical": True, "scope": humaid["scope"]},
         "checks": commands,
     }
     (output / "checks.json").write_text(json.dumps(receipt, indent=2, sort_keys=True) + "\n", encoding="utf-8")

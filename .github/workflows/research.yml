@@ -51,6 +51,8 @@ jobs:
             results/ci/replay.json
             results/ci/synthetic.json
             results/ci/tables.md
+            results/ci/humaid-replay.json
+            results/ci/humaid-tables.md
             results/ci/figures/*.json
             results/ci/figures/*.svg
             results/ci/figures/*.png

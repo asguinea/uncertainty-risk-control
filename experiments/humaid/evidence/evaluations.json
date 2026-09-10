@@ -1,0 +1,716 @@
+[
+  {
+    "alpha": null,
+    "counts": {
+      "harmful": 6270,
+      "n": 9559,
+      "priority_total": 6270,
+      "selected": 9559
+    },
+    "event": null,
+    "expected": {
+      "automation_rate": 1.0,
+      "priority_recall_to_review": 0.0,
+      "review_rate": 0.0,
+      "selected_error": 0.6559263521288837
+    },
+    "id": "source_2018:locked_evaluation:AUTO_DEPRIORITIZE_ALL:None:pooled",
+    "period": "source_2018",
+    "policy": "AUTO_DEPRIORITIZE_ALL",
+    "role": "locked_evaluation",
+    "threshold": 1.0
+  },
+  {
+    "alpha": null,
+    "counts": {
+      "harmful": 468,
+      "n": 9559,
+      "priority_total": 6270,
+      "selected": 2916
+    },
+    "event": null,
+    "expected": {
+      "automation_rate": 0.3050528297939115,
+      "priority_recall_to_review": 0.9253588516746412,
+      "review_rate": 0.6949471702060885,
+      "selected_error": 0.16049382716049382
+    },
+    "id": "source_2018:locked_evaluation:RAW_0_5_CLASSIFIER_THRESHOLD:None:pooled",
+    "period": "source_2018",
+    "policy": "RAW_0_5_CLASSIFIER_THRESHOLD",
+    "role": "locked_evaluation",
+    "threshold": 0.5
+  },
+  {
+    "alpha": null,
+    "counts": {
+      "harmful": 0,
+      "n": 9559,
+      "priority_total": 6270,
+      "selected": 0
+    },
+    "event": null,
+    "expected": {
+      "automation_rate": 0.0,
+      "priority_recall_to_review": 1.0,
+      "review_rate": 1.0,
+      "selected_error": null
+    },
+    "id": "source_2018:locked_evaluation:REVIEW_ALL:None:pooled",
+    "period": "source_2018",
+    "policy": "REVIEW_ALL",
+    "role": "locked_evaluation",
+    "threshold": null
+  },
+  {
+    "alpha": 0.025,
+    "counts": {
+      "harmful": 11,
+      "n": 9559,
+      "priority_total": 6270,
+      "selected": 760
+    },
+    "event": null,
+    "expected": {
+      "automation_rate": 0.07950622450047076,
+      "priority_recall_to_review": 0.9982456140350877,
+      "review_rate": 0.9204937754995293,
+      "selected_error": 0.014473684210526316
+    },
+    "id": "source_2018:locked_evaluation:calibrated:0.025:pooled",
+    "period": "source_2018",
+    "policy": "calibrated",
+    "role": "locked_evaluation",
+    "threshold": 0.017609769478440285
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 7,
+      "n": 2951,
+      "priority_total": 1812,
+      "selected": 473
+    },
+    "event": "california_wildfires_2018",
+    "expected": {
+      "automation_rate": 0.1602846492714334,
+      "priority_recall_to_review": 0.9961368653421634,
+      "review_rate": 0.8397153507285666,
+      "selected_error": 0.014799154334038054
+    },
+    "id": "source_2018:locked_evaluation:calibrated:0.05:california_wildfires_2018",
+    "period": "source_2018",
+    "policy": "calibrated",
+    "role": "locked_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 1,
+      "n": 606,
+      "priority_total": 360,
+      "selected": 111
+    },
+    "event": "greece_wildfires_2018",
+    "expected": {
+      "automation_rate": 0.18316831683168316,
+      "priority_recall_to_review": 0.9972222222222222,
+      "review_rate": 0.8168316831683169,
+      "selected_error": 0.009009009009009009
+    },
+    "id": "source_2018:locked_evaluation:calibrated:0.05:greece_wildfires_2018",
+    "period": "source_2018",
+    "policy": "calibrated",
+    "role": "locked_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 12,
+      "n": 2508,
+      "priority_total": 1628,
+      "selected": 303
+    },
+    "event": "hurricane_florence_2018",
+    "expected": {
+      "automation_rate": 0.12081339712918661,
+      "priority_recall_to_review": 0.9926289926289926,
+      "review_rate": 0.8791866028708134,
+      "selected_error": 0.039603960396039604
+    },
+    "id": "source_2018:locked_evaluation:calibrated:0.05:hurricane_florence_2018",
+    "period": "source_2018",
+    "policy": "calibrated",
+    "role": "locked_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 23,
+      "n": 3196,
+      "priority_total": 2298,
+      "selected": 377
+    },
+    "event": "kerala_floods_2018",
+    "expected": {
+      "automation_rate": 0.11795994993742177,
+      "priority_recall_to_review": 0.9899912967798086,
+      "review_rate": 0.8820400500625782,
+      "selected_error": 0.0610079575596817
+    },
+    "id": "source_2018:locked_evaluation:calibrated:0.05:kerala_floods_2018",
+    "period": "source_2018",
+    "policy": "calibrated",
+    "role": "locked_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 2,
+      "n": 298,
+      "priority_total": 172,
+      "selected": 63
+    },
+    "event": "maryland_floods_2018",
+    "expected": {
+      "automation_rate": 0.21140939597315436,
+      "priority_recall_to_review": 0.9883720930232558,
+      "review_rate": 0.7885906040268457,
+      "selected_error": 0.031746031746031744
+    },
+    "id": "source_2018:locked_evaluation:calibrated:0.05:maryland_floods_2018",
+    "period": "source_2018",
+    "policy": "calibrated",
+    "role": "locked_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 45,
+      "n": 9559,
+      "priority_total": 6270,
+      "selected": 1327
+    },
+    "event": null,
+    "expected": {
+      "automation_rate": 0.13882205251595356,
+      "priority_recall_to_review": 0.992822966507177,
+      "review_rate": 0.8611779474840464,
+      "selected_error": 0.03391107761868877
+    },
+    "id": "source_2018:locked_evaluation:calibrated:0.05:pooled",
+    "period": "source_2018",
+    "policy": "calibrated",
+    "role": "locked_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.1,
+    "counts": {
+      "harmful": 110,
+      "n": 9559,
+      "priority_total": 6270,
+      "selected": 1860
+    },
+    "event": null,
+    "expected": {
+      "automation_rate": 0.19458102311957318,
+      "priority_recall_to_review": 0.9824561403508771,
+      "review_rate": 0.8054189768804269,
+      "selected_error": 0.05913978494623656
+    },
+    "id": "source_2018:locked_evaluation:calibrated:0.1:pooled",
+    "period": "source_2018",
+    "policy": "calibrated",
+    "role": "locked_evaluation",
+    "threshold": 0.13397836685180664
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 4,
+      "n": 1475,
+      "priority_total": 903,
+      "selected": 235
+    },
+    "event": "california_wildfires_2018",
+    "expected": {
+      "automation_rate": 0.15932203389830507,
+      "priority_recall_to_review": 0.9955703211517165,
+      "review_rate": 0.840677966101695,
+      "selected_error": 0.01702127659574468
+    },
+    "id": "source_2018:warmup_evaluation:calibrated:0.05:california_wildfires_2018",
+    "period": "source_2018",
+    "policy": "calibrated",
+    "role": "warmup_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 3,
+      "n": 303,
+      "priority_total": 195,
+      "selected": 57
+    },
+    "event": "greece_wildfires_2018",
+    "expected": {
+      "automation_rate": 0.18811881188118812,
+      "priority_recall_to_review": 0.9846153846153847,
+      "review_rate": 0.8118811881188119,
+      "selected_error": 0.05263157894736842
+    },
+    "id": "source_2018:warmup_evaluation:calibrated:0.05:greece_wildfires_2018",
+    "period": "source_2018",
+    "policy": "calibrated",
+    "role": "warmup_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 3,
+      "n": 1252,
+      "priority_total": 842,
+      "selected": 150
+    },
+    "event": "hurricane_florence_2018",
+    "expected": {
+      "automation_rate": 0.11980830670926518,
+      "priority_recall_to_review": 0.996437054631829,
+      "review_rate": 0.8801916932907348,
+      "selected_error": 0.02
+    },
+    "id": "source_2018:warmup_evaluation:calibrated:0.05:hurricane_florence_2018",
+    "period": "source_2018",
+    "policy": "calibrated",
+    "role": "warmup_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 11,
+      "n": 1596,
+      "priority_total": 1124,
+      "selected": 173
+    },
+    "event": "kerala_floods_2018",
+    "expected": {
+      "automation_rate": 0.10839598997493734,
+      "priority_recall_to_review": 0.9902135231316725,
+      "review_rate": 0.8916040100250626,
+      "selected_error": 0.06358381502890173
+    },
+    "id": "source_2018:warmup_evaluation:calibrated:0.05:kerala_floods_2018",
+    "period": "source_2018",
+    "policy": "calibrated",
+    "role": "warmup_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 0,
+      "n": 148,
+      "priority_total": 77,
+      "selected": 34
+    },
+    "event": "maryland_floods_2018",
+    "expected": {
+      "automation_rate": 0.22972972972972974,
+      "priority_recall_to_review": 1.0,
+      "review_rate": 0.7702702702702703,
+      "selected_error": 0.0
+    },
+    "id": "source_2018:warmup_evaluation:calibrated:0.05:maryland_floods_2018",
+    "period": "source_2018",
+    "policy": "calibrated",
+    "role": "warmup_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 21,
+      "n": 4774,
+      "priority_total": 3141,
+      "selected": 649
+    },
+    "event": null,
+    "expected": {
+      "automation_rate": 0.1359447004608295,
+      "priority_recall_to_review": 0.9933142311365807,
+      "review_rate": 0.8640552995391705,
+      "selected_error": 0.032357473035439135
+    },
+    "id": "source_2018:warmup_evaluation:calibrated:0.05:pooled",
+    "period": "source_2018",
+    "policy": "calibrated",
+    "role": "warmup_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": null,
+    "counts": {
+      "harmful": 3580,
+      "n": 6159,
+      "priority_total": 3580,
+      "selected": 6159
+    },
+    "event": null,
+    "expected": {
+      "automation_rate": 1.0,
+      "priority_recall_to_review": 0.0,
+      "review_rate": 0.0,
+      "selected_error": 0.5812631920766358
+    },
+    "id": "target_2019:locked_evaluation:AUTO_DEPRIORITIZE_ALL:None:pooled",
+    "period": "target_2019",
+    "policy": "AUTO_DEPRIORITIZE_ALL",
+    "role": "locked_evaluation",
+    "threshold": 1.0
+  },
+  {
+    "alpha": null,
+    "counts": {
+      "harmful": 260,
+      "n": 6159,
+      "priority_total": 3580,
+      "selected": 2190
+    },
+    "event": null,
+    "expected": {
+      "automation_rate": 0.3555772040915733,
+      "priority_recall_to_review": 0.9273743016759777,
+      "review_rate": 0.6444227959084268,
+      "selected_error": 0.1187214611872146
+    },
+    "id": "target_2019:locked_evaluation:RAW_0_5_CLASSIFIER_THRESHOLD:None:pooled",
+    "period": "target_2019",
+    "policy": "RAW_0_5_CLASSIFIER_THRESHOLD",
+    "role": "locked_evaluation",
+    "threshold": 0.5
+  },
+  {
+    "alpha": null,
+    "counts": {
+      "harmful": 0,
+      "n": 6159,
+      "priority_total": 3580,
+      "selected": 0
+    },
+    "event": null,
+    "expected": {
+      "automation_rate": 0.0,
+      "priority_recall_to_review": 1.0,
+      "review_rate": 1.0,
+      "selected_error": null
+    },
+    "id": "target_2019:locked_evaluation:REVIEW_ALL:None:pooled",
+    "period": "target_2019",
+    "policy": "REVIEW_ALL",
+    "role": "locked_evaluation",
+    "threshold": null
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 6,
+      "n": 1575,
+      "priority_total": 1160,
+      "selected": 158
+    },
+    "event": "cyclone_idai_2019",
+    "expected": {
+      "automation_rate": 0.10031746031746032,
+      "priority_recall_to_review": 0.9948275862068966,
+      "review_rate": 0.8996825396825396,
+      "selected_error": 0.0379746835443038
+    },
+    "id": "target_2019:locked_evaluation:calibrated:0.05:cyclone_idai_2019",
+    "period": "target_2019",
+    "policy": "calibrated",
+    "role": "locked_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 19,
+      "n": 3047,
+      "priority_total": 1692,
+      "selected": 530
+    },
+    "event": "hurricane_dorian_2019",
+    "expected": {
+      "automation_rate": 0.17394158188382014,
+      "priority_recall_to_review": 0.9887706855791962,
+      "review_rate": 0.8260584181161799,
+      "selected_error": 0.035849056603773584
+    },
+    "id": "target_2019:locked_evaluation:calibrated:0.05:hurricane_dorian_2019",
+    "period": "target_2019",
+    "policy": "calibrated",
+    "role": "locked_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 3,
+      "n": 752,
+      "priority_total": 407,
+      "selected": 111
+    },
+    "event": "midwestern_us_floods_2019",
+    "expected": {
+      "automation_rate": 0.14760638297872342,
+      "priority_recall_to_review": 0.9926289926289926,
+      "review_rate": 0.8523936170212766,
+      "selected_error": 0.02702702702702703
+    },
+    "id": "target_2019:locked_evaluation:calibrated:0.05:midwestern_us_floods_2019",
+    "period": "target_2019",
+    "policy": "calibrated",
+    "role": "locked_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 4,
+      "n": 785,
+      "priority_total": 321,
+      "selected": 316
+    },
+    "event": "pakistan_earthquake_2019",
+    "expected": {
+      "automation_rate": 0.40254777070063696,
+      "priority_recall_to_review": 0.9875389408099688,
+      "review_rate": 0.597452229299363,
+      "selected_error": 0.012658227848101266
+    },
+    "id": "target_2019:locked_evaluation:calibrated:0.05:pakistan_earthquake_2019",
+    "period": "target_2019",
+    "policy": "calibrated",
+    "role": "locked_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 32,
+      "n": 6159,
+      "priority_total": 3580,
+      "selected": 1115
+    },
+    "event": null,
+    "expected": {
+      "automation_rate": 0.18103588244844943,
+      "priority_recall_to_review": 0.9910614525139665,
+      "review_rate": 0.8189641175515505,
+      "selected_error": 0.028699551569506727
+    },
+    "id": "target_2019:locked_evaluation:calibrated:0.05:pooled",
+    "period": "target_2019",
+    "policy": "calibrated",
+    "role": "locked_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": null,
+    "counts": {
+      "harmful": 1778,
+      "n": 3075,
+      "priority_total": 1778,
+      "selected": 3075
+    },
+    "event": null,
+    "expected": {
+      "automation_rate": 1.0,
+      "priority_recall_to_review": 0.0,
+      "review_rate": 0.0,
+      "selected_error": 0.5782113821138212
+    },
+    "id": "target_2019:warmup_evaluation:AUTO_DEPRIORITIZE_ALL:None:pooled",
+    "period": "target_2019",
+    "policy": "AUTO_DEPRIORITIZE_ALL",
+    "role": "warmup_evaluation",
+    "threshold": 1.0
+  },
+  {
+    "alpha": null,
+    "counts": {
+      "harmful": 124,
+      "n": 3075,
+      "priority_total": 1778,
+      "selected": 1054
+    },
+    "event": null,
+    "expected": {
+      "automation_rate": 0.34276422764227643,
+      "priority_recall_to_review": 0.9302587176602924,
+      "review_rate": 0.6572357723577236,
+      "selected_error": 0.11764705882352941
+    },
+    "id": "target_2019:warmup_evaluation:RAW_0_5_CLASSIFIER_THRESHOLD:None:pooled",
+    "period": "target_2019",
+    "policy": "RAW_0_5_CLASSIFIER_THRESHOLD",
+    "role": "warmup_evaluation",
+    "threshold": 0.5
+  },
+  {
+    "alpha": null,
+    "counts": {
+      "harmful": 0,
+      "n": 3075,
+      "priority_total": 1778,
+      "selected": 0
+    },
+    "event": null,
+    "expected": {
+      "automation_rate": 0.0,
+      "priority_recall_to_review": 1.0,
+      "review_rate": 1.0,
+      "selected_error": null
+    },
+    "id": "target_2019:warmup_evaluation:REVIEW_ALL:None:pooled",
+    "period": "target_2019",
+    "policy": "REVIEW_ALL",
+    "role": "warmup_evaluation",
+    "threshold": null
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 9,
+      "n": 3075,
+      "priority_total": 1778,
+      "selected": 522
+    },
+    "event": null,
+    "expected": {
+      "automation_rate": 0.16975609756097562,
+      "priority_recall_to_review": 0.9949381327334084,
+      "review_rate": 0.8302439024390244,
+      "selected_error": 0.017241379310344827
+    },
+    "id": "target_2019:warmup_evaluation:calibrated:0.05:pooled",
+    "period": "target_2019",
+    "policy": "calibrated",
+    "role": "warmup_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 1,
+      "n": 786,
+      "priority_total": 588,
+      "selected": 67
+    },
+    "event": "cyclone_idai_2019",
+    "expected": {
+      "automation_rate": 0.08524173027989822,
+      "priority_recall_to_review": 0.9982993197278912,
+      "review_rate": 0.9147582697201018,
+      "selected_error": 0.014925373134328358
+    },
+    "id": "target_2019:warmup_evaluation:zero_shot:0.05:cyclone_idai_2019",
+    "period": "target_2019",
+    "policy": "zero_shot",
+    "role": "warmup_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 6,
+      "n": 1522,
+      "priority_total": 827,
+      "selected": 233
+    },
+    "event": "hurricane_dorian_2019",
+    "expected": {
+      "automation_rate": 0.1530880420499343,
+      "priority_recall_to_review": 0.992744860943168,
+      "review_rate": 0.8469119579500657,
+      "selected_error": 0.02575107296137339
+    },
+    "id": "target_2019:warmup_evaluation:zero_shot:0.05:hurricane_dorian_2019",
+    "period": "target_2019",
+    "policy": "zero_shot",
+    "role": "warmup_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 1,
+      "n": 376,
+      "priority_total": 210,
+      "selected": 54
+    },
+    "event": "midwestern_us_floods_2019",
+    "expected": {
+      "automation_rate": 0.14361702127659576,
+      "priority_recall_to_review": 0.9952380952380953,
+      "review_rate": 0.8563829787234043,
+      "selected_error": 0.018518518518518517
+    },
+    "id": "target_2019:warmup_evaluation:zero_shot:0.05:midwestern_us_floods_2019",
+    "period": "target_2019",
+    "policy": "zero_shot",
+    "role": "warmup_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 1,
+      "n": 391,
+      "priority_total": 153,
+      "selected": 168
+    },
+    "event": "pakistan_earthquake_2019",
+    "expected": {
+      "automation_rate": 0.4296675191815857,
+      "priority_recall_to_review": 0.9934640522875817,
+      "review_rate": 0.5703324808184143,
+      "selected_error": 0.005952380952380952
+    },
+    "id": "target_2019:warmup_evaluation:zero_shot:0.05:pakistan_earthquake_2019",
+    "period": "target_2019",
+    "policy": "zero_shot",
+    "role": "warmup_evaluation",
+    "threshold": 0.05140062794089317
+  },
+  {
+    "alpha": 0.05,
+    "counts": {
+      "harmful": 9,
+      "n": 3075,
+      "priority_total": 1778,
+      "selected": 522
+    },
+    "event": null,
+    "expected": {
+      "automation_rate": 0.16975609756097562,
+      "priority_recall_to_review": 0.9949381327334084,
+      "review_rate": 0.8302439024390244,
+      "selected_error": 0.017241379310344827
+    },
+    "id": "target_2019:warmup_evaluation:zero_shot:0.05:pooled",
+    "period": "target_2019",
+    "policy": "zero_shot",
+    "role": "warmup_evaluation",
+    "threshold": 0.05140062794089317
+  }
+]

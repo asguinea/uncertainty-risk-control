@@ -8,7 +8,7 @@ Each platform builds a wheel and source archive, extracts the source archive int
 
 1. The complete unit suite and the synthetic walkthrough, with no Matplotlib installed in the base environment.
 2. The numerical and stopping-rule verification, including all 150,000 seeded synthetic Monte Carlo trials.
-3. The separate synthetic example and GoEmotions final-calibration replay, using the source archive's configurations and evidence.
+3. The separate synthetic example, GoEmotions final-calibration replay and local HumAID expansion replay, using the source archive's configurations and evidence. HumAID adds 16 final tests and 1,202 warm-up aggregate records; its replay runs before plotting dependencies are installed.
 4. Aggregate table regeneration, compared with the tracked report after normalizing platform line endings.
 5. Figure regeneration after installing the optional plotting dependencies from a hash-locked requirements export. Numerical figure inputs must match exactly, excluding only recorded environment metadata. Image-byte identity is not required across platforms.
 
@@ -31,6 +31,6 @@ On Windows, CI enables Python UTF-8 mode and the checkout's `.gitattributes` pre
 
 ## Logs, artifacts, and release interpretation
 
-The artifact upload is an explicit list: distribution and execution receipts, numerical verification, synthetic and GoEmotions replay JSON, tables, and generated figure files. Dependency-install logs, environment directories, raw source downloads, and built distribution archives are not uploaded as CI artifacts. The checked artifacts are retained for 14 days; a release should separately preserve its reviewed evidence and verification record.
+The artifact upload is an explicit list: distribution and execution receipts, numerical verification, synthetic, GoEmotions and HumAID replay JSON, tables, and generated figure files. Dependency-install logs, environment directories, raw source downloads, and built distribution archives are not uploaded as CI artifacts. The checked artifacts are retained for 14 days; a release should separately preserve its reviewed evidence and verification record. HumAID checks are prepared locally for the next release; their presence here does not claim that the new code has already passed hosted CI.
 
 Automated scans are useful checks, not a proof that no sensitive content exists. Before public release, inspect the full intended Git history, repository metadata, workflow logs and artifacts, citation/license scope, and the exact candidate. Any new domain, source-locator mapping, model asset, or raw-data distribution needs its own explicit scope. The current [reproduction contract](../experiments/goemotions/reproduction.md) still excludes historical retraining, checkpoint inference, and warm-up candidate-prefix reconstruction.

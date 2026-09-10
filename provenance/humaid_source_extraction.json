@@ -1,0 +1,43 @@
+{
+  "excluded": [
+    "original runners",
+    "private paths",
+    "row inputs",
+    "identity keys",
+    "model weights"
+  ],
+  "functions": [
+    {
+      "body_ast_sha256": "efb882c5a68b76b4396e595ab828e89174ea1d5ef727bbc98d3b1af6b45e40e8",
+      "exported_function": "quantiles",
+      "source_basename": "run_humaid_warmup.py",
+      "source_file_sha256": "c2da2ba84f3beddf446b0305be384a293518710d83d5385a7fbe2ecd08ce2d6d",
+      "source_function": "quantiles"
+    },
+    {
+      "body_ast_sha256": "77f41c2769c5d071ae52cebc5843f938faf7a3bac0f6c7176cd15e82ce42c695",
+      "exported_function": "aggregate_source",
+      "source_basename": "run_humaid_warmup.py",
+      "source_file_sha256": "c2da2ba84f3beddf446b0305be384a293518710d83d5385a7fbe2ecd08ce2d6d",
+      "source_function": "aggregate"
+    },
+    {
+      "body_ast_sha256": "efb882c5a68b76b4396e595ab828e89174ea1d5ef727bbc98d3b1af6b45e40e8",
+      "exported_function": "q",
+      "source_basename": "run_humaid_d3_warmup.py",
+      "source_file_sha256": "6c86788d52172cac3831ae5e795e1c62cb11bb5f9d91041f5c043c8aaf18e9ee",
+      "source_function": "q"
+    },
+    {
+      "body_ast_sha256": "c3be07f303f0bb5706d285996a0cbd41b32b1db7aef7515edb762424ec541489",
+      "exported_function": "aggregate_target",
+      "source_basename": "run_humaid_d3_warmup.py",
+      "source_file_sha256": "6c86788d52172cac3831ae5e795e1c62cb11bb5f9d91041f5c043c8aaf18e9ee",
+      "source_function": "aggregate"
+    }
+  ],
+  "schema_version": 1,
+  "transformations": [
+    "Only these function definitions extracted; aggregate function names disambiguated; NumPy import and ALPHA constant supplied."
+  ]
+}

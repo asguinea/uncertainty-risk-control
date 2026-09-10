@@ -10,6 +10,8 @@ The first study, [GoEmotions MB1](experiments/goemotions/README.md), turns a fro
 
 ## What you can inspect and run
 
+**Local expansion toward v0.2.0:** [HumAID](experiments/humaid/README.md) adds crisis-post deprioritization, calibration-label requirements, and source-to-target recalibration with the same frozen scorer. Its replay covers 16 final tests and 1,202 warm-up records. This addition is unreleased; v0.1.0 below remains the GoEmotions release.
+
 | Component | What it establishes |
 | --- | --- |
 | [Exact-binomial method](docs/method.md) | Fixed-sequence calibration with explicit assumptions, first-failure stopping, and review-all behavior |
@@ -33,6 +35,8 @@ uv sync --locked
 uv run --locked python examples/selected_risk_walkthrough.py
 uv run --locked uqrc goemotions --evidence experiments/goemotions/evidence --output results/goemotions/replay.json --report results/goemotions/tables.md
 ```
+
+For the local HumAID expansion, run `uv run --locked uqrc humaid --evidence experiments/humaid/evidence --output results/humaid/replay.json --report results/humaid/tables.md`. See its [reproduction contract](experiments/humaid/reproduction.md); this command is unavailable in the older v0.1.0 tag.
 
 The replay requires no dataset download, trained weights, GPU, credentials, or product checkout. It produces a JSON verification receipt and the research tables. `status: PASS` means the replay checks passed; it does not authenticate the original model predictions or verify the dataset's sampling assumptions.
 

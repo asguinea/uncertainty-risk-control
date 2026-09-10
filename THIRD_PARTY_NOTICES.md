@@ -20,3 +20,13 @@ The GoEmotions MB1 study uses the dataset described by Demszky et al. (2020), [G
 The classifier derives from Liu et al. (2019), [RoBERTa: A Robustly Optimized BERT Pretraining Approach](https://arxiv.org/abs/1907.11692), with the base revision recorded in the study protocol. The historical model metadata reports MIT, but no classifier, tokenizer, base weights, or fitted meta-model is redistributed by this snapshot. A future model-asset release needs its own included notices and scope.
 
 This repository includes original aggregate projections, their sufficient-statistics replay, and new derived tables and figures. Raw comments, rater judgments/identities, row-level scores, source assignment maps, model weights, paper PDFs, and model-card PDFs are excluded. The optional acquisition utility retrieves nine byte-pinned upstream resources into a caller-owned directory, including the original README and license; those downloads are not part of this repository's distribution.
+
+## HumAID
+
+The HumAID study credits Firoj Alam, Umair Qazi, Muhammad Imran and Ferda Ofli (2021), [HumAID: Human-Annotated Disaster Incidents Data from Twitter with Deep Learning Benchmarks](https://ojs.aaai.org/index.php/ICWSM/article/view/18116), DOI `10.1609/icwsm.v15i1.18116`. The base scorer derives from RoBERTa; neither its base assets nor the fitted classifier are included.
+
+The [official HumAID page](https://crisisnlp.qcri.org/humaid_dataset.html) and [CrisisNLP terms](https://crisisnlp.qcri.org/terms-of-use.html), reviewed 10 September 2026, restrict dataset use to humanitarian computing research, require dataset-content confidentiality, specify deletion conditions and require citation in resulting publications. This original aggregate research release is not a dataset license or permission for general commercial dataset use.
+
+Earlier acquisition records contain Dataverse license metadata alongside additional restrictions. The current [Dataverse record](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/A7NVF7) and metadata API could not be reverified during this review because automated access was blocked. Bare CC0 metadata must not be interpreted as unrestricted permission in the face of those unresolved terms. No raw-data download utility or model distribution is added for HumAID.
+
+Only original code, original analytical documentation, aggregate counts and derived analytical outputs are included. Tweets, tweet IDs, source-linked row labels/scores, assignments, identity keys, source archives and model assets are excluded. The repository license and EyeTrustAI affiliation grant no additional rights to those upstream assets.

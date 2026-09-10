@@ -1,0 +1,357 @@
+{
+  "construction_n": 37213,
+  "construction_years": [
+    2016,
+    2017
+  ],
+  "content_sha256": "81a60e58dead436b4b4edcffb10acf0a72cd5265cea770fa322dd79f7921b532",
+  "family": [
+    {
+      "requested_fractions": [],
+      "threshold": 0.0
+    },
+    {
+      "requested_fractions": [
+        0.05
+      ],
+      "threshold": 0.00395037978887558
+    },
+    {
+      "requested_fractions": [
+        0.1
+      ],
+      "threshold": 0.017609769478440285
+    },
+    {
+      "requested_fractions": [
+        0.15
+      ],
+      "threshold": 0.05140062794089317
+    },
+    {
+      "requested_fractions": [
+        0.2
+      ],
+      "threshold": 0.13397836685180664
+    },
+    {
+      "requested_fractions": [
+        0.25
+      ],
+      "threshold": 0.2869757413864136
+    },
+    {
+      "requested_fractions": [
+        0.3
+      ],
+      "threshold": 0.47501659393310547
+    },
+    {
+      "requested_fractions": [
+        0.35
+      ],
+      "threshold": 0.6806791424751282
+    },
+    {
+      "requested_fractions": [
+        0.4
+      ],
+      "threshold": 0.8283106684684753
+    },
+    {
+      "requested_fractions": [
+        0.45
+      ],
+      "threshold": 0.903077244758606
+    },
+    {
+      "requested_fractions": [
+        0.5
+      ],
+      "threshold": 0.9424614310264587
+    },
+    {
+      "requested_fractions": [
+        0.55
+      ],
+      "threshold": 0.9632909297943115
+    },
+    {
+      "requested_fractions": [
+        0.6
+      ],
+      "threshold": 0.9763485193252563
+    },
+    {
+      "requested_fractions": [
+        0.65
+      ],
+      "threshold": 0.9846904873847961
+    },
+    {
+      "requested_fractions": [
+        0.7
+      ],
+      "threshold": 0.9895157814025879
+    },
+    {
+      "requested_fractions": [
+        0.75
+      ],
+      "threshold": 0.9923419952392578
+    },
+    {
+      "requested_fractions": [
+        0.8
+      ],
+      "threshold": 0.9941082000732422
+    },
+    {
+      "requested_fractions": [
+        0.85
+      ],
+      "threshold": 0.9954604506492615
+    },
+    {
+      "requested_fractions": [
+        0.9
+      ],
+      "threshold": 0.9969005584716797
+    },
+    {
+      "requested_fractions": [
+        0.95
+      ],
+      "threshold": 0.9978117346763611
+    },
+    {
+      "requested_fractions": [
+        0.975
+      ],
+      "threshold": 0.9980109333992004
+    },
+    {
+      "requested_fractions": [
+        0.99
+      ],
+      "threshold": 0.9981448650360107
+    }
+  ],
+  "ordering": [
+    "development empirical selected error ascending",
+    "development selected fraction descending",
+    "threshold ascending"
+  ],
+  "sequence": [
+    {
+      "development_empirical_selected_error": 0.0,
+      "development_harmful": 0,
+      "development_selected": 1861,
+      "development_selected_fraction": 0.05000940531534679,
+      "requested_fractions": [
+        0.05
+      ],
+      "threshold": 0.00395037978887558
+    },
+    {
+      "development_empirical_selected_error": 0.0010746910263299302,
+      "development_harmful": 4,
+      "development_selected": 3722,
+      "development_selected_fraction": 0.10001881063069358,
+      "requested_fractions": [
+        0.1
+      ],
+      "threshold": 0.017609769478440285
+    },
+    {
+      "development_empirical_selected_error": 0.0014331780723754925,
+      "development_harmful": 8,
+      "development_selected": 5582,
+      "development_selected_fraction": 0.1500013436164781,
+      "requested_fractions": [
+        0.15
+      ],
+      "threshold": 0.05140062794089317
+    },
+    {
+      "development_empirical_selected_error": 0.0034932151014375923,
+      "development_harmful": 26,
+      "development_selected": 7443,
+      "development_selected_fraction": 0.2000107489318249,
+      "requested_fractions": [
+        0.2
+      ],
+      "threshold": 0.13397836685180664
+    },
+    {
+      "development_empirical_selected_error": 0.009458297506448839,
+      "development_harmful": 88,
+      "development_selected": 9304,
+      "development_selected_fraction": 0.25002015424717167,
+      "requested_fractions": [
+        0.25
+      ],
+      "threshold": 0.2869757413864136
+    },
+    {
+      "development_empirical_selected_error": 0.03932282336080258,
+      "development_harmful": 439,
+      "development_selected": 11164,
+      "development_selected_fraction": 0.3000026872329562,
+      "requested_fractions": [
+        0.3
+      ],
+      "threshold": 0.47501659393310547
+    },
+    {
+      "development_empirical_selected_error": 0.10410748560460653,
+      "development_harmful": 1356,
+      "development_selected": 13025,
+      "development_selected_fraction": 0.350012092548303,
+      "requested_fractions": [
+        0.35
+      ],
+      "threshold": 0.6806791424751282
+    },
+    {
+      "development_empirical_selected_error": 0.17983340051054683,
+      "development_harmful": 2677,
+      "development_selected": 14886,
+      "development_selected_fraction": 0.4000214978636498,
+      "requested_fractions": [
+        0.4
+      ],
+      "threshold": 0.8283106684684753
+    },
+    {
+      "development_empirical_selected_error": 0.2546279708587125,
+      "development_harmful": 4264,
+      "development_selected": 16746,
+      "development_selected_fraction": 0.45000403084943436,
+      "requested_fractions": [
+        0.45
+      ],
+      "threshold": 0.903077244758606
+    },
+    {
+      "development_empirical_selected_error": 0.3209007362820444,
+      "development_harmful": 5971,
+      "development_selected": 18607,
+      "development_selected_fraction": 0.5000134361647811,
+      "requested_fractions": [
+        0.5
+      ],
+      "threshold": 0.9424614310264587
+    },
+    {
+      "development_empirical_selected_error": 0.3788841117842486,
+      "development_harmful": 7755,
+      "development_selected": 20468,
+      "development_selected_fraction": 0.5500228414801279,
+      "requested_fractions": [
+        0.55
+      ],
+      "threshold": 0.9632909297943115
+    },
+    {
+      "development_empirical_selected_error": 0.4281171623074167,
+      "development_harmful": 9559,
+      "development_selected": 22328,
+      "development_selected_fraction": 0.6000053744659124,
+      "requested_fractions": [
+        0.6
+      ],
+      "threshold": 0.9763485193252563
+    },
+    {
+      "development_empirical_selected_error": 0.4709165323080739,
+      "development_harmful": 11391,
+      "development_selected": 24189,
+      "development_selected_fraction": 0.6500147797812592,
+      "requested_fractions": [
+        0.65
+      ],
+      "threshold": 0.9846904873847961
+    },
+    {
+      "development_empirical_selected_error": 0.5079078694817658,
+      "development_harmful": 13231,
+      "development_selected": 26050,
+      "development_selected_fraction": 0.700024185096606,
+      "requested_fractions": [
+        0.7
+      ],
+      "threshold": 0.9895157814025879
+    },
+    {
+      "development_empirical_selected_error": 0.5399140093156575,
+      "development_harmful": 15069,
+      "development_selected": 27910,
+      "development_selected_fraction": 0.7500067180823906,
+      "requested_fractions": [
+        0.75
+      ],
+      "threshold": 0.9923419952392578
+    },
+    {
+      "development_empirical_selected_error": 0.5685398542205502,
+      "development_harmful": 16926,
+      "development_selected": 29771,
+      "development_selected_fraction": 0.8000161233977373,
+      "requested_fractions": [
+        0.8
+      ],
+      "threshold": 0.9941082000732422
+    },
+    {
+      "development_empirical_selected_error": 0.5937974203338392,
+      "development_harmful": 18783,
+      "development_selected": 31632,
+      "development_selected_fraction": 0.8500255287130841,
+      "requested_fractions": [
+        0.85
+      ],
+      "threshold": 0.9954604506492615
+    },
+    {
+      "development_empirical_selected_error": 0.616236713244954,
+      "development_harmful": 20639,
+      "development_selected": 33492,
+      "development_selected_fraction": 0.9000080616988687,
+      "requested_fractions": [
+        0.9
+      ],
+      "threshold": 0.9969005584716797
+    },
+    {
+      "development_empirical_selected_error": 0.6363250643509745,
+      "development_harmful": 22496,
+      "development_selected": 35353,
+      "development_selected_fraction": 0.9500174670142154,
+      "requested_fractions": [
+        0.95
+      ],
+      "threshold": 0.9978117346763611
+    },
+    {
+      "development_empirical_selected_error": 0.645619160488383,
+      "development_harmful": 23425,
+      "development_selected": 36283,
+      "development_selected_fraction": 0.9750087335071077,
+      "requested_fractions": [
+        0.975
+      ],
+      "threshold": 0.9980109333992004
+    },
+    {
+      "development_empirical_selected_error": 0.6509418598338852,
+      "development_harmful": 23982,
+      "development_selected": 36842,
+      "development_selected_fraction": 0.9900303657324053,
+      "requested_fractions": [
+        0.99
+      ],
+      "threshold": 0.9981448650360107
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "calibration.json": "c300c7684e4c5d0531b1198e74061fea2e1f230807f5db3aeaac686f5d797e8a",
+    "design.json": "02a35e6c11517fec34ff60a34cd687b1b8e2c52254b1e6da1eb7a58cc2cc4de9",
+    "evaluations.json": "9e8514ea3e70d1d14e2b28c8c1c9408b458165a98206fb7057601b5a7badd7fe",
+    "expected.json": "8dd21bc3a93818dd32ca70edafee35d78f008ae4e280e629d272081433636c1d",
+    "study.json": "b8a33ef7463117089beffe5b10d5f3a370d974c404912bcd18945ac22305f59d",
+    "warmup_runs.json": "5e8722fc15b6f8c51a93105307e12df4ea6a9940a2788c324380c391300e94ed"
+  },
+  "implementation": {
+    "_aggregate_reference.py": "87792df443b7f12f751c0630f4d727c113620e6066520cc912bb02c33a24f008",
+    "count_replay.py": "f2abeebfe5781e2a83721d22fa5ab647e29bb72d8d7303531d7478b19f608fcb",
+    "projection.py": "92aa4f23000229cac20c64ecb7cc641455f5a27154d97d453984254a89554080"
+  },
+  "schema_version": 1,
+  "study": "humaid"
+}
