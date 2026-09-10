@@ -17,6 +17,7 @@ ROOT_FILES = {".gitignore", ".gitattributes", ".python-version", "README.md", "L
 ROOT_DIRS = {"src", "tests", "docs", "experiments", "provenance", "examples", "scripts", ".github"}
 EXCLUDED_DIRS = {"data", "models", "checkpoints", "logs", "results", ".git", ".venv", "__pycache__"}
 TEXT_SUFFIXES = {".py", ".md", ".json", ".toml", ".cff", ".lock", ".yml", ".yaml", ".svg", ".txt", ""}
+FIGURE_DIRS = {"experiments/goemotions/report/figures", "experiments/humaid/report/figures", "experiments/tweeteval-sentiment/report/figures", "docs/figures"}
 # Construct patterns without embedding an actual workstation path in the source.
 PRIVATE_PATHS = tuple("/" + name + "/" for name in ("Users", "Volumes", "private/var")) + ("file" + "://",)
 
@@ -34,7 +35,7 @@ def check_file(name, data):
     require(not re.search(r"(^|/)(\.env($|\.)|identity_salt)|\.(pem|key|salt)$", name), f"excluded credential path: {name}")
     require(len(data) < 5_000_000, f"unreviewed large asset: {name}")
     if path.suffix == ".png":
-        require(str(path.parent) == "experiments/goemotions/report/figures", f"unreviewed image: {name}")
+        require(str(path.parent) in FIGURE_DIRS, f"unreviewed image: {name}")
         require(data.startswith(b"\x89PNG\r\n\x1a\n"), f"invalid PNG: {name}")
         return
     require(path.suffix in TEXT_SUFFIXES or name in ROOT_FILES, f"unreviewed file type: {name}")

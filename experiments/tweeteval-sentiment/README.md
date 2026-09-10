@@ -4,7 +4,7 @@
 
 The study accepts a model's negative, neutral or positive tag only when its uncertainty score is below a calibrated threshold. An error means the accepted tag differs from the benchmark's released human reference. This is a study of selective prediction and review workload, not an assertion of objective sentiment, customer intent or factual truth.
 
-**Local, unreleased expansion toward v0.2.0.** The immutable public v0.1.0 release contains GoEmotions only. This addition follows the local HumAID expansion and is prepared for review.
+**Included in the local v0.2.0 release candidate.** The published v0.1.0 release contains GoEmotions only and remains unchanged. See the [candidate notes](../../docs/releases/v0.2.0.md).
 
 | Risk budget | Locked automation | Wrong accepted / accepted | Observed selected error |
 | --- | ---: | ---: | ---: |
@@ -14,6 +14,10 @@ The study accepts a model's negative, neutral or positive tag only when its unce
 | 15% | 43.4142% | 810 / 5,333 | 15.1884% |
 
 The strictest budget passes in a single full-pool development warm-up but fails in final calibration. The 15% observed test result exceeds its nominal budget and remains visible. Official TEST is a separate population from the train/validation source calibration pool, with different reference-class proportions. Calibration is not a guarantee for an arbitrarily shifted population.
+
+![Official TEST risk and automation, including review-all and observed error above 15%, alongside sparse neutral-class acceptance.](report/figures/risk_and_class_selection.svg)
+
+[Full captions, counts and calibration-size figure](report/figures/README.md) · [Three-study research note](../../docs/social-media-research.md)
 
 | Read or run | Purpose |
 | --- | --- |
@@ -32,7 +36,7 @@ uv run --locked uqrc tweeteval-sentiment --evidence experiments/tweeteval-sentim
 
 The command checks **35 final candidate tests** and **2,804 warm-up aggregate records** without source tweets, model weights, an identity key or a private checkout. It reuses the published exact-binomial method. Complete warm-up candidate-prefix reconstruction and historical training/inference remain outside scope.
 
-This addition covers Sentiment D1/D2. The separately completed Negative N1/N2 follow-up studies remain a later publication series, with their different action/loss definitions and retrospective evidence chronology. Combined figures and presentation are planned for E4.
+This addition covers Sentiment D1/D2. The separately completed Negative N1/N2 follow-up studies remain a later publication series, with their different action/loss definitions and retrospective evidence chronology. The [figure guide](report/figures/README.md) documents the regenerated plots and their limitations.
 
 ## Attribution and relationship
 

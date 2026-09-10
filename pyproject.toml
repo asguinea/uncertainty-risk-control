@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "uncertainty-risk-control"
-version = "0.1.0"
-description = "Research methods and reproducible studies of selective prediction and risk control"
+version = "0.2.0"
+description = "Uncertainty quantification for social media analysis: emotion tagging, sentiment classification, and crisis triage"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "Apache-2.0"
@@ -14,8 +14,8 @@ authors = [{name = "Alejandro Sanchez Guinea"}]
 dependencies = ["numpy==2.4.6", "scipy==1.17.1"]
 
 [project.urls]
-Repository = "https://github.com/asguinea/uncertainty-risk-control"
-Issues = "https://github.com/asguinea/uncertainty-risk-control/issues"
+Repository = "https://github.com/asguinea/risk-controlled-social-media-analysis"
+Issues = "https://github.com/asguinea/risk-controlled-social-media-analysis/issues"
 
 [project.scripts]
 uqrc = "uncertainty_risk_control.cli:main"

@@ -58,6 +58,15 @@ jobs:
             results/ci/figures/*.json
             results/ci/figures/*.svg
             results/ci/figures/*.png
+            results/ci/social-media/experiments/humaid/report/figures/*.json
+            results/ci/social-media/experiments/humaid/report/figures/*.svg
+            results/ci/social-media/experiments/humaid/report/figures/*.png
+            results/ci/social-media/experiments/tweeteval-sentiment/report/figures/*.json
+            results/ci/social-media/experiments/tweeteval-sentiment/report/figures/*.svg
+            results/ci/social-media/experiments/tweeteval-sentiment/report/figures/*.png
+            results/ci/social-media/docs/figures/*.json
+            results/ci/social-media/docs/figures/*.svg
+            results/ci/social-media/docs/figures/*.png
 
   secrets:
     name: Scan complete history

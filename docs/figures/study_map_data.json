@@ -1,0 +1,51 @@
+{
+  "cards": [
+    {
+      "action": "Accept an emotion tag",
+      "application": "Emotion tagging",
+      "error": "Tag absent from the\nagreed-label reference",
+      "population": "Own group-preserving split\n10,853 locked comments",
+      "question": "How much tagging remains useful\nunder strict error budgets?",
+      "study": "GoEmotions",
+      "tests": 35,
+      "warmup_records": 2804
+    },
+    {
+      "action": "Deprioritize a crisis post",
+      "application": "Crisis triage",
+      "error": "Selected post has a\nhuman priority label",
+      "population": "2018 source \u2192 2019 target\nDistinct evaluation roles",
+      "question": "How do label requirements and\ncalibration change across years?",
+      "study": "HumAID",
+      "tests": 16,
+      "warmup_records": 1202
+    },
+    {
+      "action": "Accept a sentiment label",
+      "application": "Sentiment classification",
+      "error": "Label disagrees with the\nhuman sentiment reference",
+      "population": "Source calibration \u2192 official TEST\n12,284 locked posts",
+      "question": "Who gets automated when\nerror tolerance changes?",
+      "study": "TweetEval Sentiment",
+      "tests": 35,
+      "warmup_records": 2804
+    }
+  ],
+  "environment": {
+    "matplotlib": "3.10.7",
+    "numpy": "2.4.6",
+    "python": "3.11.13",
+    "scipy": "1.17.1",
+    "uncertainty-risk-control": "0.2.0"
+  },
+  "evidence_manifest_sha256": {
+    "goemotions": "239244a8539c73e72a497a70a2574dc24ac7513767e8e9617de39f8c5fb676f7",
+    "humaid": "b4062067ce2e5c147f28ebfa9592ebfae45b2b02f113336ee73280f5179ff4ba",
+    "tweeteval-sentiment": "88a28b009c1c04ff295de35f493222558c429d4d9d7d91e3486f4f193666de0c"
+  },
+  "generator_sha256": "1f80b40c4b7319c4de8cd15583f1d3dbf5afb2a105c56be2a8f5cac39706a5e4",
+  "schema_version": 1,
+  "scope": "reproduction inventory; no pooled performance",
+  "total_final_tests": 86,
+  "total_warmup_records": 6810
+}

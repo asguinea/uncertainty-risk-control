@@ -71,7 +71,7 @@ def main():
                 dest.write_bytes(data)
         for required in ("examples/selected_risk_walkthrough.py", "scripts/verify_reproduction.py", "experiments/goemotions/scripts/plot_results.py", "experiments/goemotions/evidence/manifest.json", "experiments/humaid/evidence/manifest.json", "provenance/humaid_source_extraction.json"):
             require((source / required).is_file(), f"missing source asset: {required}")
-        for required in ("experiments/tweeteval-sentiment/evidence/manifest.json", "provenance/tweeteval_sentiment_extraction.json"):
+        for required in ("experiments/tweeteval-sentiment/evidence/manifest.json", "provenance/tweeteval_sentiment_extraction.json", "scripts/plot_social_media_studies.py", "docs/social-media-research.md", "CITATION.cff", "docs/releases/v0.2.0.md"):
             require((source / required).is_file(), f"missing source asset: {required}")
 
         venv = scratch / "venv"
@@ -108,6 +108,20 @@ def main():
         current.pop("environment")
         require(current == original, "figure numerical inputs or generator hash changed")
 
+        run("social-media-figures", [python, source / "scripts/plot_social_media_studies.py", "--source-root", source, "--output", output / "social-media"], scratch)
+        figure_inputs = ["experiments/humaid/report/figures/plot_data.json", "experiments/tweeteval-sentiment/report/figures/plot_data.json", "docs/figures/study_map_data.json"]
+        for name in figure_inputs:
+            original = json.loads((source / name).read_text(encoding="utf-8"))
+            current = json.loads((output / "social-media" / name).read_text(encoding="utf-8"))
+            original.pop("environment")
+            current.pop("environment")
+            require(current == original, f"social media figure inputs or generator hash changed: {name}")
+        figure_stems = ["experiments/humaid/report/figures/risk_and_transfer", "experiments/humaid/report/figures/calibration_size", "experiments/tweeteval-sentiment/report/figures/risk_and_class_selection", "experiments/tweeteval-sentiment/report/figures/calibration_size", "docs/figures/study_map"]
+        for stem in figure_stems:
+            for suffix in (".svg", ".png"):
+                for directory in (source, output / "social-media"):
+                    require((directory / (stem + suffix)).is_file(), f"missing figure: {stem + suffix}")
+
     verification = json.loads((output / "verification.json").read_text(encoding="utf-8"))
     replay = json.loads((output / "replay.json").read_text(encoding="utf-8"))
     humaid = json.loads((output / "humaid-replay.json").read_text(encoding="utf-8"))
@@ -124,6 +138,11 @@ def main():
         "table_text_identical": True,
         "table_bytes_identical": (output / "tables.md").read_bytes() == (root / "experiments/goemotions/report/results.md").read_bytes(),
         "figure_inputs_exact_match_excluding_environment": True,
+        "social_media_figure_inputs_exact_match_excluding_environment": True,
+        "social_media_figure_input_files": figure_inputs,
+        "total_svg_png_figure_pairs": 7,
+        "total_final_candidate_tests": replay["scope"]["final_candidate_tests_replayed"] + humaid["final_candidate_tests"] + sentiment["final_candidate_tests"],
+        "total_warmup_aggregate_records": replay["scope"]["warmup_aggregate_records"] + humaid["warmup_records"] + sentiment["warmup_records"],
         "figure_byte_comparison": "not required across platforms; exact numerical inputs are required",
         "evidence_manifest_sha256": replay["evidence_manifest_sha256"], "study_scope": replay["scope"],
         "humaid": {"evidence_manifest_sha256": humaid["evidence_manifest_sha256"], "final_candidate_tests": humaid["final_candidate_tests"], "warmup_records": humaid["warmup_records"], "table_text_identical": True, "scope": humaid["scope"]},

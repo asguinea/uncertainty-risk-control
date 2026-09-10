@@ -1,6 +1,6 @@
 # HumAID reproduction contract
 
-**Available in this local expansion:** final-calibration sufficient-statistics replay and aggregate regeneration for the completed D1/D2/D3 humanitarian-research sequence. The immutable v0.1.0 tag predates this addition.
+**Available in this local v0.2.0 candidate:** final-calibration sufficient-statistics replay and aggregate regeneration for the completed D1/D2/D3 humanitarian-research sequence. The immutable v0.1.0 tag predates this addition.
 
 ```sh
 uv sync --locked
@@ -29,3 +29,7 @@ uv run --locked --group figures python scripts/verify_reproduction.py --output r
 HumAID historical role order and warm-up construction largely derive from canonical tweet identities, with opaque identities used for stored joins and some tie-breaking. Missing a secret alone does not inherently make every assignment unreconstructible. Complete public source-to-assignment reconstruction is nevertheless not implemented here, and no restricted input is distributed or acquired by this command.
 
 The bundle permits reviewing thresholds, selected-risk tradeoffs, event heterogeneity and descriptive calibration-label requirements. It does not support a new claim about live drift, model adaptation, causal recalibration benefit, or EyeTrustAI product performance.
+
+## Figures
+
+The [figure guide](report/figures/README.md) provides SVG/PNG outputs, full captions and provenance. From the repository root, use `uv run --locked --group figures python scripts/plot_social_media_studies.py --output results/social-media`. This replays all public evidence before rendering, without fitting a scorer or recalibrating a policy.

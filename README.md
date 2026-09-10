@@ -1,70 +1,60 @@
-# Uncertainty and risk control
+# Risk-controlled social media analysis
 
-**When should a model answer, and when should it ask for review?** This repository studies selective prediction: using uncertainty scores and statistical calibration to control errors among automatically accepted outputs, then measuring how much work can actually be automated.
+**How much social media analysis can we automate at a chosen error tolerance—and how much calibration data and human review does that require?**
 
-The first study, [GoEmotions MB1](experiments/goemotions/README.md), turns a frozen emotion classifier's outputs into four acceptance/review policies. At the 5% and 10% risk budgets, fewer than 5% of locked comments are accepted. Higher budgets increase automation alongside the observed error rate. Passing calibration and obtaining useful automation are distinct outcomes.
+Research on uncertainty quantification for **emotion tagging, sentiment classification, and crisis triage under explicit error budgets**. Three studies turn frozen model scores into policies that either act automatically or leave a post for review, then investigate the consequences for automation, annotation requirements, and calibration across populations.
 
-![Locked automation and observed selected error for four risk budgets and descriptive baselines, including a detail panel showing less than 5% automation for the strict budgets.](experiments/goemotions/report/figures/risk_automation.svg)
+![Three social media applications: GoEmotions emotion tagging, HumAID crisis triage, and TweetEval sentiment classification, each with a distinct action and error reference.](docs/figures/study_map.svg)
 
-*10,853 locked comments from the study's own group-preserving split. Each budget uses delta 0.05 separately; the points are observed rates, not bounds or a joint guarantee. “Error” means the top tag is absent from the agreed-label reference. [Counts, captions, and figure sources](experiments/goemotions/report/figures/README.md).*
+**Version status:** this checkout prepares the **v0.2.0 release candidate**. The published [v0.1.0 release](https://github.com/asguinea/risk-controlled-social-media-analysis/releases/tag/v0.1.0) contains GoEmotions only and remains unchanged. See the [candidate notes](docs/releases/v0.2.0.md) for the expansion and remaining publication checks.
 
-## What you can inspect and run
+## Explore the studies
 
-**Local expansion toward v0.2.0:** [HumAID](experiments/humaid/README.md) adds crisis-post deprioritization, calibration-label requirements, and source-to-target recalibration with the same frozen scorer. Its replay covers 16 final tests and 1,202 warm-up records. This addition is unreleased; v0.1.0 below remains the GoEmotions release.
+| Application and study | Research question | Result to investigate |
+| --- | --- | --- |
+| **[Emotion tagging · GoEmotions](experiments/goemotions/README.md)** | How useful is selective tagging when unsupported tags must be rare? | Both the 5% and 10% budgets accept fewer than 5% of 10,853 locked comments. |
+| **[Crisis triage · HumAID](experiments/humaid/README.md)** | How do calibration-label requirements and priority errors change across event-year populations? | At a 5% budget, the 2018 source policy deprioritizes 13.88% of locked posts, with 3.39% priority contamination. Transfer and local calibration use separate evaluation roles. |
+| **[Sentiment classification · TweetEval](experiments/tweeteval-sentiment/README.md)** | How do error tolerance and calibration size affect automation and class coverage? | The 2.5% budget returns review-all; the 15% policy automates 43.41% of official TEST with 15.1884% observed error. |
 
-[TweetEval Sentiment](experiments/tweeteval-sentiment/README.md) now adds a local second tagging study: 35 final tests and 2,804 warm-up records, preserving strict-budget review-all, class heterogeneity and the observed test error above 15%. Both additions remain unreleased pending combined presentation and release review.
+These are distinct tasks and references. An emotion error is an unsupported tag, a crisis error is a priority post being deprioritized, and a sentiment error is disagreement with the human label. The [three-study research note](docs/social-media-research.md) explains what connects them and how to interpret the populations, unsuccessful outcomes, and descriptive slices.
 
-| Component | What it establishes |
-| --- | --- |
-| [Exact-binomial method](docs/method.md) | Fixed-sequence calibration with explicit assumptions, first-failure stopping, and review-all behavior |
-| [Synthetic walkthrough](examples/selected_risk_walkthrough.py) | A small example of passing, stopping, count replay, and insufficient evidence |
-| [GoEmotions evidence replay](experiments/goemotions/reproduction.md) | Recomputes all 35 executed final-calibration tests across four budgets, including their first failures |
-| [Tables and figures](experiments/goemotions/report/figures/README.md) | Regenerates locked observations and sample-size summaries from published aggregate evidence |
-| [Research note](docs/research-note.md) | Explains calibration, annotation disagreement, development history, and the limits of the findings |
+## Reproduce the evidence
 
-**Release: [v0.1.0](https://github.com/asguinea/uncertainty-risk-control/releases/tag/v0.1.0).** The runnable benchmark scope is final-calibration replay and aggregate regeneration. Full historical training, checkpoint inference, and warm-up sampling/prefix reproduction are unavailable. The [reproduction contract](experiments/goemotions/reproduction.md) states the missing inputs. Synthetic examples are labeled separately from benchmark results.
+The candidate replays **86 executed final-calibration tests** and regenerates summaries from **6,810 warm-up aggregate records**. Those totals describe the reproduction inventory; they do not pool study performance. All three workflows run without datasets, model weights, a GPU, credentials, or an EyeTrustAI product checkout.
 
-The [Research checks workflow](https://github.com/asguinea/uncertainty-risk-control/actions/workflows/research.yml) checks isolated wheel installation, numerical verification, evidence replay, figures, and distribution history. See [verification scope and local commands](docs/verification.md).
-
-## Quick start
-
-For a versioned reproduction, use the [v0.1.0 source archive and release notes](docs/releases/v0.1.0.md), or check out the `v0.1.0` Git tag. The source archive includes the study evidence and figure workflow; the wheel contains the reusable methods and CLI.
-
-Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then run from the repository root. The reference environment is Python 3.11.13 with locked dependencies.
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then run from this checkout or its candidate source archive:
 
 ```sh
 uv sync --locked
-uv run --locked python examples/selected_risk_walkthrough.py
 uv run --locked uqrc goemotions --evidence experiments/goemotions/evidence --output results/goemotions/replay.json --report results/goemotions/tables.md
+uv run --locked uqrc humaid --evidence experiments/humaid/evidence --output results/humaid/replay.json --report results/humaid/tables.md
+uv run --locked uqrc tweeteval-sentiment --evidence experiments/tweeteval-sentiment/evidence --output results/tweeteval-sentiment/replay.json --report results/tweeteval-sentiment/tables.md
 ```
 
-For the local HumAID expansion, run `uv run --locked uqrc humaid --evidence experiments/humaid/evidence --output results/humaid/replay.json --report results/humaid/tables.md`. See its [reproduction contract](experiments/humaid/reproduction.md); this command is unavailable in the older v0.1.0 tag.
+The package distribution remains `uncertainty-risk-control`, with Python import `uncertainty_risk_control` and CLI `uqrc`. The repository name makes the application domain explicit while preserving those existing interfaces.
 
-For the local sentiment study, run `uv run --locked uqrc tweeteval-sentiment --evidence experiments/tweeteval-sentiment/evidence --output results/tweeteval-sentiment/replay.json --report results/tweeteval-sentiment/tables.md`. Its [reproduction contract](experiments/tweeteval-sentiment/reproduction.md) has the same aggregate-only boundary.
-
-The replay requires no dataset download, trained weights, GPU, credentials, or product checkout. It produces a JSON verification receipt and the research tables. `status: PASS` means the replay checks passed; it does not authenticate the original model predictions or verify the dataset's sampling assumptions.
-
-To regenerate the figures, install the optional plotting dependencies:
+To regenerate all seven figures, including the study map:
 
 ```sh
 uv sync --locked --group figures
 uv run --locked --group figures python experiments/goemotions/scripts/plot_results.py --evidence experiments/goemotions/evidence --output results/goemotions/figures
+uv run --locked --group figures python scripts/plot_social_media_studies.py --output results/social-media
 ```
 
-The plotting command replays the evidence before rendering two SVG/PNG figures and their exact numerical inputs. See the [reproduction guide](docs/reproduction.md) for method verification, synthetic simulations, packaging, and expected outputs.
+The [reproduction guide](docs/reproduction.md) covers outputs, the source archive versus wheel, and full verification. Calibration replay checks the executed sufficient statistics, including first failures. Aggregate regeneration does not reconstruct all historical warm-up candidate prefixes, retrain the models, or authenticate their original predictions. `status: PASS` refers to the specified computational checks.
 
-## How to read the method
+## Method and interpretation
 
-A frozen scorer gives lower values to outputs it estimates are less likely to be wrong. A threshold accepts `score <= threshold`, including ties. Calibration tests candidates in an independently fixed order, stops at the first failure, and chooses the largest accepted set within the passing prefix. If none passes, it returns `REVIEW_ALL`; conditional error is undefined when nothing is accepted.
+The [exact-binomial method](docs/method.md) tests a frozen candidate sequence, stops at the first failure, and chooses the largest selected set in the passing prefix. Empty selection means `REVIEW_ALL`, with undefined conditional error. The [small walkthrough](examples/selected_risk_walkthrough.py) and [verification workflow](docs/verification.md) make these decisions inspectable.
 
-The target is **error conditional on acceptance**, not the model's overall accuracy or the reliability of every individual probability. Under the stated sampling and protocol assumptions, each calibrated nonempty policy has a selected-risk guarantee at its own budget. `CERTIFIED` is the implementation's name for that method outcome. Read the [assumptions and exact statement](docs/method.md#assumptions-and-interpretation) before applying it elsewhere.
+The target is error **among automatically selected outputs**. Each risk budget uses delta 0.05 separately, under explicit sampling and protocol assumptions. This does not provide a simultaneous guarantee across budgets, classes, events, or studies, and a source-population certificate does not automatically transfer under distribution shift. Warm-up bands are descriptive; full-pool results are single runs. Human annotation references and grouping do not establish objective truth or independence.
 
-## Author, research context, and citation
+## Author, research context, and reuse
 
-Maintained by **Alejandro Sanchez Guinea**, owner of EyeTrustAI. This research originated in EyeTrustAI's validation work. The personal repository focuses on the experimental protocol, implementation, verification, and investigation of uncertainty and selective prediction. [Contribution and relationship details](docs/contributions.md) distinguish those contributions from the underlying statistical methods, dataset, and base model.
+Maintained by **Alejandro Sanchez Guinea**, owner of **EyeTrustAI**, where the underlying validation research originated. This personal repository focuses on uncertainty research, experimental protocols, implementation, and reproducibility. The [contribution statement](docs/contributions.md) credits the existing statistical methods, datasets, and base models.
 
-A planned EyeTrustAI companion repository will connect immutable research releases to specific product implementations and validation requirements. It will identify the shared evidence and ownership; it will not present the same benchmark as an independent replication. This benchmark alone does not establish product readiness.
+A planned EyeTrustAI companion repository will connect immutable research releases to product implementations and validation requirements. It will disclose shared ownership and evidence; the same benchmark does not become an independent replication or establish product readiness.
 
-Use [CITATION.cff](CITATION.cff) for the software's current metadata and cite the underlying [statistical methods](docs/method.md#references), [GoEmotions](https://aclanthology.org/2020.acl-main.372/), and [RoBERTa](https://arxiv.org/abs/1907.11692) as applicable. [Reusable portfolio copy](docs/portfolio.md) accompanies the research note.
+Use [CITATION.cff](CITATION.cff) and cite the underlying methods, datasets, and models applicable to your use. The candidate's [portfolio and article drafts](docs/portfolio.md) include figure links and precise wording for later publication.
 
-Original material is under [Apache-2.0](LICENSE), subject to [license scope](LICENSE_SCOPE.md) and [third-party notices](THIRD_PARTY_NOTICES.md). The repository distributes projected aggregate evidence and derived figures. It includes no raw comments, row-level datasets, model weights, or product runtime.
+Original included material is under [Apache-2.0](LICENSE), with [license scope](LICENSE_SCOPE.md) and [third-party notices](THIRD_PARTY_NOTICES.md). Published study assets are aggregate projections, code, documentation, and derived figures. Source posts, row-level records, identities, model weights, and product runtime are excluded.

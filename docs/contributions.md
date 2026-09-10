@@ -9,14 +9,16 @@ The portfolio contribution is the research and engineering work around an existi
 - Defining the selected-risk target, acceptance/review action, annotation reference, data roles, and comparison protocol.
 - Implementing and verifying the exact-binomial fixed-sequence procedure, including first-failure stopping and review-all behavior.
 - Investigating a development-only meta-risk scorer, separate risk budgets, calibration sample size, and performance across annotation agreement and predicted emotions.
+- Extending the action and error definitions to humanitarian crisis-post deprioritization and three-class sentiment tagging.
+- Investigating calibration transfer across HumAID event-years and preserving source/target roles; examining TweetEval class coverage and source-to-TEST differences.
 - Preserving unsuccessful and low-utility development outcomes alongside the final findings.
 - Preparing a traceable aggregate evidence bundle, executable calibration replay, and reproducible tables and figures with explicit limits.
 
-The [method extraction record](provenance.md) and [study provenance](../experiments/goemotions/provenance.md) identify the historical source material and subsequent adaptations. The presentation layer uses those projected aggregates; it adds no model fit, benchmark evaluation, or calibration search.
+The [method extraction record](provenance.md) and the study provenance records for [GoEmotions](../experiments/goemotions/provenance.md), [HumAID](../experiments/humaid/provenance.md) and [TweetEval](../experiments/tweeteval-sentiment/provenance.md) identify the historical source material and subsequent adaptations. The presentation layer uses those projected aggregates; it adds no model fit, benchmark evaluation, or calibration search.
 
 ## Prior work and attribution
 
-Exact binomial inference, Clopper–Pearson bounds, and Learn then Test are prior statistical methods. Google Research created GoEmotions, and the RoBERTa authors supplied the base-model research. This repository claims no invention of those methods, dataset, or architecture. Original notices and source attribution remain in [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md) and the protocol's references.
+Exact binomial inference, Clopper–Pearson bounds, and Learn then Test are prior statistical methods. Google Research created GoEmotions; the HumAID authors supplied the crisis benchmark; TweetEval and SemEval-2017 supplied the sentiment benchmark and task. RoBERTa and BERTweet are prior base-model research. This repository claims no invention of those methods, datasets, or architectures. Original notices and source attribution remain in [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md) and the protocol's references.
 
 The investigation is not presented as peer reviewed, publicly preregistered, independently replicated, or externally mathematically audited. Replaying projected sufficient statistics is a specific reproducibility contribution, with a narrower scope than independently rebuilding the original predictions.
 

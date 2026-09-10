@@ -1,6 +1,8 @@
 # Reproducing the methods and study evidence
 
-Start with the [small walkthrough](../examples/README.md) to inspect the stopping rule, or run `uqrc goemotions` to replay frozen benchmark evidence and regenerate aggregate tables. The optional figure script renders the study charts from verified aggregates. See the [GoEmotions reproduction contract](../experiments/goemotions/reproduction.md) for the distinction between these workflows and historical model reproduction.
+The v0.2.0 candidate supports GoEmotions, HumAID and TweetEval Sentiment. Each study replays executed final-calibration tests and regenerates aggregate tables. Plotting reads the same verified public evidence. The [small walkthrough](../examples/README.md) introduces the shared method. See the [candidate notes](releases/v0.2.0.md) for release status.
+
+The GitHub repository is named `risk-controlled-social-media-analysis`. For compatibility, the package remains `uncertainty-risk-control`, the import remains `uncertainty_risk_control`, and the CLI remains `uqrc`. No PyPI upload is claimed.
 
 ## Environment and commands
 
@@ -25,27 +27,42 @@ JSON outputs record method identifiers, source integrity, package/Python version
 
 ## Study tables and figures
 
+| Study | Final candidate tests | Warm-up aggregate records | Reproduction contract |
+| --- | ---: | ---: | --- |
+| GoEmotions MB1 | 35 | 2,804 | [Scope and provenance](../experiments/goemotions/reproduction.md) |
+| HumAID source and target | 16 | 1,202 | [Scope and provenance](../experiments/humaid/reproduction.md) |
+| TweetEval Sentiment | 35 | 2,804 | [Scope and provenance](../experiments/tweeteval-sentiment/reproduction.md) |
+
+The totals (86 and 6,810) describe the reproduction inventory, not pooled performance.
+
 ```sh
 uv run --locked uqrc goemotions \
   --evidence experiments/goemotions/evidence \
   --output results/goemotions/replay.json \
   --report results/goemotions/tables.md
+uv run --locked uqrc humaid --evidence experiments/humaid/evidence --output results/humaid/replay.json --report results/humaid/tables.md
+uv run --locked uqrc tweeteval-sentiment --evidence experiments/tweeteval-sentiment/evidence --output results/tweeteval-sentiment/replay.json --report results/tweeteval-sentiment/tables.md
 uv sync --locked --group figures
 uv run --locked --group figures python experiments/goemotions/scripts/plot_results.py \
   --evidence experiments/goemotions/evidence \
   --output results/goemotions/figures
+uv run --locked --group figures python scripts/plot_social_media_studies.py --output results/social-media
 ```
 
-The first command produces a JSON receipt and Markdown tables. The second workflow adds Matplotlib through the optional, locked `figures` group and produces two SVGs, two PNGs, and `plot_data.json`. It replays the evidence before plotting, so it does not trust an arbitrary saved result file. No dataset or model download is involved. The [figure guide](../experiments/goemotions/report/figures/README.md) explains every plotted quantity, omitted point, variability band, and caption.
+Each study command produces a JSON receipt and Markdown tables. The optional, locked `figures` group adds Matplotlib. The original GoEmotions script produces two SVG/PNG pairs and its `plot_data.json`. The new social-media script adds five SVG/PNG pairs: two HumAID figures, two TweetEval figures, and the three-study map. It writes paths mirroring `experiments/.../report/figures/` and `docs/figures/` beneath `results/social-media`, with three JSON input/provenance files. All figures are regenerated after evidence replay; no arbitrary saved result, dataset or model download is used.
 
-Expected checks: the receipt reports 35 final candidate tests, 14 unique executed candidates out of the frozen 21, and 2,804 warm-up aggregate records. Its controller counts and stopping positions must agree exactly with the evidence expectations. The regenerated tables should match `experiments/goemotions/report/results.md` byte for byte in the locked environment. Figure numerical inputs retain full precision; displayed percentages are rounded. Image-byte agreement is only claimed for the checked local environment, not across platforms.
+The [GoEmotions](../experiments/goemotions/report/figures/README.md), [HumAID](../experiments/humaid/report/figures/README.md), [TweetEval](../experiments/tweeteval-sentiment/report/figures/README.md), and [study-map](figures/README.md) guides document numerical inputs, omitted points, variability bands and population limits.
+
+For GoEmotions, the receipt reports 35 final candidate tests, 14 unique executed candidates out of the frozen 21, and 2,804 warm-up aggregate records. Its controller counts and stopping positions must agree exactly with the evidence expectations. The regenerated tables should match `experiments/goemotions/report/results.md` byte for byte in the locked environment. Figure numerical inputs retain full precision; displayed percentages are rounded. The HumAID and TweetEval receipts must match their inventory above and their respective tracked `report/results.md` text. All four figure JSON files must match exactly after removing only environment metadata. Image bytes are not required to match across platforms.
 
 ## Independent wheel installation
 
 The [automated verification workflow](verification.md) performs a fresh wheel/source-archive check on its declared Linux, macOS, and Windows runners. Its receipts distinguish exact scientific comparisons from platform-dependent text line endings and image rendering.
 
-Install the wheel built under `dist/` into a new virtual environment and run `uqrc verify` from another directory. This tests package resources and imports without an editable source checkout. The source archive includes tests, examples, configs, evidence, the plotting script and figures, documentation, and extraction manifests. The wheel includes the method, CLI, GoEmotions replay/report modules, and hash resources; study evidence, examples, and the plotting workflow need the source archive or checkout. Matplotlib is not a base package dependency.
+Install the wheel built under `dist/` into a new virtual environment and run `uqrc verify` from another directory. This tests package resources and imports without an editable source checkout. The source archive includes tests, examples, configs, evidence, both plotting scripts and all seven figures, documentation, and extraction manifests. The wheel includes the method, CLI, all three study replay/report modules, and hash resources; study evidence, examples, and the plotting workflow need the source archive or checkout. Matplotlib is not a base package dependency.
 
 ## Benchmark reproduction
+
+All three studies support aggregate regeneration and executed final-prefix replay only. The per-study contracts describe historical source assignment and join limitations. HumAID and TweetEval require no source acquisition utility for these workflows. The candidate adds no training, inference, new score fitting, threshold selection, or Negative N1/N2 experiment.
 
 GoEmotions MB1 supports report regeneration from public counts and final-calibration replay from sufficient statistics, including first failures. It also provides an optional upstream byte-verification/acquisition utility. Historical training and sampling retain unresolved assignment/order dependencies on private identity generation; no source-data/model reproduction command is claimed. Publishing a new seed would define a new replication protocol, not exact historical reproduction.

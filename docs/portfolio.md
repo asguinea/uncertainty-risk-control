@@ -1,38 +1,34 @@
-# Portfolio and article copy
+# Portfolio and article drafts
 
-These are reusable drafts for a personal portfolio, EyeTrustAI research page, or an article introduction. They describe the implemented evidence-replay scope. For this first study, link the [v0.1.0 release](https://github.com/asguinea/uncertainty-risk-control/releases/tag/v0.1.0) and use its citation metadata. That versioned link identifies the evidence discussed here.
+These drafts accompany the local v0.2.0 candidate. They have not been posted to a website, EyeTrustAI page, Substack or Medium. Link the [repository](https://github.com/asguinea/risk-controlled-social-media-analysis) while discussing work in progress; once v0.2.0 is published, replace that with the verified immutable release link and finalized citation metadata. The existing [v0.1.0 release](https://github.com/asguinea/risk-controlled-social-media-analysis/releases/tag/v0.1.0) supports GoEmotions only.
 
-## Portfolio card
+## Personal portfolio card
 
-**Uncertainty and risk control**
+**Risk-controlled social media analysis**
 
-Research on when a model should answer and when it should ask for review. The first study examines emotion tagging, calibration sample size, and the automation–error trade-off. Includes an exact-binomial method, executable replay of frozen calibration evidence, and reproducible aggregate figures. Developed in connection with EyeTrustAI, which I own.
+Research on uncertainty quantification for emotion tagging, sentiment classification and crisis triage. I investigate how explicit error budgets change automation, human review and calibration-label requirements using GoEmotions, HumAID and TweetEval Sentiment. The research includes frozen-evidence calibration replay and reproducible aggregate figures, including low-utility and unsuccessful outcomes. Developed in connection with EyeTrustAI, which I own.
 
-## Suggested article title and introduction
+## Suggested article sequence
 
-**A calibrated model can still leave almost everything for review**
+| Article | Main evidence and suggested figure |
+| --- | --- |
+| **How much social media analysis can we automate under an error budget?** | Introduce the actions and human references with the [study map](figures/study_map.png), then use the [three-study research note](social-media-research.md). |
+| **A calibrated emotion tagger can still leave almost everything for review** | GoEmotions' strict budgets and annotation agreement; [risk/automation](../experiments/goemotions/report/figures/risk_automation.png) and [sample size](../experiments/goemotions/report/figures/calibration_size.png). |
+| **Does a crisis-triage threshold travel to the next year?** | HumAID source transfer and local calibration on separate roles; [risk and transfer](../experiments/humaid/report/figures/risk_and_transfer.png) and [sample size](../experiments/humaid/report/figures/calibration_size.png). |
+| **Who gets automated by a selective sentiment classifier?** | TweetEval review-all, class selection and the observed result above 15%; [risk and classes](../experiments/tweeteval-sentiment/report/figures/risk_and_class_selection.png) and [sample size](../experiments/tweeteval-sentiment/report/figures/calibration_size.png). |
 
-How much work can we automate when we place a statistical constraint on the mistakes among accepted predictions? I investigated this question using a frozen emotion classifier and four selected-risk budgets on GoEmotions. At the 5% and 10% budgets, fewer than 5% of locked comments were accepted. Larger calibration samples made passing policies more available, but did not necessarily make strict policies useful. The accompanying research repository lets readers replay the executed final-calibration tests and regenerate aggregate tables and figures. It also documents the unsuccessful development steps, annotation disagreement, sampling assumptions, and the parts of historical model reproduction that remain unavailable.
+## Opening paragraph
 
-This work originated in EyeTrustAI's development validation program. I own EyeTrustAI; the personal repository focuses on the methods and benchmark investigation.
+A social media classifier can label every post. The harder question is how much work it can handle when errors among its automatic decisions must stay below a chosen tolerance. I investigated this across emotion tagging, crisis-post deprioritization and sentiment classification. Stricter budgets can leave almost everything for review; more calibration labels do not always deliver useful automation; and calibration on one population does not automatically protect another. The accompanying research repository lets readers replay frozen final-calibration evidence and regenerate aggregate reports while keeping unsuccessful results and uncertainty about the human references visible.
 
 ## EyeTrustAI research-page description
 
-EyeTrustAI's development validation work informed this study of statistical risk control for emotion tagging. Alejandro Sanchez Guinea, EyeTrustAI's owner, maintains the research repository. It provides frozen-evidence calibration replay and aggregate benchmark reports. A future product-validation repository will document correspondence to specific EyeTrustAI implementations and cite the same research release. The benchmark itself does not establish product readiness or constitute independent external validation.
+EyeTrustAI's validation research informed these studies of uncertainty quantification for social media analysis. Alejandro Sanchez Guinea, EyeTrustAI's owner, maintains the personal research repository. It makes selected protocols, implementations and aggregate benchmark evidence reproducible. A planned product-validation companion will map immutable research releases to particular EyeTrustAI versions and requirements, identifying shared evidence and ownership. These benchmark results alone do not establish product readiness or independent external validation.
 
-## Figures and captions to reuse
+## Reuse and precision
 
-Use [risk and automation](../experiments/goemotions/report/figures/risk_automation.png) for the main result and [calibration sample size](../experiments/goemotions/report/figures/calibration_size.png) for the sample-size discussion. SVG versions are available in the same directory. Preserve the [full captions](../experiments/goemotions/report/figures/README.md), attribution, and reference definition when embedding or cropping them. The numerical inputs and generator travel with the repository.
+SVGs accompany each PNG. Preserve the full captions and population labels from the [GoEmotions](../experiments/goemotions/report/figures/README.md), [HumAID](../experiments/humaid/report/figures/README.md), and [TweetEval](../experiments/tweeteval-sentiment/report/figures/README.md) guides. Credit the original analysis and cite applicable datasets, models and statistical methods from the [notices](../THIRD_PARTY_NOTICES.md).
 
-## Claims to keep precise
+Use “replays frozen final-calibration evidence and regenerates aggregate reports.” State delta 0.05 separately per budget and retain the sampling assumptions. Describe human references explicitly. Report HumAID target roles separately; retain TweetEval's review-all and 15.1884% observation. Full-pool warm-up points are single runs. The 86 final tests and 6,810 aggregate records measure reproduction scope, not a combined performance result.
 
-| Topic | Wording supported by this snapshot |
-| --- | --- |
-| Reproducibility | “Replays frozen final-calibration evidence and regenerates aggregate reports.” |
-| Confidence | “Each risk budget uses delta 0.05 separately, under the stated assumptions.” |
-| Observed performance | “The 5% policy accepted 419 of 10,853 locked comments; 10 accepted tags were unsupported by the annotation reference.” |
-| Sample size | “At the 5% budget and requested n = 4,000, all 100 recorded warm-up runs passed; median automation was 4.18%.” |
-| Contribution | “Protocol, implementation, verification, and empirical investigation using existing statistical methods.” |
-| Relationship | “Developed in connection with EyeTrustAI, owned by the maintainer.” |
-
-Full retraining, a simultaneous four-budget guarantee, psychological ground truth, and product readiness are not established. Use the [research note](research-note.md) for the full argument, [contributions](contributions.md) for attribution, and [reproduction contract](../experiments/goemotions/reproduction.md) for executable scope.
+The [contribution statement](contributions.md) identifies prior work and shared EyeTrustAI ownership. The [reproduction guide](reproduction.md) states the missing historical training, inference and warm-up prefix workflows.

@@ -4,9 +4,13 @@
 
 This humanitarian-research study investigates uncertainty through a concrete action: automatically deprioritizing a post whose score suggests it lacks a priority signal. A harmful selection is a deprioritized post carrying one of the study's seven priority categories. The reference is HumAID's released human-agreed category, not verified incident truth.
 
-**Local, unreleased expansion toward v0.2.0.** The public v0.1.0 release contains GoEmotions only. This addition is prepared for review; it does not change that immutable release.
+**Included in the local v0.2.0 release candidate.** The published v0.1.0 release contains GoEmotions only and remains unchanged. See the [candidate notes](../../docs/releases/v0.2.0.md).
 
 The primary source policy automates 13.88% of 9,559 locked posts, with 3.39% priority contamination among selected posts. The source study retains its 2.5%, 5% and 10% risk budgets. The 2019 series uses the same frozen scorer, observes source-policy transfer on a development role, and separately calibrates and evaluates a target policy. Its locally calibrated locked result is 18.10% automation and 2.87% selected error. These results use different populations; their difference does not measure a causal benefit from recalibration.
+
+![Separate source, target-transfer and target-local panels retain their own populations and observed priority errors.](report/figures/risk_and_transfer.svg)
+
+[Full captions, counts and calibration-size figure](report/figures/README.md) · [Three-study research note](../../docs/social-media-research.md)
 
 | Read or run | Purpose |
 | --- | --- |
@@ -23,7 +27,7 @@ uv sync --locked
 uv run --locked uqrc humaid --evidence experiments/humaid/evidence --output results/humaid/replay.json --report results/humaid/tables.md
 ```
 
-The replay checks **16 final-calibration tests** and regenerates **1,202 warm-up records** without a dataset download, model, GPU or product checkout. It is aggregate reproducibility, not an independent replication or an end-to-end model experiment. Figures and combined three-study presentation are planned for a later batch.
+The replay checks **16 final-calibration tests** and regenerates **1,202 warm-up records** without a dataset download, model, GPU or product checkout. It is aggregate reproducibility, not an independent replication or an end-to-end model experiment. The [figure guide](report/figures/README.md) explains the regenerated plots and their limitations.
 
 ## Attribution and asset boundary
 

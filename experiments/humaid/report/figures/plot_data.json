@@ -1,0 +1,1462 @@
+{
+  "display": {
+    "bands": "descriptive p05-p95, including review-all",
+    "full_pool_excluded_from_curves": true,
+    "zero_selected_error": "undefined; omitted from risk scatter"
+  },
+  "environment": {
+    "matplotlib": "3.10.7",
+    "numpy": "2.4.6",
+    "python": "3.11.13",
+    "scipy": "1.17.1",
+    "uncertainty-risk-control": "0.2.0"
+  },
+  "generator_sha256": "1f80b40c4b7319c4de8cd15583f1d3dbf5afb2a105c56be2a8f5cac39706a5e4",
+  "schema_version": 1,
+  "study": "humaid",
+  "verified_replay": {
+    "evaluations": [
+      {
+        "alpha": null,
+        "counts": {
+          "harmful": 6270,
+          "n": 9559,
+          "priority_total": 6270,
+          "selected": 9559
+        },
+        "event": null,
+        "expected": {
+          "automation_rate": 1.0,
+          "priority_recall_to_review": 0.0,
+          "review_rate": 0.0,
+          "selected_error": 0.6559263521288837
+        },
+        "id": "source_2018:locked_evaluation:AUTO_DEPRIORITIZE_ALL:None:pooled",
+        "period": "source_2018",
+        "policy": "AUTO_DEPRIORITIZE_ALL",
+        "role": "locked_evaluation",
+        "threshold": 1.0
+      },
+      {
+        "alpha": null,
+        "counts": {
+          "harmful": 468,
+          "n": 9559,
+          "priority_total": 6270,
+          "selected": 2916
+        },
+        "event": null,
+        "expected": {
+          "automation_rate": 0.3050528297939115,
+          "priority_recall_to_review": 0.9253588516746412,
+          "review_rate": 0.6949471702060885,
+          "selected_error": 0.16049382716049382
+        },
+        "id": "source_2018:locked_evaluation:RAW_0_5_CLASSIFIER_THRESHOLD:None:pooled",
+        "period": "source_2018",
+        "policy": "RAW_0_5_CLASSIFIER_THRESHOLD",
+        "role": "locked_evaluation",
+        "threshold": 0.5
+      },
+      {
+        "alpha": null,
+        "counts": {
+          "harmful": 0,
+          "n": 9559,
+          "priority_total": 6270,
+          "selected": 0
+        },
+        "event": null,
+        "expected": {
+          "automation_rate": 0.0,
+          "priority_recall_to_review": 1.0,
+          "review_rate": 1.0,
+          "selected_error": null
+        },
+        "id": "source_2018:locked_evaluation:REVIEW_ALL:None:pooled",
+        "period": "source_2018",
+        "policy": "REVIEW_ALL",
+        "role": "locked_evaluation",
+        "threshold": null
+      },
+      {
+        "alpha": 0.025,
+        "counts": {
+          "harmful": 11,
+          "n": 9559,
+          "priority_total": 6270,
+          "selected": 760
+        },
+        "event": null,
+        "expected": {
+          "automation_rate": 0.07950622450047076,
+          "priority_recall_to_review": 0.9982456140350877,
+          "review_rate": 0.9204937754995293,
+          "selected_error": 0.014473684210526316
+        },
+        "id": "source_2018:locked_evaluation:calibrated:0.025:pooled",
+        "period": "source_2018",
+        "policy": "calibrated",
+        "role": "locked_evaluation",
+        "threshold": 0.017609769478440285
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 7,
+          "n": 2951,
+          "priority_total": 1812,
+          "selected": 473
+        },
+        "event": "california_wildfires_2018",
+        "expected": {
+          "automation_rate": 0.1602846492714334,
+          "priority_recall_to_review": 0.9961368653421634,
+          "review_rate": 0.8397153507285666,
+          "selected_error": 0.014799154334038054
+        },
+        "id": "source_2018:locked_evaluation:calibrated:0.05:california_wildfires_2018",
+        "period": "source_2018",
+        "policy": "calibrated",
+        "role": "locked_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 1,
+          "n": 606,
+          "priority_total": 360,
+          "selected": 111
+        },
+        "event": "greece_wildfires_2018",
+        "expected": {
+          "automation_rate": 0.18316831683168316,
+          "priority_recall_to_review": 0.9972222222222222,
+          "review_rate": 0.8168316831683169,
+          "selected_error": 0.009009009009009009
+        },
+        "id": "source_2018:locked_evaluation:calibrated:0.05:greece_wildfires_2018",
+        "period": "source_2018",
+        "policy": "calibrated",
+        "role": "locked_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 12,
+          "n": 2508,
+          "priority_total": 1628,
+          "selected": 303
+        },
+        "event": "hurricane_florence_2018",
+        "expected": {
+          "automation_rate": 0.12081339712918661,
+          "priority_recall_to_review": 0.9926289926289926,
+          "review_rate": 0.8791866028708134,
+          "selected_error": 0.039603960396039604
+        },
+        "id": "source_2018:locked_evaluation:calibrated:0.05:hurricane_florence_2018",
+        "period": "source_2018",
+        "policy": "calibrated",
+        "role": "locked_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 23,
+          "n": 3196,
+          "priority_total": 2298,
+          "selected": 377
+        },
+        "event": "kerala_floods_2018",
+        "expected": {
+          "automation_rate": 0.11795994993742177,
+          "priority_recall_to_review": 0.9899912967798086,
+          "review_rate": 0.8820400500625782,
+          "selected_error": 0.0610079575596817
+        },
+        "id": "source_2018:locked_evaluation:calibrated:0.05:kerala_floods_2018",
+        "period": "source_2018",
+        "policy": "calibrated",
+        "role": "locked_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 2,
+          "n": 298,
+          "priority_total": 172,
+          "selected": 63
+        },
+        "event": "maryland_floods_2018",
+        "expected": {
+          "automation_rate": 0.21140939597315436,
+          "priority_recall_to_review": 0.9883720930232558,
+          "review_rate": 0.7885906040268457,
+          "selected_error": 0.031746031746031744
+        },
+        "id": "source_2018:locked_evaluation:calibrated:0.05:maryland_floods_2018",
+        "period": "source_2018",
+        "policy": "calibrated",
+        "role": "locked_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 45,
+          "n": 9559,
+          "priority_total": 6270,
+          "selected": 1327
+        },
+        "event": null,
+        "expected": {
+          "automation_rate": 0.13882205251595356,
+          "priority_recall_to_review": 0.992822966507177,
+          "review_rate": 0.8611779474840464,
+          "selected_error": 0.03391107761868877
+        },
+        "id": "source_2018:locked_evaluation:calibrated:0.05:pooled",
+        "period": "source_2018",
+        "policy": "calibrated",
+        "role": "locked_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.1,
+        "counts": {
+          "harmful": 110,
+          "n": 9559,
+          "priority_total": 6270,
+          "selected": 1860
+        },
+        "event": null,
+        "expected": {
+          "automation_rate": 0.19458102311957318,
+          "priority_recall_to_review": 0.9824561403508771,
+          "review_rate": 0.8054189768804269,
+          "selected_error": 0.05913978494623656
+        },
+        "id": "source_2018:locked_evaluation:calibrated:0.1:pooled",
+        "period": "source_2018",
+        "policy": "calibrated",
+        "role": "locked_evaluation",
+        "threshold": 0.13397836685180664
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 4,
+          "n": 1475,
+          "priority_total": 903,
+          "selected": 235
+        },
+        "event": "california_wildfires_2018",
+        "expected": {
+          "automation_rate": 0.15932203389830507,
+          "priority_recall_to_review": 0.9955703211517165,
+          "review_rate": 0.840677966101695,
+          "selected_error": 0.01702127659574468
+        },
+        "id": "source_2018:warmup_evaluation:calibrated:0.05:california_wildfires_2018",
+        "period": "source_2018",
+        "policy": "calibrated",
+        "role": "warmup_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 3,
+          "n": 303,
+          "priority_total": 195,
+          "selected": 57
+        },
+        "event": "greece_wildfires_2018",
+        "expected": {
+          "automation_rate": 0.18811881188118812,
+          "priority_recall_to_review": 0.9846153846153847,
+          "review_rate": 0.8118811881188119,
+          "selected_error": 0.05263157894736842
+        },
+        "id": "source_2018:warmup_evaluation:calibrated:0.05:greece_wildfires_2018",
+        "period": "source_2018",
+        "policy": "calibrated",
+        "role": "warmup_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 3,
+          "n": 1252,
+          "priority_total": 842,
+          "selected": 150
+        },
+        "event": "hurricane_florence_2018",
+        "expected": {
+          "automation_rate": 0.11980830670926518,
+          "priority_recall_to_review": 0.996437054631829,
+          "review_rate": 0.8801916932907348,
+          "selected_error": 0.02
+        },
+        "id": "source_2018:warmup_evaluation:calibrated:0.05:hurricane_florence_2018",
+        "period": "source_2018",
+        "policy": "calibrated",
+        "role": "warmup_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 11,
+          "n": 1596,
+          "priority_total": 1124,
+          "selected": 173
+        },
+        "event": "kerala_floods_2018",
+        "expected": {
+          "automation_rate": 0.10839598997493734,
+          "priority_recall_to_review": 0.9902135231316725,
+          "review_rate": 0.8916040100250626,
+          "selected_error": 0.06358381502890173
+        },
+        "id": "source_2018:warmup_evaluation:calibrated:0.05:kerala_floods_2018",
+        "period": "source_2018",
+        "policy": "calibrated",
+        "role": "warmup_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 0,
+          "n": 148,
+          "priority_total": 77,
+          "selected": 34
+        },
+        "event": "maryland_floods_2018",
+        "expected": {
+          "automation_rate": 0.22972972972972974,
+          "priority_recall_to_review": 1.0,
+          "review_rate": 0.7702702702702703,
+          "selected_error": 0.0
+        },
+        "id": "source_2018:warmup_evaluation:calibrated:0.05:maryland_floods_2018",
+        "period": "source_2018",
+        "policy": "calibrated",
+        "role": "warmup_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 21,
+          "n": 4774,
+          "priority_total": 3141,
+          "selected": 649
+        },
+        "event": null,
+        "expected": {
+          "automation_rate": 0.1359447004608295,
+          "priority_recall_to_review": 0.9933142311365807,
+          "review_rate": 0.8640552995391705,
+          "selected_error": 0.032357473035439135
+        },
+        "id": "source_2018:warmup_evaluation:calibrated:0.05:pooled",
+        "period": "source_2018",
+        "policy": "calibrated",
+        "role": "warmup_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": null,
+        "counts": {
+          "harmful": 3580,
+          "n": 6159,
+          "priority_total": 3580,
+          "selected": 6159
+        },
+        "event": null,
+        "expected": {
+          "automation_rate": 1.0,
+          "priority_recall_to_review": 0.0,
+          "review_rate": 0.0,
+          "selected_error": 0.5812631920766358
+        },
+        "id": "target_2019:locked_evaluation:AUTO_DEPRIORITIZE_ALL:None:pooled",
+        "period": "target_2019",
+        "policy": "AUTO_DEPRIORITIZE_ALL",
+        "role": "locked_evaluation",
+        "threshold": 1.0
+      },
+      {
+        "alpha": null,
+        "counts": {
+          "harmful": 260,
+          "n": 6159,
+          "priority_total": 3580,
+          "selected": 2190
+        },
+        "event": null,
+        "expected": {
+          "automation_rate": 0.3555772040915733,
+          "priority_recall_to_review": 0.9273743016759777,
+          "review_rate": 0.6444227959084268,
+          "selected_error": 0.1187214611872146
+        },
+        "id": "target_2019:locked_evaluation:RAW_0_5_CLASSIFIER_THRESHOLD:None:pooled",
+        "period": "target_2019",
+        "policy": "RAW_0_5_CLASSIFIER_THRESHOLD",
+        "role": "locked_evaluation",
+        "threshold": 0.5
+      },
+      {
+        "alpha": null,
+        "counts": {
+          "harmful": 0,
+          "n": 6159,
+          "priority_total": 3580,
+          "selected": 0
+        },
+        "event": null,
+        "expected": {
+          "automation_rate": 0.0,
+          "priority_recall_to_review": 1.0,
+          "review_rate": 1.0,
+          "selected_error": null
+        },
+        "id": "target_2019:locked_evaluation:REVIEW_ALL:None:pooled",
+        "period": "target_2019",
+        "policy": "REVIEW_ALL",
+        "role": "locked_evaluation",
+        "threshold": null
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 6,
+          "n": 1575,
+          "priority_total": 1160,
+          "selected": 158
+        },
+        "event": "cyclone_idai_2019",
+        "expected": {
+          "automation_rate": 0.10031746031746032,
+          "priority_recall_to_review": 0.9948275862068966,
+          "review_rate": 0.8996825396825396,
+          "selected_error": 0.0379746835443038
+        },
+        "id": "target_2019:locked_evaluation:calibrated:0.05:cyclone_idai_2019",
+        "period": "target_2019",
+        "policy": "calibrated",
+        "role": "locked_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 19,
+          "n": 3047,
+          "priority_total": 1692,
+          "selected": 530
+        },
+        "event": "hurricane_dorian_2019",
+        "expected": {
+          "automation_rate": 0.17394158188382014,
+          "priority_recall_to_review": 0.9887706855791962,
+          "review_rate": 0.8260584181161799,
+          "selected_error": 0.035849056603773584
+        },
+        "id": "target_2019:locked_evaluation:calibrated:0.05:hurricane_dorian_2019",
+        "period": "target_2019",
+        "policy": "calibrated",
+        "role": "locked_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 3,
+          "n": 752,
+          "priority_total": 407,
+          "selected": 111
+        },
+        "event": "midwestern_us_floods_2019",
+        "expected": {
+          "automation_rate": 0.14760638297872342,
+          "priority_recall_to_review": 0.9926289926289926,
+          "review_rate": 0.8523936170212766,
+          "selected_error": 0.02702702702702703
+        },
+        "id": "target_2019:locked_evaluation:calibrated:0.05:midwestern_us_floods_2019",
+        "period": "target_2019",
+        "policy": "calibrated",
+        "role": "locked_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 4,
+          "n": 785,
+          "priority_total": 321,
+          "selected": 316
+        },
+        "event": "pakistan_earthquake_2019",
+        "expected": {
+          "automation_rate": 0.40254777070063696,
+          "priority_recall_to_review": 0.9875389408099688,
+          "review_rate": 0.597452229299363,
+          "selected_error": 0.012658227848101266
+        },
+        "id": "target_2019:locked_evaluation:calibrated:0.05:pakistan_earthquake_2019",
+        "period": "target_2019",
+        "policy": "calibrated",
+        "role": "locked_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 32,
+          "n": 6159,
+          "priority_total": 3580,
+          "selected": 1115
+        },
+        "event": null,
+        "expected": {
+          "automation_rate": 0.18103588244844943,
+          "priority_recall_to_review": 0.9910614525139665,
+          "review_rate": 0.8189641175515505,
+          "selected_error": 0.028699551569506727
+        },
+        "id": "target_2019:locked_evaluation:calibrated:0.05:pooled",
+        "period": "target_2019",
+        "policy": "calibrated",
+        "role": "locked_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": null,
+        "counts": {
+          "harmful": 1778,
+          "n": 3075,
+          "priority_total": 1778,
+          "selected": 3075
+        },
+        "event": null,
+        "expected": {
+          "automation_rate": 1.0,
+          "priority_recall_to_review": 0.0,
+          "review_rate": 0.0,
+          "selected_error": 0.5782113821138212
+        },
+        "id": "target_2019:warmup_evaluation:AUTO_DEPRIORITIZE_ALL:None:pooled",
+        "period": "target_2019",
+        "policy": "AUTO_DEPRIORITIZE_ALL",
+        "role": "warmup_evaluation",
+        "threshold": 1.0
+      },
+      {
+        "alpha": null,
+        "counts": {
+          "harmful": 124,
+          "n": 3075,
+          "priority_total": 1778,
+          "selected": 1054
+        },
+        "event": null,
+        "expected": {
+          "automation_rate": 0.34276422764227643,
+          "priority_recall_to_review": 0.9302587176602924,
+          "review_rate": 0.6572357723577236,
+          "selected_error": 0.11764705882352941
+        },
+        "id": "target_2019:warmup_evaluation:RAW_0_5_CLASSIFIER_THRESHOLD:None:pooled",
+        "period": "target_2019",
+        "policy": "RAW_0_5_CLASSIFIER_THRESHOLD",
+        "role": "warmup_evaluation",
+        "threshold": 0.5
+      },
+      {
+        "alpha": null,
+        "counts": {
+          "harmful": 0,
+          "n": 3075,
+          "priority_total": 1778,
+          "selected": 0
+        },
+        "event": null,
+        "expected": {
+          "automation_rate": 0.0,
+          "priority_recall_to_review": 1.0,
+          "review_rate": 1.0,
+          "selected_error": null
+        },
+        "id": "target_2019:warmup_evaluation:REVIEW_ALL:None:pooled",
+        "period": "target_2019",
+        "policy": "REVIEW_ALL",
+        "role": "warmup_evaluation",
+        "threshold": null
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 9,
+          "n": 3075,
+          "priority_total": 1778,
+          "selected": 522
+        },
+        "event": null,
+        "expected": {
+          "automation_rate": 0.16975609756097562,
+          "priority_recall_to_review": 0.9949381327334084,
+          "review_rate": 0.8302439024390244,
+          "selected_error": 0.017241379310344827
+        },
+        "id": "target_2019:warmup_evaluation:calibrated:0.05:pooled",
+        "period": "target_2019",
+        "policy": "calibrated",
+        "role": "warmup_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 1,
+          "n": 786,
+          "priority_total": 588,
+          "selected": 67
+        },
+        "event": "cyclone_idai_2019",
+        "expected": {
+          "automation_rate": 0.08524173027989822,
+          "priority_recall_to_review": 0.9982993197278912,
+          "review_rate": 0.9147582697201018,
+          "selected_error": 0.014925373134328358
+        },
+        "id": "target_2019:warmup_evaluation:zero_shot:0.05:cyclone_idai_2019",
+        "period": "target_2019",
+        "policy": "zero_shot",
+        "role": "warmup_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 6,
+          "n": 1522,
+          "priority_total": 827,
+          "selected": 233
+        },
+        "event": "hurricane_dorian_2019",
+        "expected": {
+          "automation_rate": 0.1530880420499343,
+          "priority_recall_to_review": 0.992744860943168,
+          "review_rate": 0.8469119579500657,
+          "selected_error": 0.02575107296137339
+        },
+        "id": "target_2019:warmup_evaluation:zero_shot:0.05:hurricane_dorian_2019",
+        "period": "target_2019",
+        "policy": "zero_shot",
+        "role": "warmup_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 1,
+          "n": 376,
+          "priority_total": 210,
+          "selected": 54
+        },
+        "event": "midwestern_us_floods_2019",
+        "expected": {
+          "automation_rate": 0.14361702127659576,
+          "priority_recall_to_review": 0.9952380952380953,
+          "review_rate": 0.8563829787234043,
+          "selected_error": 0.018518518518518517
+        },
+        "id": "target_2019:warmup_evaluation:zero_shot:0.05:midwestern_us_floods_2019",
+        "period": "target_2019",
+        "policy": "zero_shot",
+        "role": "warmup_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 1,
+          "n": 391,
+          "priority_total": 153,
+          "selected": 168
+        },
+        "event": "pakistan_earthquake_2019",
+        "expected": {
+          "automation_rate": 0.4296675191815857,
+          "priority_recall_to_review": 0.9934640522875817,
+          "review_rate": 0.5703324808184143,
+          "selected_error": 0.005952380952380952
+        },
+        "id": "target_2019:warmup_evaluation:zero_shot:0.05:pakistan_earthquake_2019",
+        "period": "target_2019",
+        "policy": "zero_shot",
+        "role": "warmup_evaluation",
+        "threshold": 0.05140062794089317
+      },
+      {
+        "alpha": 0.05,
+        "counts": {
+          "harmful": 9,
+          "n": 3075,
+          "priority_total": 1778,
+          "selected": 522
+        },
+        "event": null,
+        "expected": {
+          "automation_rate": 0.16975609756097562,
+          "priority_recall_to_review": 0.9949381327334084,
+          "review_rate": 0.8302439024390244,
+          "selected_error": 0.017241379310344827
+        },
+        "id": "target_2019:warmup_evaluation:zero_shot:0.05:pooled",
+        "period": "target_2019",
+        "policy": "zero_shot",
+        "role": "warmup_evaluation",
+        "threshold": 0.05140062794089317
+      }
+    ],
+    "evidence_manifest_sha256": "b4062067ce2e5c147f28ebfa9592ebfae45b2b02f113336ee73280f5179ff4ba",
+    "final_calibration": {
+      "source_2018": {
+        "0.025": {
+          "controller": {
+            "certified": 2,
+            "cp_upper": 0.017336396352735026,
+            "harmful": 2,
+            "p_value": 0.005685443083067839,
+            "selected": 361,
+            "state": "CERTIFIED",
+            "stopped_at_index": 2,
+            "tested": 3,
+            "threshold": 0.017609769478440285
+          },
+          "tests": [
+            {
+              "cp_upper": 0.021474277572936608,
+              "harmful": 0,
+              "index": 0,
+              "p_value": 0.0303834416407994,
+              "passes": true,
+              "selected": 138,
+              "threshold": 0.00395037978887558
+            },
+            {
+              "cp_upper": 0.017336396352735026,
+              "harmful": 2,
+              "index": 1,
+              "p_value": 0.005685443083067839,
+              "passes": true,
+              "selected": 361,
+              "threshold": 0.017609769478440285
+            },
+            {
+              "cp_upper": 0.03850192728058621,
+              "harmful": 17,
+              "index": 2,
+              "p_value": 0.6174940105237781,
+              "passes": false,
+              "selected": 658,
+              "threshold": 0.05140062794089317
+            }
+          ]
+        },
+        "0.05": {
+          "controller": {
+            "certified": 3,
+            "cp_upper": 0.03850192728058621,
+            "harmful": 17,
+            "p_value": 0.0014245513567676393,
+            "selected": 658,
+            "state": "CERTIFIED",
+            "stopped_at_index": 3,
+            "tested": 4,
+            "threshold": 0.05140062794089317
+          },
+          "tests": [
+            {
+              "cp_upper": 0.021474277572936608,
+              "harmful": 0,
+              "index": 0,
+              "p_value": 0.0008430581474923386,
+              "passes": true,
+              "selected": 138,
+              "threshold": 0.00395037978887558
+            },
+            {
+              "cp_upper": 0.017336396352735026,
+              "harmful": 2,
+              "index": 1,
+              "p_value": 1.8165673533038326e-06,
+              "passes": true,
+              "selected": 361,
+              "threshold": 0.017609769478440285
+            },
+            {
+              "cp_upper": 0.03850192728058621,
+              "harmful": 17,
+              "index": 2,
+              "p_value": 0.0014245513567676393,
+              "passes": true,
+              "selected": 658,
+              "threshold": 0.05140062794089317
+            },
+            {
+              "cp_upper": 0.06926533621876879,
+              "harmful": 52,
+              "index": 3,
+              "p_value": 0.7990637523197294,
+              "passes": false,
+              "selected": 939,
+              "threshold": 0.13397836685180664
+            }
+          ]
+        },
+        "0.1": {
+          "controller": {
+            "certified": 4,
+            "cp_upper": 0.06926533621876879,
+            "harmful": 52,
+            "p_value": 5.963152251536689e-07,
+            "selected": 939,
+            "state": "CERTIFIED",
+            "stopped_at_index": 4,
+            "tested": 5,
+            "threshold": 0.13397836685180664
+          },
+          "tests": [
+            {
+              "cp_upper": 0.021474277572936608,
+              "harmful": 0,
+              "index": 0,
+              "p_value": 4.846925033557794e-07,
+              "passes": true,
+              "selected": 138,
+              "threshold": 0.00395037978887558
+            },
+            {
+              "cp_upper": 0.017336396352735026,
+              "harmful": 2,
+              "index": 1,
+              "p_value": 2.555907745348588e-14,
+              "passes": true,
+              "selected": 361,
+              "threshold": 0.017609769478440285
+            },
+            {
+              "cp_upper": 0.03850192728058621,
+              "harmful": 17,
+              "index": 2,
+              "p_value": 1.131061865708898e-13,
+              "passes": true,
+              "selected": 658,
+              "threshold": 0.05140062794089317
+            },
+            {
+              "cp_upper": 0.06926533621876879,
+              "harmful": 52,
+              "index": 3,
+              "p_value": 5.963152251536689e-07,
+              "passes": true,
+              "selected": 939,
+              "threshold": 0.13397836685180664
+            },
+            {
+              "cp_upper": 0.11279057837706684,
+              "harmful": 118,
+              "index": 4,
+              "p_value": 0.41374908482487716,
+              "passes": false,
+              "selected": 1209,
+              "threshold": 0.2869757413864136
+            }
+          ]
+        }
+      },
+      "target_2019": {
+        "0.05": {
+          "controller": {
+            "certified": 3,
+            "cp_upper": 0.03864256704021294,
+            "harmful": 13,
+            "p_value": 0.002362501466040934,
+            "selected": 531,
+            "state": "CERTIFIED",
+            "stopped_at_index": 3,
+            "tested": 4,
+            "threshold": 0.05140062794089317
+          },
+          "tests": [
+            {
+              "cp_upper": 0.012720674150193349,
+              "harmful": 0,
+              "index": 0,
+              "p_value": 6.128068871993384e-06,
+              "passes": true,
+              "selected": 234,
+              "threshold": 0.00395037978887558
+            },
+            {
+              "cp_upper": 0.03327840159698848,
+              "harmful": 7,
+              "index": 1,
+              "p_value": 0.0008180910343993004,
+              "passes": true,
+              "selected": 392,
+              "threshold": 0.017609769478440285
+            },
+            {
+              "cp_upper": 0.03864256704021294,
+              "harmful": 13,
+              "index": 2,
+              "p_value": 0.002362501466040934,
+              "passes": true,
+              "selected": 531,
+              "threshold": 0.05140062794089317
+            },
+            {
+              "cp_upper": 0.05450977019490107,
+              "harmful": 28,
+              "index": 3,
+              "p_value": 0.12972198531854884,
+              "passes": false,
+              "selected": 699,
+              "threshold": 0.13397836685180664
+            }
+          ]
+        }
+      }
+    },
+    "final_candidate_tests": 16,
+    "kind": "humaid_aggregate_replay",
+    "scope": "Frozen humanitarian-research aggregate replay: 16 final candidate tests and 1,202 warm-up records. No source-row redistribution, training/inference reproduction, complete warm-up prefix reconstruction, independent replication, or product-readiness claim.",
+    "warmup": {
+      "source_2018": {
+        "aggregates": {
+          "100": {
+            "calibration_all_runs": {
+              "median_cp_upper_where_defined": null,
+              "median_harmful_h": 0.0,
+              "median_selected_s": 0.0
+            },
+            "calibration_cp_upper_certified_runs": null,
+            "calibration_harmful_certified_runs": null,
+            "calibration_selected_certified_runs": null,
+            "certification_frequency": 0.0,
+            "certified_runs": 0,
+            "evaluation_auto_deprioritization_rate": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "evaluation_fraction_observed_selected_error_le_alpha": null,
+            "evaluation_nonzero_selection_runs": 0,
+            "evaluation_selected_error_nonzero_selection": null,
+            "review_all_frequency": 1.0,
+            "runs": 100,
+            "tau_certified_runs": null,
+            "tau_p05_p95_width": null
+          },
+          "1000": {
+            "calibration_all_runs": {
+              "median_cp_upper_where_defined": null,
+              "median_harmful_h": 0.0,
+              "median_selected_s": 0.0
+            },
+            "calibration_cp_upper_certified_runs": null,
+            "calibration_harmful_certified_runs": null,
+            "calibration_selected_certified_runs": null,
+            "certification_frequency": 0.0,
+            "certified_runs": 0,
+            "evaluation_auto_deprioritization_rate": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "evaluation_fraction_observed_selected_error_le_alpha": null,
+            "evaluation_nonzero_selection_runs": 0,
+            "evaluation_selected_error_nonzero_selection": null,
+            "review_all_frequency": 1.0,
+            "runs": 100,
+            "tau_certified_runs": null,
+            "tau_p05_p95_width": null
+          },
+          "200": {
+            "calibration_all_runs": {
+              "median_cp_upper_where_defined": null,
+              "median_harmful_h": 0.0,
+              "median_selected_s": 0.0
+            },
+            "calibration_cp_upper_certified_runs": null,
+            "calibration_harmful_certified_runs": null,
+            "calibration_selected_certified_runs": null,
+            "certification_frequency": 0.0,
+            "certified_runs": 0,
+            "evaluation_auto_deprioritization_rate": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "evaluation_fraction_observed_selected_error_le_alpha": null,
+            "evaluation_nonzero_selection_runs": 0,
+            "evaluation_selected_error_nonzero_selection": null,
+            "review_all_frequency": 1.0,
+            "runs": 100,
+            "tau_certified_runs": null,
+            "tau_p05_p95_width": null
+          },
+          "2000": {
+            "calibration_all_runs": {
+              "median_cp_upper_where_defined": 0.0433872586629609,
+              "median_harmful_h": 0.0,
+              "median_selected_s": 0.0
+            },
+            "calibration_cp_upper_certified_runs": {
+              "mean": 0.03914263899083642,
+              "median": 0.0433872586629609,
+              "p05": 0.023293349594702476,
+              "p95": 0.04748510215143834
+            },
+            "calibration_harmful_certified_runs": {
+              "mean": 2.2,
+              "median": 0.0,
+              "p05": 0.0,
+              "p95": 5.8
+            },
+            "calibration_selected_certified_runs": {
+              "mean": 162.6,
+              "median": 154.0,
+              "p05": 61.6,
+              "p95": 268.8
+            },
+            "certification_frequency": 0.05,
+            "certified_runs": 5,
+            "evaluation_auto_deprioritization_rate": {
+              "mean": 0.0040050272308336824,
+              "median": 0.0,
+              "p05": 0.0,
+              "p95": 0.0012672811059907115
+            },
+            "evaluation_fraction_observed_selected_error_le_alpha": 1.0,
+            "evaluation_nonzero_selection_runs": 5,
+            "evaluation_selected_error_nonzero_selection": {
+              "mean": 0.0194745807897555,
+              "median": 0.016129032258064516,
+              "p05": 0.008264462809917356,
+              "p95": 0.032357473035439135
+            },
+            "review_all_frequency": 0.95,
+            "runs": 100,
+            "tau_certified_runs": {
+              "mean": 0.025662356987595558,
+              "median": 0.017609769478440285,
+              "p05": 0.00395037978887558,
+              "p95": 0.05140062794089317
+            },
+            "tau_p05_p95_width": 0.04745024815201759
+          },
+          "4774": {
+            "calibration_all_runs": {
+              "median_cp_upper_where_defined": 0.04697550495724245,
+              "median_harmful_h": 19.0,
+              "median_selected_s": 589.0
+            },
+            "calibration_cp_upper_certified_runs": {
+              "mean": 0.04697550495724245,
+              "median": 0.04697550495724245,
+              "p05": 0.04697550495724245,
+              "p95": 0.04697550495724245
+            },
+            "calibration_harmful_certified_runs": {
+              "mean": 19.0,
+              "median": 19.0,
+              "p05": 19.0,
+              "p95": 19.0
+            },
+            "calibration_selected_certified_runs": {
+              "mean": 589.0,
+              "median": 589.0,
+              "p05": 589.0,
+              "p95": 589.0
+            },
+            "certification_frequency": 1.0,
+            "certified_runs": 1,
+            "evaluation_auto_deprioritization_rate": {
+              "mean": 0.1359447004608295,
+              "median": 0.1359447004608295,
+              "p05": 0.1359447004608295,
+              "p95": 0.1359447004608295
+            },
+            "evaluation_fraction_observed_selected_error_le_alpha": 1.0,
+            "evaluation_nonzero_selection_runs": 1,
+            "evaluation_selected_error_nonzero_selection": {
+              "mean": 0.032357473035439135,
+              "median": 0.032357473035439135,
+              "p05": 0.032357473035439135,
+              "p95": 0.032357473035439135
+            },
+            "review_all_frequency": 0.0,
+            "runs": 1,
+            "tau_certified_runs": {
+              "mean": 0.05140062794089317,
+              "median": 0.05140062794089317,
+              "p05": 0.05140062794089317,
+              "p95": 0.05140062794089317
+            },
+            "tau_p05_p95_width": 0.0
+          },
+          "50": {
+            "calibration_all_runs": {
+              "median_cp_upper_where_defined": null,
+              "median_harmful_h": 0.0,
+              "median_selected_s": 0.0
+            },
+            "calibration_cp_upper_certified_runs": null,
+            "calibration_harmful_certified_runs": null,
+            "calibration_selected_certified_runs": null,
+            "certification_frequency": 0.0,
+            "certified_runs": 0,
+            "evaluation_auto_deprioritization_rate": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "evaluation_fraction_observed_selected_error_le_alpha": null,
+            "evaluation_nonzero_selection_runs": 0,
+            "evaluation_selected_error_nonzero_selection": null,
+            "review_all_frequency": 1.0,
+            "runs": 100,
+            "tau_certified_runs": null,
+            "tau_p05_p95_width": null
+          },
+          "500": {
+            "calibration_all_runs": {
+              "median_cp_upper_where_defined": null,
+              "median_harmful_h": 0.0,
+              "median_selected_s": 0.0
+            },
+            "calibration_cp_upper_certified_runs": null,
+            "calibration_harmful_certified_runs": null,
+            "calibration_selected_certified_runs": null,
+            "certification_frequency": 0.0,
+            "certified_runs": 0,
+            "evaluation_auto_deprioritization_rate": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "evaluation_fraction_observed_selected_error_le_alpha": null,
+            "evaluation_nonzero_selection_runs": 0,
+            "evaluation_selected_error_nonzero_selection": null,
+            "review_all_frequency": 1.0,
+            "runs": 100,
+            "tau_certified_runs": null,
+            "tau_p05_p95_width": null
+          }
+        },
+        "milestones": {
+          "first_90pct_certification_and_10pct_utility": 4774,
+          "first_90pct_certification_and_25pct_utility": null,
+          "first_90pct_certification_and_50pct_utility": null,
+          "first_any_certification": 2000,
+          "first_certification_frequency_ge_50pct": 4774,
+          "first_certification_frequency_ge_80pct": 4774,
+          "first_certification_frequency_ge_90pct": 4774,
+          "first_median_utility_ge_10pct": 4774,
+          "first_median_utility_ge_25pct": null,
+          "first_median_utility_ge_50pct": null,
+          "first_median_utility_ge_75pct": null
+        },
+        "runs": 601
+      },
+      "target_2019": {
+        "aggregates": {
+          "100": {
+            "calibration_all_runs": {
+              "median_cp_upper_where_defined": null,
+              "median_harmful_h": 0.0,
+              "median_selected_s": 0.0
+            },
+            "calibration_cp_upper_certified": null,
+            "calibration_harmful_certified": null,
+            "calibration_selected_certified": null,
+            "certification_frequency": 0.0,
+            "certified_runs": 0,
+            "evaluation_automation_rate": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "evaluation_nonzero_selection_runs": 0,
+            "evaluation_selected_error_nonzero": null,
+            "fraction_evaluation_selected_error_le_005": null,
+            "review_all_frequency": 1.0,
+            "runs": 100,
+            "tau_certified_runs": null,
+            "tau_p05_p95_width": null
+          },
+          "1000": {
+            "calibration_all_runs": {
+              "median_cp_upper_where_defined": 0.043727554781889444,
+              "median_harmful_h": 0.0,
+              "median_selected_s": 68.5
+            },
+            "calibration_cp_upper_certified": {
+              "mean": 0.0419456015967944,
+              "median": 0.043727554781889444,
+              "p05": 0.02844600315442062,
+              "p95": 0.04913931404270034
+            },
+            "calibration_harmful_certified": {
+              "mean": 1.492063492063492,
+              "median": 1.0,
+              "p05": 0.0,
+              "p95": 4.0
+            },
+            "calibration_selected_certified": {
+              "mean": 126.57142857142857,
+              "median": 127.0,
+              "p05": 63.1,
+              "p95": 193.6
+            },
+            "certification_frequency": 0.63,
+            "certified_runs": 63,
+            "evaluation_automation_rate": {
+              "mean": 0.07821138211382116,
+              "median": 0.07479674796747968,
+              "p05": 0.0,
+              "p95": 0.16975609756097562
+            },
+            "evaluation_nonzero_selection_runs": 63,
+            "evaluation_selected_error_nonzero": {
+              "mean": 0.010921436243344976,
+              "median": 0.007751937984496124,
+              "p05": 0.004347826086956522,
+              "p95": 0.017241379310344827
+            },
+            "fraction_evaluation_selected_error_le_005": 1.0,
+            "review_all_frequency": 0.37,
+            "runs": 100,
+            "tau_certified_runs": {
+              "mean": 0.028457995178917096,
+              "median": 0.017609769478440285,
+              "p05": 0.00395037978887558,
+              "p95": 0.05140062794089317
+            },
+            "tau_p05_p95_width": 0.04745024815201759
+          },
+          "200": {
+            "calibration_all_runs": {
+              "median_cp_upper_where_defined": null,
+              "median_harmful_h": 0.0,
+              "median_selected_s": 0.0
+            },
+            "calibration_cp_upper_certified": null,
+            "calibration_harmful_certified": null,
+            "calibration_selected_certified": null,
+            "certification_frequency": 0.0,
+            "certified_runs": 0,
+            "evaluation_automation_rate": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "evaluation_nonzero_selection_runs": 0,
+            "evaluation_selected_error_nonzero": null,
+            "fraction_evaluation_selected_error_le_005": null,
+            "review_all_frequency": 1.0,
+            "runs": 100,
+            "tau_certified_runs": null,
+            "tau_p05_p95_width": null
+          },
+          "2000": {
+            "calibration_all_runs": {
+              "median_cp_upper_where_defined": 0.04327917411338139,
+              "median_harmful_h": 8.0,
+              "median_selected_s": 350.0
+            },
+            "calibration_cp_upper_certified": {
+              "mean": 0.042114678734690186,
+              "median": 0.04327917411338139,
+              "p05": 0.03184202092486666,
+              "p95": 0.049246636335322135
+            },
+            "calibration_harmful_certified": {
+              "mean": 7.26,
+              "median": 8.0,
+              "p05": 1.0,
+              "p95": 10.0
+            },
+            "calibration_selected_certified": {
+              "mean": 310.55,
+              "median": 350.0,
+              "p05": 140.0,
+              "p95": 372.1
+            },
+            "certification_frequency": 1.0,
+            "certified_runs": 100,
+            "evaluation_automation_rate": {
+              "mean": 0.14983414634146341,
+              "median": 0.16975609756097562,
+              "p05": 0.07479674796747968,
+              "p95": 0.16975609756097562
+            },
+            "evaluation_nonzero_selection_runs": 100,
+            "evaluation_selected_error_nonzero": {
+              "mean": 0.01398911611924474,
+              "median": 0.017241379310344827,
+              "p05": 0.004347826086956522,
+              "p95": 0.017241379310344827
+            },
+            "fraction_evaluation_selected_error_le_005": 1.0,
+            "review_all_frequency": 0.0,
+            "runs": 100,
+            "tau_certified_runs": {
+              "mean": 0.03972284939140081,
+              "median": 0.05140062794089317,
+              "p05": 0.00395037978887558,
+              "p95": 0.05140062794089317
+            },
+            "tau_p05_p95_width": 0.04745024815201759
+          },
+          "3075": {
+            "calibration_all_runs": {
+              "median_cp_upper_where_defined": 0.04176058912079111,
+              "median_harmful_h": 15.0,
+              "median_selected_s": 549.0
+            },
+            "calibration_cp_upper_certified": {
+              "mean": 0.04176058912079111,
+              "median": 0.04176058912079111,
+              "p05": 0.04176058912079111,
+              "p95": 0.04176058912079111
+            },
+            "calibration_harmful_certified": {
+              "mean": 15.0,
+              "median": 15.0,
+              "p05": 15.0,
+              "p95": 15.0
+            },
+            "calibration_selected_certified": {
+              "mean": 549.0,
+              "median": 549.0,
+              "p05": 549.0,
+              "p95": 549.0
+            },
+            "certification_frequency": 1.0,
+            "certified_runs": 1,
+            "evaluation_automation_rate": {
+              "mean": 0.16975609756097562,
+              "median": 0.16975609756097562,
+              "p05": 0.16975609756097562,
+              "p95": 0.16975609756097562
+            },
+            "evaluation_nonzero_selection_runs": 1,
+            "evaluation_selected_error_nonzero": {
+              "mean": 0.017241379310344827,
+              "median": 0.017241379310344827,
+              "p05": 0.017241379310344827,
+              "p95": 0.017241379310344827
+            },
+            "fraction_evaluation_selected_error_le_005": 1.0,
+            "review_all_frequency": 0.0,
+            "runs": 1,
+            "tau_certified_runs": {
+              "mean": 0.05140062794089317,
+              "median": 0.05140062794089317,
+              "p05": 0.05140062794089317,
+              "p95": 0.05140062794089317
+            },
+            "tau_p05_p95_width": 0.0
+          },
+          "50": {
+            "calibration_all_runs": {
+              "median_cp_upper_where_defined": null,
+              "median_harmful_h": 0.0,
+              "median_selected_s": 0.0
+            },
+            "calibration_cp_upper_certified": null,
+            "calibration_harmful_certified": null,
+            "calibration_selected_certified": null,
+            "certification_frequency": 0.0,
+            "certified_runs": 0,
+            "evaluation_automation_rate": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "evaluation_nonzero_selection_runs": 0,
+            "evaluation_selected_error_nonzero": null,
+            "fraction_evaluation_selected_error_le_005": null,
+            "review_all_frequency": 1.0,
+            "runs": 100,
+            "tau_certified_runs": null,
+            "tau_p05_p95_width": null
+          },
+          "500": {
+            "calibration_all_runs": {
+              "median_cp_upper_where_defined": null,
+              "median_harmful_h": 0.0,
+              "median_selected_s": 0.0
+            },
+            "calibration_cp_upper_certified": null,
+            "calibration_harmful_certified": null,
+            "calibration_selected_certified": null,
+            "certification_frequency": 0.0,
+            "certified_runs": 0,
+            "evaluation_automation_rate": {
+              "mean": 0.0,
+              "median": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "evaluation_nonzero_selection_runs": 0,
+            "evaluation_selected_error_nonzero": null,
+            "fraction_evaluation_selected_error_le_005": null,
+            "review_all_frequency": 1.0,
+            "runs": 100,
+            "tau_certified_runs": null,
+            "tau_p05_p95_width": null
+          }
+        },
+        "milestones": {
+          "first_90pct_certification_and_10pct_utility": 2000,
+          "first_90pct_certification_and_25pct_utility": null,
+          "first_90pct_certification_and_50pct_utility": null,
+          "first_any_certification": 1000,
+          "first_certification_frequency_ge_50pct": 1000,
+          "first_certification_frequency_ge_80pct": 2000,
+          "first_certification_frequency_ge_90pct": 2000,
+          "first_median_utility_ge_10pct": 2000,
+          "first_median_utility_ge_25pct": null,
+          "first_median_utility_ge_50pct": null
+        },
+        "runs": 601
+      }
+    },
+    "warmup_records": 1202
+  }
+}

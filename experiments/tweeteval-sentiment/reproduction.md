@@ -1,6 +1,6 @@
 # TweetEval Sentiment reproduction contract
 
-**Available in this local expansion:** frozen D1/D2 final sufficient-statistics replay and aggregate regeneration. The immutable v0.1.0 tag predates this study addition.
+**Available in this local v0.2.0 candidate:** frozen D1/D2 final sufficient-statistics replay and aggregate regeneration. The immutable v0.1.0 tag predates this study addition.
 
 ```sh
 uv sync --locked
@@ -29,3 +29,7 @@ uv run --locked --group figures python scripts/verify_reproduction.py --output r
 The original source-role assignment uses unsalted normalized-text group ordering; sanity and warm-up orders depend on opaque group identities. Not every assignment is inherently unreconstructible merely because a secret exists. This release nevertheless provides no complete public source-to-assignment reconstruction or dataset acquisition utility.
 
 The export used a hash-bound historical official-identity map, the existing local identity key, source-label offsets and frozen final scores to establish an exact join. That work remains internal; public replay consumes only aggregate counts. The key and source records are neither included nor required by the public command.
+
+## Figures
+
+The [figure guide](report/figures/README.md) provides SVG/PNG outputs, full captions and provenance. From the repository root, use `uv run --locked --group figures python scripts/plot_social_media_studies.py --output results/social-media`. This replays all public evidence before rendering, without fitting a scorer or recalibrating a policy.
