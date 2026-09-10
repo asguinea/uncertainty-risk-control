@@ -11,10 +11,11 @@
     "scipy": "1.17.1",
     "uncertainty-risk-control": "0.2.0"
   },
-  "generator_sha256": "1f80b40c4b7319c4de8cd15583f1d3dbf5afb2a105c56be2a8f5cac39706a5e4",
-  "schema_version": 1,
+  "evidence_manifest_sha256": "b4062067ce2e5c147f28ebfa9592ebfae45b2b02f113336ee73280f5179ff4ba",
+  "generator_sha256": "1ddad2d4657d6d89fd80556e7a16b728954b5b8d5ef3cfb1ad67cfbf228e88b7",
+  "schema_version": 2,
   "study": "humaid",
-  "verified_replay": {
+  "verified_aggregates": {
     "evaluations": [
       {
         "alpha": null,
@@ -731,220 +732,6 @@
         "threshold": 0.05140062794089317
       }
     ],
-    "evidence_manifest_sha256": "b4062067ce2e5c147f28ebfa9592ebfae45b2b02f113336ee73280f5179ff4ba",
-    "final_calibration": {
-      "source_2018": {
-        "0.025": {
-          "controller": {
-            "certified": 2,
-            "cp_upper": 0.017336396352735026,
-            "harmful": 2,
-            "p_value": 0.005685443083067839,
-            "selected": 361,
-            "state": "CERTIFIED",
-            "stopped_at_index": 2,
-            "tested": 3,
-            "threshold": 0.017609769478440285
-          },
-          "tests": [
-            {
-              "cp_upper": 0.021474277572936608,
-              "harmful": 0,
-              "index": 0,
-              "p_value": 0.0303834416407994,
-              "passes": true,
-              "selected": 138,
-              "threshold": 0.00395037978887558
-            },
-            {
-              "cp_upper": 0.017336396352735026,
-              "harmful": 2,
-              "index": 1,
-              "p_value": 0.005685443083067839,
-              "passes": true,
-              "selected": 361,
-              "threshold": 0.017609769478440285
-            },
-            {
-              "cp_upper": 0.03850192728058621,
-              "harmful": 17,
-              "index": 2,
-              "p_value": 0.6174940105237781,
-              "passes": false,
-              "selected": 658,
-              "threshold": 0.05140062794089317
-            }
-          ]
-        },
-        "0.05": {
-          "controller": {
-            "certified": 3,
-            "cp_upper": 0.03850192728058621,
-            "harmful": 17,
-            "p_value": 0.0014245513567676393,
-            "selected": 658,
-            "state": "CERTIFIED",
-            "stopped_at_index": 3,
-            "tested": 4,
-            "threshold": 0.05140062794089317
-          },
-          "tests": [
-            {
-              "cp_upper": 0.021474277572936608,
-              "harmful": 0,
-              "index": 0,
-              "p_value": 0.0008430581474923386,
-              "passes": true,
-              "selected": 138,
-              "threshold": 0.00395037978887558
-            },
-            {
-              "cp_upper": 0.017336396352735026,
-              "harmful": 2,
-              "index": 1,
-              "p_value": 1.8165673533038326e-06,
-              "passes": true,
-              "selected": 361,
-              "threshold": 0.017609769478440285
-            },
-            {
-              "cp_upper": 0.03850192728058621,
-              "harmful": 17,
-              "index": 2,
-              "p_value": 0.0014245513567676393,
-              "passes": true,
-              "selected": 658,
-              "threshold": 0.05140062794089317
-            },
-            {
-              "cp_upper": 0.06926533621876879,
-              "harmful": 52,
-              "index": 3,
-              "p_value": 0.7990637523197294,
-              "passes": false,
-              "selected": 939,
-              "threshold": 0.13397836685180664
-            }
-          ]
-        },
-        "0.1": {
-          "controller": {
-            "certified": 4,
-            "cp_upper": 0.06926533621876879,
-            "harmful": 52,
-            "p_value": 5.963152251536689e-07,
-            "selected": 939,
-            "state": "CERTIFIED",
-            "stopped_at_index": 4,
-            "tested": 5,
-            "threshold": 0.13397836685180664
-          },
-          "tests": [
-            {
-              "cp_upper": 0.021474277572936608,
-              "harmful": 0,
-              "index": 0,
-              "p_value": 4.846925033557794e-07,
-              "passes": true,
-              "selected": 138,
-              "threshold": 0.00395037978887558
-            },
-            {
-              "cp_upper": 0.017336396352735026,
-              "harmful": 2,
-              "index": 1,
-              "p_value": 2.555907745348588e-14,
-              "passes": true,
-              "selected": 361,
-              "threshold": 0.017609769478440285
-            },
-            {
-              "cp_upper": 0.03850192728058621,
-              "harmful": 17,
-              "index": 2,
-              "p_value": 1.131061865708898e-13,
-              "passes": true,
-              "selected": 658,
-              "threshold": 0.05140062794089317
-            },
-            {
-              "cp_upper": 0.06926533621876879,
-              "harmful": 52,
-              "index": 3,
-              "p_value": 5.963152251536689e-07,
-              "passes": true,
-              "selected": 939,
-              "threshold": 0.13397836685180664
-            },
-            {
-              "cp_upper": 0.11279057837706684,
-              "harmful": 118,
-              "index": 4,
-              "p_value": 0.41374908482487716,
-              "passes": false,
-              "selected": 1209,
-              "threshold": 0.2869757413864136
-            }
-          ]
-        }
-      },
-      "target_2019": {
-        "0.05": {
-          "controller": {
-            "certified": 3,
-            "cp_upper": 0.03864256704021294,
-            "harmful": 13,
-            "p_value": 0.002362501466040934,
-            "selected": 531,
-            "state": "CERTIFIED",
-            "stopped_at_index": 3,
-            "tested": 4,
-            "threshold": 0.05140062794089317
-          },
-          "tests": [
-            {
-              "cp_upper": 0.012720674150193349,
-              "harmful": 0,
-              "index": 0,
-              "p_value": 6.128068871993384e-06,
-              "passes": true,
-              "selected": 234,
-              "threshold": 0.00395037978887558
-            },
-            {
-              "cp_upper": 0.03327840159698848,
-              "harmful": 7,
-              "index": 1,
-              "p_value": 0.0008180910343993004,
-              "passes": true,
-              "selected": 392,
-              "threshold": 0.017609769478440285
-            },
-            {
-              "cp_upper": 0.03864256704021294,
-              "harmful": 13,
-              "index": 2,
-              "p_value": 0.002362501466040934,
-              "passes": true,
-              "selected": 531,
-              "threshold": 0.05140062794089317
-            },
-            {
-              "cp_upper": 0.05450977019490107,
-              "harmful": 28,
-              "index": 3,
-              "p_value": 0.12972198531854884,
-              "passes": false,
-              "selected": 699,
-              "threshold": 0.13397836685180664
-            }
-          ]
-        }
-      }
-    },
-    "final_candidate_tests": 16,
-    "kind": "humaid_aggregate_replay",
-    "scope": "Frozen humanitarian-research aggregate replay: 16 final candidate tests and 1,202 warm-up records. No source-row redistribution, training/inference reproduction, complete warm-up prefix reconstruction, independent replication, or product-readiness claim.",
     "warmup": {
       "source_2018": {
         "aggregates": {
@@ -1456,7 +1243,6 @@
         },
         "runs": 601
       }
-    },
-    "warmup_records": 1202
+    }
   }
 }

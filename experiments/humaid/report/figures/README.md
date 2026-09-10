@@ -20,6 +20,8 @@ Full-pool rows (source 4,774; target 3,075) are single runs and are excluded fro
 
 ## Regeneration and attribution
 
-From the repository root run `uv run --locked --group figures python scripts/plot_social_media_studies.py --output results/social-media`. The [generator](../../../../scripts/plot_social_media_studies.py) replays the public bundle before plotting. The output mirrors these paths beneath the requested directory. JSON retains the complete verified replay, generator SHA-256 and environment. No source text, labels per row, model weights or recalibration are involved.
+From the repository root run `uv run --locked --group figures python scripts/plot_social_media_studies.py --output results/social-media`. The [generator](../../../../scripts/plot_social_media_studies.py) replays the public bundle before plotting. The output mirrors these paths beneath the requested directory. JSON retains verified evaluation counts and warm-up aggregates, generator SHA-256 and environment. No source text, labels per row, model weights or recalibration are involved.
 
 These are original analytical figures based on the HumAID study. Credit Alejandro Sanchez Guinea / EyeTrustAI and cite [HumAID and its terms](../../../../THIRD_PARTY_NOTICES.md#humaid). Human priority labels are the reference, not verified incident truth. Preserve population labels and these qualifications when reusing figures.
+
+Figure-input schema 2 excludes unplotted final-test probabilities and confidence-bound diagnostics. The complete evidence replay still runs before plotting and retains its original numerical tolerances. Plotted inputs are compared exactly; no rounding or tolerance is added to figure comparisons.

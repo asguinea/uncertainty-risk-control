@@ -22,6 +22,8 @@ The full-pool n = 7,142 row is one run and is excluded from the curves. At 2.5% 
 
 ## Regeneration and attribution
 
-From the repository root run `uv run --locked --group figures python scripts/plot_social_media_studies.py --output results/social-media`. The [generator](../../../../scripts/plot_social_media_studies.py) reads only the verified public evidence. Outputs mirror these paths under the requested directory. The JSON contains the complete verified replay, generator hash and environment; full-precision numerical inputs are compared during installed reproduction.
+From the repository root run `uv run --locked --group figures python scripts/plot_social_media_studies.py --output results/social-media`. The [generator](../../../../scripts/plot_social_media_studies.py) reads only the verified public evidence. Outputs mirror these paths under the requested directory. The JSON contains verified evaluation counts and warm-up aggregates, generator hash and environment; full-precision numerical inputs are compared during installed reproduction.
 
 Credit Alejandro Sanchez Guinea / EyeTrustAI for the original analysis, and cite [TweetEval, SemEval-2017 sentiment and BERTweet](../../../../THIRD_PARTY_NOTICES.md#tweeteval-sentiment-and-bertweet) as applicable. Preserve the human-reference definition, review-all outcome, observed excess and sparse neutral slice in reuse.
+
+Figure-input schema 2 excludes unplotted final-test probabilities and confidence-bound diagnostics. The complete evidence replay still runs before plotting and retains its original numerical tolerances. Plotted inputs are compared exactly; no rounding or tolerance is added to figure comparisons.

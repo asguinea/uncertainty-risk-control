@@ -190,7 +190,13 @@ def main():
     sentiment_risk(sentiment, sent_dir)
     warmup_plot([(f"{100 * float(alpha):g}% budget", rows, "evaluation_automation", "replicates") for alpha, rows in sentiment["warmup"]["aggregation"].items()], sent_dir, "Sentiment classification: calibration labels and available automation", "At 2.5%, the single full-pool warm-up run passes; final calibration returns REVIEW_ALL. Full pool: n = 7,142.")
     for directory, name, replay in [(hum_dir, "humaid", crisis), (sent_dir, "tweeteval-sentiment", sentiment)]:
-        write_data(directory, "plot_data.json", {"study": name, "verified_replay": replay, "display": {"full_pool_excluded_from_curves": True, "bands": "descriptive p05-p95, including review-all", "zero_selected_error": "undefined; omitted from risk scatter"}})
+        # The full replay still runs above. Final-test probabilities and CP
+        # diagnostics are not plotted; their numerical tolerance belongs to
+        # replay verification, not the exact comparison of figure inputs.
+        write_data(directory, "plot_data.json", {"schema_version": 2, "study": name,
+            "evidence_manifest_sha256": replay["evidence_manifest_sha256"],
+            "verified_aggregates": {key: replay[key] for key in ("evaluations", "warmup")},
+            "display": {"full_pool_excluded_from_curves": True, "bands": "descriptive p05-p95, including review-all", "zero_selected_error": "undefined; omitted from risk scatter"}})
     study_map(studies, args.output / "docs/figures")
     print("PASS: verified public evidence; five figures (SVG/PNG) and three numerical/provenance records.")
 
