@@ -1,0 +1,45 @@
+{
+  "aggregation_loop_ast_sha256": "befb6d451ac6c35077a3d8d0284c9100811961f1d99dca2f601c8f022ea39d67",
+  "excluded": [
+    "original runner",
+    "identity join and private locations",
+    "raw source rows",
+    "identity key",
+    "model assets"
+  ],
+  "function_bodies": [
+    {
+      "body_ast_sha256": "cefe24d4b6c3127918cdd715bc02588067e62e03765c75c17ca7abb13af9f7d8",
+      "name": "q"
+    },
+    {
+      "body_ast_sha256": "34197d3a6c29fa9738da28c9cc57d1006be6a4379f79621369da2df8bbb98127",
+      "name": "milestone"
+    }
+  ],
+  "original_method_functions": [
+    {
+      "body_ast_sha256": "808481d79c17c2b787915847ca403b6b689872ecfaf5b71b8f1aba8c66b50022",
+      "name": "cp_upper"
+    },
+    {
+      "body_ast_sha256": "bc3ca8c8a62bfbf4e6bd483e605be8e7ef758e12c78b348e7a2e6abb2ad49979",
+      "name": "p_value"
+    },
+    {
+      "body_ast_sha256": "a704617874682f179bd0ffdd6c00020210cab6edd09abb61721dee8f761c0e57",
+      "name": "evidence"
+    },
+    {
+      "body_ast_sha256": "ae6d43ddbdea093fc9ef6579b30eb74d2ffeec309d8b347929b8394178236263",
+      "name": "calibrate"
+    }
+  ],
+  "schema_version": 1,
+  "source_basename": "analyze_tweeteval_sentiment_d1.py",
+  "source_file_sha256": "568ab87229043b3be235b960194f8db7861e1bb63caeb8527cd181db808dea4a",
+  "transformations": [
+    "Extract quantile and milestone function bodies plus the aggregation loop from main; supply original budgets/tiers and a pure input/return wrapper; format with ast.unparse.",
+    "Original numerical adapter functions used internally for parity checks only; public replay reuses the published count engine."
+  ]
+}

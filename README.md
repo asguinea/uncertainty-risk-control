@@ -12,6 +12,8 @@ The first study, [GoEmotions MB1](experiments/goemotions/README.md), turns a fro
 
 **Local expansion toward v0.2.0:** [HumAID](experiments/humaid/README.md) adds crisis-post deprioritization, calibration-label requirements, and source-to-target recalibration with the same frozen scorer. Its replay covers 16 final tests and 1,202 warm-up records. This addition is unreleased; v0.1.0 below remains the GoEmotions release.
 
+[TweetEval Sentiment](experiments/tweeteval-sentiment/README.md) now adds a local second tagging study: 35 final tests and 2,804 warm-up records, preserving strict-budget review-all, class heterogeneity and the observed test error above 15%. Both additions remain unreleased pending combined presentation and release review.
+
 | Component | What it establishes |
 | --- | --- |
 | [Exact-binomial method](docs/method.md) | Fixed-sequence calibration with explicit assumptions, first-failure stopping, and review-all behavior |
@@ -37,6 +39,8 @@ uv run --locked uqrc goemotions --evidence experiments/goemotions/evidence --out
 ```
 
 For the local HumAID expansion, run `uv run --locked uqrc humaid --evidence experiments/humaid/evidence --output results/humaid/replay.json --report results/humaid/tables.md`. See its [reproduction contract](experiments/humaid/reproduction.md); this command is unavailable in the older v0.1.0 tag.
+
+For the local sentiment study, run `uv run --locked uqrc tweeteval-sentiment --evidence experiments/tweeteval-sentiment/evidence --output results/tweeteval-sentiment/replay.json --report results/tweeteval-sentiment/tables.md`. Its [reproduction contract](experiments/tweeteval-sentiment/reproduction.md) has the same aggregate-only boundary.
 
 The replay requires no dataset download, trained weights, GPU, credentials, or product checkout. It produces a JSON verification receipt and the research tables. `status: PASS` means the replay checks passed; it does not authenticate the original model predictions or verify the dataset's sampling assumptions.
 

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "calibration.json": "9a1bdfe7475f9b47f8a2bb6fa0207d8e3a408f834830d866b41828feb01e251a",
+    "design.json": "68027ea0ef699fb9d034fed35e698cfc7a297eeb91025026e55797173e96ada7",
+    "evaluations.json": "c29321ba9a231fb06c397a5fb0366eb844eb39a2ac5c3f3c8c45a751caf318e2",
+    "expected.json": "3e9f5550433c4e1c9609098f15aa14b5ed7f67416f7edc3095cdc4fcee0f4326",
+    "study.json": "5af37d1218adad3fe035351673c7178a92b6c1a4ad6dab8ea99467d4a73fa9e6",
+    "warmup_runs.json": "8d833b2b7ec1421c8fd4dee23f233ebe5dba87794071ea697fc936f5665b1fb9"
+  },
+  "implementation": {
+    "_aggregate_reference.py": "3564b665f9ea1fa8148c6acccff5991a907d6ef4852e6f7e76a1b23b4105f9c1",
+    "count_replay.py": "f2abeebfe5781e2a83721d22fa5ab647e29bb72d8d7303531d7478b19f608fcb",
+    "projection.py": "f626ec896996e1342b34962eb2b94f8744b25d8d17bdf2ccd48a86729103a027"
+  },
+  "schema_version": 1,
+  "study": "tweeteval-sentiment"
+}

@@ -1,0 +1,140 @@
+{
+  "budgets": {
+    "0.025": {
+      "certified": 0,
+      "cp_upper": null,
+      "harmful": 0,
+      "p_value": null,
+      "selected": 0,
+      "state": "REVIEW_ALL",
+      "stopped_at_index": 0,
+      "tested": 1,
+      "threshold": null
+    },
+    "0.05": {
+      "certified": 7,
+      "cp_upper": 0.030630523096338864,
+      "harmful": 12,
+      "p_value": 4.583450808749593e-05,
+      "selected": 631,
+      "state": "CERTIFIED",
+      "stopped_at_index": 7,
+      "tested": 8,
+      "threshold": 0.0295229992319207
+    },
+    "0.1": {
+      "certified": 11,
+      "cp_upper": 0.08803011507210892,
+      "harmful": 149,
+      "p_value": 0.0003394180773565651,
+      "selected": 1928,
+      "state": "CERTIFIED",
+      "stopped_at_index": 11,
+      "tested": 12,
+      "threshold": 0.061477750631934946
+    },
+    "0.15": {
+      "certified": 13,
+      "cp_upper": 0.12914295611926652,
+      "harmful": 385,
+      "p_value": 2.938709742312626e-07,
+      "selected": 3226,
+      "state": "CERTIFIED",
+      "stopped_at_index": 13,
+      "tested": 14,
+      "threshold": 0.11842140197479434
+    }
+  },
+  "counts": [
+    {
+      "harmful": 1,
+      "index": 0,
+      "selected": 134,
+      "threshold": 0.01720148135074917
+    },
+    {
+      "harmful": 4,
+      "index": 1,
+      "selected": 313,
+      "threshold": 0.021523669158594383
+    },
+    {
+      "harmful": 4,
+      "index": 2,
+      "selected": 260,
+      "threshold": 0.02004763201966986
+    },
+    {
+      "harmful": 7,
+      "index": 3,
+      "selected": 475,
+      "threshold": 0.025470538417912914
+    },
+    {
+      "harmful": 12,
+      "index": 4,
+      "selected": 631,
+      "threshold": 0.0295229992319207
+    },
+    {
+      "harmful": 0,
+      "index": 5,
+      "selected": 65,
+      "threshold": 0.015606177474279836
+    },
+    {
+      "harmful": 2,
+      "index": 6,
+      "selected": 200,
+      "threshold": 0.018537458919133054
+    },
+    {
+      "harmful": 68,
+      "index": 7,
+      "selected": 1288,
+      "threshold": 0.04416786348552704
+    },
+    {
+      "harmful": 41,
+      "index": 8,
+      "selected": 942,
+      "threshold": 0.03683912023362246
+    },
+    {
+      "harmful": 105,
+      "index": 9,
+      "selected": 1623,
+      "threshold": 0.05229788468364194
+    },
+    {
+      "harmful": 149,
+      "index": 10,
+      "selected": 1928,
+      "threshold": 0.061477750631934946
+    },
+    {
+      "harmful": 246,
+      "index": 11,
+      "selected": 2539,
+      "threshold": 0.08568221332232251
+    },
+    {
+      "harmful": 385,
+      "index": 12,
+      "selected": 3226,
+      "threshold": 0.11842140197479434
+    },
+    {
+      "harmful": 567,
+      "index": 13,
+      "selected": 3940,
+      "threshold": 0.1656113623980724
+    }
+  ],
+  "n": 7143,
+  "reference_support": {
+    "negative": 1118,
+    "neutral": 3220,
+    "positive": 2805
+  }
+}

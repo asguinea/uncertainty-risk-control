@@ -30,3 +30,13 @@ The [official HumAID page](https://crisisnlp.qcri.org/humaid_dataset.html) and [
 Earlier acquisition records contain Dataverse license metadata alongside additional restrictions. The current [Dataverse record](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/A7NVF7) and metadata API could not be reverified during this review because automated access was blocked. Bare CC0 metadata must not be interpreted as unrestricted permission in the face of those unresolved terms. No raw-data download utility or model distribution is added for HumAID.
 
 Only original code, original analytical documentation, aggregate counts and derived analytical outputs are included. Tweets, tweet IDs, source-linked row labels/scores, assignments, identity keys, source archives and model assets are excluded. The repository license and EyeTrustAI affiliation grant no additional rights to those upstream assets.
+
+## TweetEval Sentiment and BERTweet
+
+The study credits [TweetEval: Unified Benchmark and Comparative Evaluation for Tweet Classification](https://aclanthology.org/2020.findings-emnlp.148/) (Barbieri et al., 2020; DOI `10.18653/v1/2020.findings-emnlp.148`) and the underlying [SemEval-2017 Task 4: Sentiment Analysis in Twitter](https://aclanthology.org/S17-2088/). The source snapshot is Cardiff NLP revision `4fbd22cd78421f05b1ecdb4fc5725bc7a7bd8f66`.
+
+The [pinned upstream README](https://github.com/cardiffnlp/tweeteval/blob/4fbd22cd78421f05b1ecdb4fc5725bc7a7bd8f66/README.md#license), reviewed in the expansion scope on 10 September 2026, defers to restrictions of the original tasks and Twitter. The repository's Apache-2.0 license applies to its original included material and does not grant unrestricted rights to benchmark data or underlying posts.
+
+The historical scorer derives from [BERTweet: A pre-trained language model for English Tweets](https://aclanthology.org/2020.emnlp-demos.2/), with the pinned base revision recorded in the study protocol. The source includes no BERTweet model, tokenizer, normalization code, base weights or fitted classifier. There is no new benchmark download utility or model redistribution in this addition.
+
+Only original projection/replay code, extracted original aggregation logic, aggregate sufficient statistics and analytical reports are included. Tweets, original/opaque row identities, per-row annotations or scores, assignment maps, the identity key, model assets and original papers are excluded. A personal GitHub account and shared EyeTrustAI ownership do not grant additional rights to those excluded assets.

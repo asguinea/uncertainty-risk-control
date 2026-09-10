@@ -53,6 +53,8 @@ jobs:
             results/ci/tables.md
             results/ci/humaid-replay.json
             results/ci/humaid-tables.md
+            results/ci/tweeteval-sentiment-replay.json
+            results/ci/tweeteval-sentiment-tables.md
             results/ci/figures/*.json
             results/ci/figures/*.svg
             results/ci/figures/*.png

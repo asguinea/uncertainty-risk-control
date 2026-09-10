@@ -1,0 +1,1154 @@
+{
+  "aggregation": {
+    "0.025": {
+      "100": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 100.0,
+          "median": 100.0,
+          "min": 100.0,
+          "p05": 100.0,
+          "p95": 100.0
+        },
+        "replicates": 100,
+        "requested_n": 100,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "1000": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 1000.0,
+          "median": 1000.0,
+          "min": 1000.0,
+          "p05": 1000.0,
+          "p95": 1000.0
+        },
+        "replicates": 100,
+        "requested_n": 1000,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "200": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 200.0,
+          "median": 200.0,
+          "min": 200.0,
+          "p05": 200.0,
+          "p95": 200.0
+        },
+        "replicates": 100,
+        "requested_n": 200,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "2000": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 2000.0,
+          "median": 2000.0,
+          "min": 2000.0,
+          "p05": 2000.0,
+          "p95": 2000.0
+        },
+        "replicates": 100,
+        "requested_n": 2000,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "4000": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 4000.0,
+          "median": 4000.0,
+          "min": 4000.0,
+          "p05": 4000.0,
+          "p95": 4000.0
+        },
+        "replicates": 100,
+        "requested_n": 4000,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "50": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 50.0,
+          "median": 50.0,
+          "min": 50.0,
+          "p05": 50.0,
+          "p95": 50.0
+        },
+        "replicates": 100,
+        "requested_n": 50,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "500": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 500.0,
+          "median": 500.0,
+          "min": 500.0,
+          "p05": 500.0,
+          "p95": 500.0
+        },
+        "replicates": 100,
+        "requested_n": 500,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "7142": {
+        "certification_frequency": 1.0,
+        "evaluation_automation": {
+          "max": 0.04900588070568468,
+          "median": 0.04900588070568468,
+          "min": 0.04900588070568468,
+          "p05": 0.04900588070568468,
+          "p95": 0.04900588070568468
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": 0.002857142857142857,
+          "median": 0.002857142857142857,
+          "min": 0.002857142857142857,
+          "p05": 0.002857142857142857,
+          "p95": 0.002857142857142857
+        },
+        "realized_n": {
+          "max": 7142.0,
+          "median": 7142.0,
+          "min": 7142.0,
+          "p05": 7142.0,
+          "p95": 7142.0
+        },
+        "replicates": 1,
+        "requested_n": 7142,
+        "review_all_frequency": 0.0,
+        "threshold_nonzero": {
+          "max": 0.021523669158594383,
+          "median": 0.021523669158594383,
+          "min": 0.021523669158594383,
+          "p05": 0.021523669158594383,
+          "p95": 0.021523669158594383
+        }
+      }
+    },
+    "0.05": {
+      "100": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 100.0,
+          "median": 100.0,
+          "min": 100.0,
+          "p05": 100.0,
+          "p95": 100.0
+        },
+        "replicates": 100,
+        "requested_n": 100,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "1000": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 1000.0,
+          "median": 1000.0,
+          "min": 1000.0,
+          "p05": 1000.0,
+          "p95": 1000.0
+        },
+        "replicates": 100,
+        "requested_n": 1000,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "200": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 200.0,
+          "median": 200.0,
+          "min": 200.0,
+          "p05": 200.0,
+          "p95": 200.0
+        },
+        "replicates": 100,
+        "requested_n": 200,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "2000": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 2000.0,
+          "median": 2000.0,
+          "min": 2000.0,
+          "p05": 2000.0,
+          "p95": 2000.0
+        },
+        "replicates": 100,
+        "requested_n": 2000,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "4000": {
+        "certification_frequency": 1.0,
+        "evaluation_automation": {
+          "max": 0.08989078689442734,
+          "median": 0.08989078689442734,
+          "min": 0.04900588070568468,
+          "p05": 0.08989078689442734,
+          "p95": 0.08989078689442734
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": 0.017133956386292833,
+          "median": 0.017133956386292833,
+          "min": 0.002857142857142857,
+          "p05": 0.017133956386292833,
+          "p95": 0.017133956386292833
+        },
+        "realized_n": {
+          "max": 4000.0,
+          "median": 4000.0,
+          "min": 4000.0,
+          "p05": 4000.0,
+          "p95": 4000.0
+        },
+        "replicates": 100,
+        "requested_n": 4000,
+        "review_all_frequency": 0.0,
+        "threshold_nonzero": {
+          "max": 0.0295229992319207,
+          "median": 0.0295229992319207,
+          "min": 0.021523669158594383,
+          "p05": 0.0295229992319207,
+          "p95": 0.0295229992319207
+        }
+      },
+      "50": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 50.0,
+          "median": 50.0,
+          "min": 50.0,
+          "p05": 50.0,
+          "p95": 50.0
+        },
+        "replicates": 100,
+        "requested_n": 50,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "500": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 500.0,
+          "median": 500.0,
+          "min": 500.0,
+          "p05": 500.0,
+          "p95": 500.0
+        },
+        "replicates": 100,
+        "requested_n": 500,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "7142": {
+        "certification_frequency": 1.0,
+        "evaluation_automation": {
+          "max": 0.08989078689442734,
+          "median": 0.08989078689442734,
+          "min": 0.08989078689442734,
+          "p05": 0.08989078689442734,
+          "p95": 0.08989078689442734
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": 0.017133956386292833,
+          "median": 0.017133956386292833,
+          "min": 0.017133956386292833,
+          "p05": 0.017133956386292833,
+          "p95": 0.017133956386292833
+        },
+        "realized_n": {
+          "max": 7142.0,
+          "median": 7142.0,
+          "min": 7142.0,
+          "p05": 7142.0,
+          "p95": 7142.0
+        },
+        "replicates": 1,
+        "requested_n": 7142,
+        "review_all_frequency": 0.0,
+        "threshold_nonzero": {
+          "max": 0.0295229992319207,
+          "median": 0.0295229992319207,
+          "min": 0.0295229992319207,
+          "p05": 0.0295229992319207,
+          "p95": 0.0295229992319207
+        }
+      }
+    },
+    "0.1": {
+      "100": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 100.0,
+          "median": 100.0,
+          "min": 100.0,
+          "p05": 100.0,
+          "p95": 100.0
+        },
+        "replicates": 100,
+        "requested_n": 100,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "1000": {
+        "certification_frequency": 0.05,
+        "evaluation_automation": {
+          "max": 0.08989078689442734,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0044945393447211116
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": 0.017133956386292833,
+          "median": 0.017133956386292833,
+          "min": 0.017133956386292833,
+          "p05": 0.017133956386292833,
+          "p95": 0.017133956386292833
+        },
+        "realized_n": {
+          "max": 1000.0,
+          "median": 1000.0,
+          "min": 1000.0,
+          "p05": 1000.0,
+          "p95": 1000.0
+        },
+        "replicates": 100,
+        "requested_n": 1000,
+        "review_all_frequency": 0.95,
+        "threshold_nonzero": {
+          "max": 0.0295229992319207,
+          "median": 0.0295229992319207,
+          "min": 0.0295229992319207,
+          "p05": 0.0295229992319207,
+          "p95": 0.0295229992319207
+        }
+      },
+      "200": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 200.0,
+          "median": 200.0,
+          "min": 200.0,
+          "p05": 200.0,
+          "p95": 200.0
+        },
+        "replicates": 100,
+        "requested_n": 200,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "2000": {
+        "certification_frequency": 0.98,
+        "evaluation_automation": {
+          "max": 0.22234668160179222,
+          "median": 0.08989078689442734,
+          "min": 0.0,
+          "p05": 0.08989078689442734,
+          "p95": 0.08989078689442734
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": 0.05163727959697733,
+          "median": 0.017133956386292833,
+          "min": 0.017133956386292833,
+          "p05": 0.017133956386292833,
+          "p95": 0.017133956386292833
+        },
+        "realized_n": {
+          "max": 2000.0,
+          "median": 2000.0,
+          "min": 2000.0,
+          "p05": 2000.0,
+          "p95": 2000.0
+        },
+        "replicates": 100,
+        "requested_n": 2000,
+        "review_all_frequency": 0.02,
+        "threshold_nonzero": {
+          "max": 0.05229788468364194,
+          "median": 0.0295229992319207,
+          "min": 0.0295229992319207,
+          "p05": 0.0295229992319207,
+          "p95": 0.0295229992319207
+        }
+      },
+      "4000": {
+        "certification_frequency": 1.0,
+        "evaluation_automation": {
+          "max": 0.35956314757770935,
+          "median": 0.35956314757770935,
+          "min": 0.2674320918510221,
+          "p05": 0.2674320918510221,
+          "p95": 0.35956314757770935
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": 0.08489096573208722,
+          "median": 0.08489096573208722,
+          "min": 0.05602094240837696,
+          "p05": 0.05602094240837696,
+          "p95": 0.08489096573208722
+        },
+        "realized_n": {
+          "max": 4000.0,
+          "median": 4000.0,
+          "min": 4000.0,
+          "p05": 4000.0,
+          "p95": 4000.0
+        },
+        "replicates": 100,
+        "requested_n": 4000,
+        "review_all_frequency": 0.0,
+        "threshold_nonzero": {
+          "max": 0.08568221332232251,
+          "median": 0.08568221332232251,
+          "min": 0.061477750631934946,
+          "p05": 0.061477750631934946,
+          "p95": 0.08568221332232251
+        }
+      },
+      "50": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 50.0,
+          "median": 50.0,
+          "min": 50.0,
+          "p05": 50.0,
+          "p95": 50.0
+        },
+        "replicates": 100,
+        "requested_n": 50,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "500": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 500.0,
+          "median": 500.0,
+          "min": 500.0,
+          "p05": 500.0,
+          "p95": 500.0
+        },
+        "replicates": 100,
+        "requested_n": 500,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "7142": {
+        "certification_frequency": 1.0,
+        "evaluation_automation": {
+          "max": 0.35956314757770935,
+          "median": 0.35956314757770935,
+          "min": 0.35956314757770935,
+          "p05": 0.35956314757770935,
+          "p95": 0.35956314757770935
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": 0.08489096573208722,
+          "median": 0.08489096573208722,
+          "min": 0.08489096573208722,
+          "p05": 0.08489096573208722,
+          "p95": 0.08489096573208722
+        },
+        "realized_n": {
+          "max": 7142.0,
+          "median": 7142.0,
+          "min": 7142.0,
+          "p05": 7142.0,
+          "p95": 7142.0
+        },
+        "replicates": 1,
+        "requested_n": 7142,
+        "review_all_frequency": 0.0,
+        "threshold_nonzero": {
+          "max": 0.08568221332232251,
+          "median": 0.08568221332232251,
+          "min": 0.08568221332232251,
+          "p05": 0.08568221332232251,
+          "p95": 0.08568221332232251
+        }
+      }
+    },
+    "0.15": {
+      "100": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 100.0,
+          "median": 100.0,
+          "min": 100.0,
+          "p05": 100.0,
+          "p95": 100.0
+        },
+        "replicates": 100,
+        "requested_n": 100,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "1000": {
+        "certification_frequency": 0.73,
+        "evaluation_automation": {
+          "max": 0.08989078689442734,
+          "median": 0.08989078689442734,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.08989078689442734
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": 0.017133956386292833,
+          "median": 0.017133956386292833,
+          "min": 0.017133956386292833,
+          "p05": 0.017133956386292833,
+          "p95": 0.017133956386292833
+        },
+        "realized_n": {
+          "max": 1000.0,
+          "median": 1000.0,
+          "min": 1000.0,
+          "p05": 1000.0,
+          "p95": 1000.0
+        },
+        "replicates": 100,
+        "requested_n": 1000,
+        "review_all_frequency": 0.27,
+        "threshold_nonzero": {
+          "max": 0.0295229992319207,
+          "median": 0.0295229992319207,
+          "min": 0.0295229992319207,
+          "p05": 0.0295229992319207,
+          "p95": 0.0295229992319207
+        }
+      },
+      "200": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 200.0,
+          "median": 200.0,
+          "min": 200.0,
+          "p05": 200.0,
+          "p95": 200.0
+        },
+        "replicates": 100,
+        "requested_n": 200,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "2000": {
+        "certification_frequency": 1.0,
+        "evaluation_automation": {
+          "max": 0.5455054606552786,
+          "median": 0.5000700084010081,
+          "min": 0.08989078689442734,
+          "p05": 0.08989078689442734,
+          "p95": 0.5455054606552786
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": 0.13141683778234087,
+          "median": 0.12022027599003092,
+          "min": 0.017133956386292833,
+          "p05": 0.017133956386292833,
+          "p95": 0.13141683778234087
+        },
+        "realized_n": {
+          "max": 2000.0,
+          "median": 2000.0,
+          "min": 2000.0,
+          "p05": 2000.0,
+          "p95": 2000.0
+        },
+        "replicates": 100,
+        "requested_n": 2000,
+        "review_all_frequency": 0.0,
+        "threshold_nonzero": {
+          "max": 0.1656113623980724,
+          "median": 0.14201638218643337,
+          "min": 0.0295229992319207,
+          "p05": 0.0295229992319207,
+          "p95": 0.1656113623980724
+        }
+      },
+      "4000": {
+        "certification_frequency": 1.0,
+        "evaluation_automation": {
+          "max": 0.5455054606552786,
+          "median": 0.5455054606552786,
+          "min": 0.4546345561467376,
+          "p05": 0.4546345561467376,
+          "p95": 0.5455054606552786
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": 0.13141683778234087,
+          "median": 0.13141683778234087,
+          "min": 0.10902371419772097,
+          "p05": 0.10902371419772097,
+          "p95": 0.13141683778234087
+        },
+        "realized_n": {
+          "max": 4000.0,
+          "median": 4000.0,
+          "min": 4000.0,
+          "p05": 4000.0,
+          "p95": 4000.0
+        },
+        "replicates": 100,
+        "requested_n": 4000,
+        "review_all_frequency": 0.0,
+        "threshold_nonzero": {
+          "max": 0.1656113623980724,
+          "median": 0.1656113623980724,
+          "min": 0.11842140197479434,
+          "p05": 0.11842140197479434,
+          "p95": 0.1656113623980724
+        }
+      },
+      "50": {
+        "certification_frequency": 0.0,
+        "evaluation_automation": {
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "realized_n": {
+          "max": 50.0,
+          "median": 50.0,
+          "min": 50.0,
+          "p05": 50.0,
+          "p95": 50.0
+        },
+        "replicates": 100,
+        "requested_n": 50,
+        "review_all_frequency": 1.0,
+        "threshold_nonzero": {
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        }
+      },
+      "500": {
+        "certification_frequency": 0.01,
+        "evaluation_automation": {
+          "max": 0.08989078689442734,
+          "median": 0.0,
+          "min": 0.0,
+          "p05": 0.0,
+          "p95": 0.0
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": 0.017133956386292833,
+          "median": 0.017133956386292833,
+          "min": 0.017133956386292833,
+          "p05": 0.017133956386292833,
+          "p95": 0.017133956386292833
+        },
+        "realized_n": {
+          "max": 500.0,
+          "median": 500.0,
+          "min": 500.0,
+          "p05": 500.0,
+          "p95": 500.0
+        },
+        "replicates": 100,
+        "requested_n": 500,
+        "review_all_frequency": 0.99,
+        "threshold_nonzero": {
+          "max": 0.0295229992319207,
+          "median": 0.0295229992319207,
+          "min": 0.0295229992319207,
+          "p05": 0.0295229992319207,
+          "p95": 0.0295229992319207
+        }
+      },
+      "7142": {
+        "certification_frequency": 1.0,
+        "evaluation_automation": {
+          "max": 0.5455054606552786,
+          "median": 0.5455054606552786,
+          "min": 0.5455054606552786,
+          "p05": 0.5455054606552786,
+          "p95": 0.5455054606552786
+        },
+        "evaluation_selected_error_nonzero": {
+          "max": 0.13141683778234087,
+          "median": 0.13141683778234087,
+          "min": 0.13141683778234087,
+          "p05": 0.13141683778234087,
+          "p95": 0.13141683778234087
+        },
+        "realized_n": {
+          "max": 7142.0,
+          "median": 7142.0,
+          "min": 7142.0,
+          "p05": 7142.0,
+          "p95": 7142.0
+        },
+        "replicates": 1,
+        "requested_n": 7142,
+        "review_all_frequency": 0.0,
+        "threshold_nonzero": {
+          "max": 0.1656113623980724,
+          "median": 0.1656113623980724,
+          "min": 0.1656113623980724,
+          "p05": 0.1656113623980724,
+          "p95": 0.1656113623980724
+        }
+      }
+    }
+  },
+  "milestones": {
+    "0.025": {
+      "any_certification": 7142,
+      "certification_50": 7142,
+      "certification_80": 7142,
+      "certification_90": 7142,
+      "combined_90_certification_automation_0.1": null,
+      "combined_90_certification_automation_0.25": null,
+      "combined_90_certification_automation_0.5": null,
+      "median_automation_0.1": null,
+      "median_automation_0.25": null,
+      "median_automation_0.5": null,
+      "median_automation_0.75": null
+    },
+    "0.05": {
+      "any_certification": 4000,
+      "certification_50": 4000,
+      "certification_80": 4000,
+      "certification_90": 4000,
+      "combined_90_certification_automation_0.1": null,
+      "combined_90_certification_automation_0.25": null,
+      "combined_90_certification_automation_0.5": null,
+      "median_automation_0.1": null,
+      "median_automation_0.25": null,
+      "median_automation_0.5": null,
+      "median_automation_0.75": null
+    },
+    "0.1": {
+      "any_certification": 1000,
+      "certification_50": 2000,
+      "certification_80": 2000,
+      "certification_90": 2000,
+      "combined_90_certification_automation_0.1": 4000,
+      "combined_90_certification_automation_0.25": 4000,
+      "combined_90_certification_automation_0.5": null,
+      "median_automation_0.1": 4000,
+      "median_automation_0.25": 4000,
+      "median_automation_0.5": null,
+      "median_automation_0.75": null
+    },
+    "0.15": {
+      "any_certification": 500,
+      "certification_50": 1000,
+      "certification_80": 2000,
+      "certification_90": 2000,
+      "combined_90_certification_automation_0.1": 2000,
+      "combined_90_certification_automation_0.25": 2000,
+      "combined_90_certification_automation_0.5": 2000,
+      "median_automation_0.1": 2000,
+      "median_automation_0.25": 2000,
+      "median_automation_0.5": 2000,
+      "median_automation_0.75": null
+    }
+  }
+}

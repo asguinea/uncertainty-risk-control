@@ -1,0 +1,46 @@
+{
+  "classes": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "roles": {
+    "FINAL_CALIBRATION": 7143,
+    "LOCKED_TEST": 12284,
+    "MODEL_DEVELOPMENT": 26188,
+    "WARMUP_CALIBRATION": 7142,
+    "WARMUP_EVALUATION": 7142
+  },
+  "schema_version": 1,
+  "scope": "Frozen TweetEval Sentiment D1/D2 aggregate replay: 35 final candidate tests and 2,804 warm-up records. No raw source rows, identity key or model assets; no complete warm-up prefix, training/inference reproduction, independent replication or product-readiness claim.",
+  "scorer": {
+    "base": "vinai/bertweet-base",
+    "id": "TWEETEVAL_BERTWEET_SENTIMENT_SCORER_V1",
+    "max_length": 64,
+    "model_sha256": "04e7d79beaf30060b3d5911b9856df6b813a05f93d87c3ac3065532b09c0fe07",
+    "revision": "b349c1243407b0dcffeabb2337497477286e27ab",
+    "score_corpus_sha256": "15a7299f015502ecb46d79c42e3e643d251b3c0e1817f9be209cbbc6f51a0e67"
+  },
+  "source_hashes": {
+    "input_00_tweeteval_sentiment_d1_scorer_and_warmup.json": "f7f975374b4f79fccd22b7107c024c8bbc150e1886613fa5373a96081ef1f9c8",
+    "input_01_tweeteval_sentiment_d1_scorer_and_warmup.json": "73747c623ee4b88dc63e24df556f08a1fd83ba1fdd35ddee8907e9fc061e52d3",
+    "input_02_tweeteval_sentiment_d2_final.json": "f68ae59188f0732fc4ad9bc20e4212dc6157512ace67a6c14907496220dbfc32",
+    "input_03_tweeteval_sentiment_d2_final.json": "10d2a963b206062973e27105a03daa08c9354d028d21a354c9a2ba774363bd0b",
+    "input_04_tweeteval_sentiment_d0_binding.json": "4a6737bd63f7d7b2b0cfc09994fea7bea1f725c83b3feda6fa7b94e350d91b4c",
+    "input_05_analyze_tweeteval_sentiment_d1.py": "568ab87229043b3be235b960194f8db7861e1bb63caeb8527cd181db808dea4a",
+    "input_06_tweeteval_sentiment_common.py": "36cae1ab703b9343f72ddb9e277368f6711ae2b39038a52b16d94fecc0483398",
+    "input_07_tweeteval_sentiment_d2_common.py": "b866c2aa3d6bfc2925037ff10ed3922a94196234143c04074d58ca8c1e6fbf37",
+    "input_08_tweeteval_sentiment_d2.py": "e1cfe0d026215c465cd5d0944a36ebd1e8572694b87aff2fc4c4bb9e9b397f54",
+    "input_09_candidate-family.json": "6963fcb8b6ea21012ebbbc197522e61c271a821156b3c44a633dd6a4b3fff776",
+    "input_10_fixed-sequence.json": "2195e385569903245921686d5303f0e44cc848e52204ce30902c82e2612dd033",
+    "input_11_source_binding.json": "1f5573c6fb28cdbcb0b92b8fcf361ff08b011d2a7f9a21ae12fa21781f4d1c46",
+    "input_12_role_manifest.jsonl": "cd228dced67274e0cfd092b16450ef6d9cd2c383e4bcdfe8d5cbf9858d53a10a",
+    "input_13_official_split_identities.jsonl": "b50bd4167db43d4bc2d20e8562f93986413cfed3f09dc5e02c94e51c85646e5b",
+    "input_14_final_calibration.jsonl": "e315687af768ba2e3d2d467ec1a1ee644fe63ecaa40818c26d12a5c0c6a8a6ba",
+    "input_15_train_labels.txt": "122bfb1732fb6995b0e5c5f726c0ba457c469c3b6e60513007ce5037f23e65d4",
+    "input_16_val_labels.txt": "b4566926c72e2e4e2916c864def94e76c4cdde52446af2c7ba4fc2006e057e51",
+    "input_17_all-runs.json": "b89f090445a6728a150c97ec2144c417d8a084528197ca96c3f1bb0e17c6d3c2"
+  },
+  "source_revision": "4fbd22cd78421f05b1ecdb4fc5725bc7a7bd8f66",
+  "study": "tweeteval-sentiment"
+}
