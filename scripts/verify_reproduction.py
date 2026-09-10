@@ -20,6 +20,23 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def differences(expected, actual, path="root"):
+    """Give bounded, useful diagnostics for already-public figure input JSON."""
+    if isinstance(expected, dict) and isinstance(actual, dict):
+        for key in sorted(expected.keys() | actual.keys()):
+            if key not in expected or key not in actual:
+                yield f"{path}.{key}: key missing"
+            else:
+                yield from differences(expected[key], actual[key], f"{path}.{key}")
+    elif isinstance(expected, list) and isinstance(actual, list):
+        if len(expected) != len(actual):
+            yield f"{path}: lengths {len(expected)} != {len(actual)}"
+        for i, (a, b) in enumerate(zip(expected, actual)):
+            yield from differences(a, b, f"{path}[{i}]")
+    elif expected != actual:
+        yield f"{path}: expected {str(expected)[:100]!r}, actual {str(actual)[:100]!r}"
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
@@ -115,7 +132,10 @@ def main():
             current = json.loads((output / "social-media" / name).read_text(encoding="utf-8"))
             original.pop("environment")
             current.pop("environment")
-            require(current == original, f"social media figure inputs or generator hash changed: {name}")
+            if current != original:
+                from itertools import islice
+                detail = "; ".join(islice(differences(original, current), 8))
+                raise ValueError(f"social media figure inputs or generator hash changed: {name}; {detail}")
         figure_stems = ["experiments/humaid/report/figures/risk_and_transfer", "experiments/humaid/report/figures/calibration_size", "experiments/tweeteval-sentiment/report/figures/risk_and_class_selection", "experiments/tweeteval-sentiment/report/figures/calibration_size", "docs/figures/study_map"]
         for stem in figure_stems:
             for suffix in (".svg", ".png"):
